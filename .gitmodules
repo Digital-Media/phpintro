@@ -1,0 +1,4 @@
+[submodule "normform"]
+	path = normform
+	url = git@github.com:martinharrer/normform.git
+	branch = master
