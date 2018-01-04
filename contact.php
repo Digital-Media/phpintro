@@ -2,22 +2,22 @@
 session_start();
 
 /**
- * Einbinden der define-Angaben für SIBUE
+ * include define declarations
  */
 require_once 'includes/defines.inc.php';
 
 /**
- * Einbinden einer statischen Hilfsklasse mit Methoden zur Email-Überprüfung, Passwort-Überprüfung, ...
+ * include static helper class with methods to validate email, integer, password ...
  */
 require_once UTILITIES;
 
 /**
- * Einbinden der Klasse TNormform, die die Formularabläufe festlegt. Bindet auch Utilities.php ein.
+ * include the class AbstractNormform, that defines the form process.
  */
 require_once NORM_FORM;
 
 /*
- * Das objektorientierte und templatebasierte Contact-formular setzt ein Kontaktformular um.
+ * the object-oriented and template based Contact implements a contact form.
  * *
  * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
  * @package phpue
@@ -25,12 +25,12 @@ require_once NORM_FORM;
  */
 final class Contact extends AbstractNormForm {
     /**
-     * Konstanten für ein HTML Attribute z.B:: <input name='pname' id='pname' ... >, <label for='pname' ... >, Keys für $_POST[self::PNAME]..
+     * constants for HTML attributes : <input name='pname' id='pname' ... >, <label for='pname' ... >, keys for $_POST[self::PNAME]..
      *
-     * @var string SUBJECT Key für $_POST-Array
-     * @var string REQUEST Key für $_POST-Array
-     * @var string EMAIL Key für $_POST-Array
-     * @var string PRIORITY Key für $_POST-Array
+     * @var string SUBJECT Key for $_POST-Array
+     * @var string REQUEST Key for $_POST-Array
+     * @var string EMAIL Key for $_POST-Array
+     * @var string PRIORITY Key for $_POST-Array
      */
     const SUBJECT = "subject";
     const REQUEST = "request";
@@ -40,63 +40,60 @@ final class Contact extends AbstractNormForm {
     /**
      * IMAR Constructor.
      *
-     * Ruft den Constructor der Klasse AbstractNormform auf.
+     * Calls the constructor of class AbstractNormform.
      */
-    public function __construct(View $defaultView, $templateDir = "templates", $compileDir = "templates_c") {
-        parent::__construct($defaultView, $templateDir, $compileDir);
+    public function __construct() {
+        $view = new View("contactMain.tpl", [
+            new PostParameter(Contact::SUBJECT),
+            new PostParameter(Contact::REQUEST),
+            new PostParameter(Contact::EMAIL),
+            new PostParameter(Contact::PRIORITY)
+        ]);
+        parent::__construct($view);
     }
 
     /**
-     * Validiert den Benutzerinput nach dem Abschicken des Formulars.
+     * Validates the input after sending the form.
      *
-     * Zur Überprüfung, ob ein Formularfeld leer ist, eine Email und ein Passwort einer passenden REGEX entsprechen,
-     * finden sich in @see /phpue/imar/normform/Utilities.php
+     * Examples for REGEX to validate input can be found in includes/Utilities.class.php
      *
-     * Ob eine Email in /phpue/imar/data/userdata.txt bereits vorhanden ist, wird mit $this->isUniqueEmail geprüft
-     *
-     * Fehlermeldungen werden im Array $errMsg[] gesammelt.
-     *
-     * Abstracte Methode in der Klasse AbstractNormForm und muss daher hier implementiert werden
+     * Abstract methods of class AbstractNormForm have to be implemented here
      *
      * @return bool true, wenn $errorMessages leer ist. Ansonsten false
      */
     protected function isValid(): bool {
         //TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
         /*--
-        require SOLUTION . 'contact/isValid.inc.php';
+        require '../wbt2uesolution/contact/isValid.inc.php';
         //*/
+        //TODO keep the next two lines
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
         return (count($this->errorMessages) === 0);
     }
 
     /**
-     * Verarbeitet die Benutzereingaben, die mit POST geschickt wurden
-     * Wenn alles gut geganden ist, wird eine Statusmeldung geschrieben, ansonsten eine Fehlermeldung.
+     * processes data sent via form
+     * shows a status message, when processing data succeeded.
      *
-     * Abstracte Methode in der Klasse AbstractNormForm und muss daher hier implementiert werden
+     * abstract methods in AbstractNormForm have to be implemented here
      */
     protected function business()
     {
         //TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
+        //TODO see vendor/normform/NormFormExample
+        //TODO Add: Sanitize input before it is sent to template. Use htmlspecialchars, htmlentities, ...
         /*--
-        require SOLUTION . 'contact/show.inc.php';
+        require '../wbt2uesolution/contact/business.inc.php';
         //*/
     }
 }
 
 /**
- * Instantiieren der Klasse Contact und Aufruf der Methode AbstractNormForm::normForm()
+ * Instantiate the class Contact and call the method AbstractNormForm::normForm()
  *
- * Bei PHP-Exception wird vorerst nur auf eine allgemeine Errorpage weitergeleitet
+ * PHP exception are forwarded to an error page
  */
 try {
-    $view = new View(View::FORM, "contactMain.tpl", [
-        new PostParameter(Contact::SUBJECT),
-        new PostParameter(Contact::REQUEST),
-        new PostParameter(Contact::EMAIL),
-        new PostParameter(Contact::PRIORITY)
-    ]);
-
     $contact = new Contact($view);
     $contact->normForm();
 } catch (Exception $e) {
