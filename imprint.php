@@ -1,13 +1,13 @@
 <?php
 /**
- * Einbinden der define-Angaben für Imprint und Contact
+ * Adding define declarations
 */
 require_once 'includes/defines.inc.php';
-require_once("../vendor/normform/vendor/smarty/smarty/libs/Smarty.class.php");
+require_once("vendor/normform/vendor/smarty/smarty/libs/Smarty.class.php");
 
 
 /*
- * Das objektorientierte und templatebasierte Impressum setzt eine Seite ohne Formularfelder um.
+ * The objectorientated and template based Imprint shows the implementation of a static page.
  * *
  * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
  * @package phpue
@@ -20,18 +20,17 @@ final class Imprint {
     protected $smarty;
 
     /**
-     * @var string $statusMessage An optional status message that can be set in business() when processing data was
+     * @var string $imprint Holds the imprint defined in the method show()
      * successful.
      */
     protected $imprint;
 
     /**
-     * Imprint Constructor.
+     * Imprint constructor.
      *
-     * Ruft den Constructor der Klasse AbstractNormform auf.
+     * Calls the constructor of class AbstractNormform.
      */
     public function __construct($templateDir = "templates", $compileDir = "templates_c") {
-        $compileDir = "templates_c";
         $this->smarty = new Smarty();
         $this->smarty->template_dir = $templateDir;
         $this->smarty->compile_dir = $compileDir;
@@ -42,19 +41,22 @@ final class Imprint {
     {
         //TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
         /*--
-        require SOLUTION . 'imprint/show.inc.php';
+        require '../wbt2uesolution/imprint/show.inc.php';
         //*/
+        //TODO Replace the text below with a imprint of your own using valid HTML5 syntax
         //##
-        $this->imprint = "<p> Place the requested Imprint here";
-        $this->smarty->assign('imprint', $this->imprint);
-        $this->smarty->display('imprintMain.tpl');
+        $this->imprint = "<p> Place the requested Imprint here </p>";
         //*/
+        //TODO keep these two lines.
+        // Assigning the PHP variable $this->imprint to the Smarty variable imprint
+        $this->smarty->assign('imprint', $this->imprint);
+        // Defining the Smarty template to use. See __construct for template directory
+        $this->smarty->display('imprintMain.tpl');
+
     }
 }
 /**
- * Instantiieren der Klasse Contact und Aufruf der Methode AbstractNormForm::normForm()
- *
- * Bei PHP-Exception wird vorerst nur auf eine allgemeine Errorpage weitergeleitet
+ * Instantiate the class Contact and call the method show()
  */
     $imprint = new Imprint();
     $imprint->show();
