@@ -7,7 +7,7 @@ require_once("vendor/normform/vendor/smarty/smarty/libs/Smarty.class.php");
 
 
 /*
- * The objectorientated and template based Imprint shows the implementation of a static page.
+ * The object-oriented and template based Imprint shows the implementation of a static page.
  * *
  * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
  * @package phpue
