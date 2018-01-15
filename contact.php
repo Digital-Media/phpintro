@@ -14,7 +14,7 @@ require_once UTILITIES;
 /**
  * include the class AbstractNormform, that defines the form process.
  */
-require_once NORM_FORM;
+require_once TNORMFORM;
 
 /*
  * the object-oriented and template based Contact implements a contact form.
@@ -38,8 +38,9 @@ final class Contact extends AbstractNormForm {
     const PRIORITY = "priority";
 
     /**
-     * IMAR Constructor.
+     * Contact Constructor.
      *
+     * Uses Class View included by AbstractNormForm to define, which template to use and the names of the HTML input fields
      * Calls the constructor of class AbstractNormform.
      */
     public function __construct() {
@@ -94,7 +95,8 @@ final class Contact extends AbstractNormForm {
  * PHP exception are forwarded to an error page
  */
 try {
-    $contact = new Contact($view);
+    // Creates a new Shop object and triggers the NormForm process
+    $contact = new Contact();
     $contact->normForm();
 } catch (Exception $e) {
     //header("Location: https://localhost/phpue/includes/errorpage.html");

@@ -14,7 +14,7 @@
 /**
  * @var string TITLE The title of the site. Used in the templates.
  */
-define("TITLE", "WBT2UE");
+define("TITLE", "PHPUE");
 
 /**
  * @var string SUBTITLE The subtitle of the site. Used in the templates.
@@ -42,11 +42,17 @@ define("UTILITIES", "includes/Utilities.class.php");
 /**
  * @var string NORM_FORM Path to the NormForm class.
  */
-define("NORM_FORM", NORM_DIR . "AbstractNormForm.php");
+define("TNORMFORM", NORM_DIR . "AbstractNormForm.php");
 
 /**
  * @var string CSS_DIR Path to the CSS files provided by NormForm.
  */
 define("CSS_DIR", NORM_DIR . "css");
+
+/**
+ * @var string FILE_ACCESS Path to the FileAccess class.
+ */
+define("FILE_ACCESS", "includes/FileAccess.php");
+
 
 
