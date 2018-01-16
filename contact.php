@@ -56,7 +56,7 @@ final class Contact extends AbstractNormForm {
     /**
      * Validates the input after sending the form.
      *
-     * Examples for REGEX to validate input can be found in includes/Utilities.class.php
+     * Examples for REGEX to validate input can be found in includes/Utilities.php
      *
      * Abstract methods of class AbstractNormForm have to be implemented here
      *

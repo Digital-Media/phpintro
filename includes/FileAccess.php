@@ -21,24 +21,9 @@ class FileAccess
     const DATA_DIRECTORY = "data/";
 
     /**
-     * @var string IMAGE_DATA_PATH The full path for the images meta data JSON file.
-     */
-    const IMAGE_DATA_PATH = self::DATA_DIRECTORY . "imagedata.json";
-
-    /**
      * @var string USER_DATA_PATH The full path for the user meta data JSON file.
      */
     const USER_DATA_PATH = self::DATA_DIRECTORY . "userdata.json";
-
-    /**
-     * @var string IMAGE_DIRECTORY Path where uploaded images are stored.
-     */
-    const IMAGE_DIRECTORY = "images/";
-
-    /**
-     * @var string THUMBNAIL_DIRECTORY Path where generated thumbnails are stored.
-     */
-    const THUMBNAIL_DIRECTORY = self::IMAGE_DIRECTORY . "thumbs/";
 
     /**
      * Creates a new FileAccess object.
@@ -47,127 +32,6 @@ class FileAccess
     {
         // Intentionally left empty.
     }
-
-    /**
-     * Loads the contents of a JSON file into an according two-dimensional array. Works with both image meta data and
-     * user meta data. The method uses file_get_contents to read the whole file into a string and the create an array
-     * using json_decode. A file lock has to be obtained since file_get_contents does not implement this by itself.
-     * @param string $filename The file that is to be read.
-     * @return array Returns a two-dimensional array with the information of the JSON file. The array keys are the JSON
-     * keys.
-     */
-    public function loadContents(string $filename): array
-    {
-        $data = [];
-        if (file_exists($filename)) {
-            $fp = fopen($filename, "r");
-            $lock = flock($fp, LOCK_SH);
-            if ($lock) {
-                $data = json_decode(file_get_contents($filename), true) ?? [];
-            }
-            flock($fp, LOCK_UN);
-            fclose($fp);
-        }
-        return $data;
-    }
-
-    /**
-     * Writes a two-dimensional array of data into a JSON file. Works with both image meta data and user meta data. The
-     * method uses file_put_contents to write a string into a file that is being created by json_encode. JSON output is
-     * pretty printed, an exclusive file lock is obtain to avoid problems with concurrent access.
-     * @param string $filename The file to be written.
-     * @param array $data The array of data that is read.
-     * @return bool Returns true if the operation was successful, otherwise false.
-     */
-    public function storeContents(string $filename, array $data): bool
-    {
-        $bytes = file_put_contents($filename, json_encode($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT), LOCK_EX);
-
-        if ($bytes > 0) {
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Creates an auto-increment ID for a given file. The file is opened and all data stored under the key $idName is
-     * retrieved. This data is then searched for the highest ID value. This value is incremented by one and returned.
-     * @param string $filename The file containing IDs where an auto-increment ID should be generated.
-     * @param string $idName The name of the fields containing the ID values.
-     * @return int Returns an auto-increment ID.
-     */
-    public function autoincrementID(string $filename, string $idName): int
-    {
-        if (file_exists($filename)) {
-            $data = $this->loadContents($filename);
-            $highestID = max(array_column($data, $idName)) ?? 0;
-            return ++$highestID;
-        }
-        return 0;
-    }
-
-    /**
-     * Checks if a file upload was successful. In order to be successful, the "error" entry in $_FILES has to equal 0.
-     * @see FileAccess::interpretError() Use this method if uploadOkay returns false, to see which error has occurred.
-     * @param string $name The name of the entry in the $_FILES array.
-     * @return bool Returns true if the upload was successful, otherwise false.
-     */
-    public function uploadOkay(string $name): bool
-    {
-        return ($_FILES[$name]["error"] === UPLOAD_ERR_OK);
-    }
-
-    /**
-     * Moves an uploaded file to its final destination in the file system. The method first checks if the file was
-     * uploaded via HTTP POST and then moves it to the specified destination.
-     * @param string $name The name of the entry in the $_FILES array.
-     * @param string $destination The file's destination path.
-     * @return bool Returns true if the operation was successful, otherwise false.
-     */
-    public function storeUploadedFile(string $name, string $destination): bool
-    {
-        if (is_uploaded_file($_FILES[$name]["tmp_name"])) {
-            return move_uploaded_file($_FILES[$name]["tmp_name"], "$destination");
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * Generates meaningful error messages when a file upload error has occurred. Does not return a message if the
-     * upload was successful (UPLOAD_ERR_OK).
-     * @param string $name The name of the entry in the $_FILES array.
-     * @return string The appropriate error message.
-     */
-    public function interpretError(string $name): string
-    {
-        $errorCode = $_FILES[$name]["error"];
-        $errorMessage = "";
-
-        switch ($errorCode) {
-            case UPLOAD_ERR_INI_SIZE: // 1
-            case UPLOAD_ERR_FORM_SIZE: // 2
-                $errorMessage = "The size of the file was too big. Please upload a smaller file.";
-                break;
-            case UPLOAD_ERR_PARTIAL: // 3
-                $errorMessage = "The file was not fully uploaded. Please try again.";
-                break;
-            case UPLOAD_ERR_NO_FILE: // 4
-                $errorMessage = "Please specify a file to upload.";
-                break;
-            case UPLOAD_ERR_NO_TMP_DIR: // 6
-                $errorMessage = "Your web server is missing a temporary folder to upload. Please contact your administrator.";
-                break;
-            case UPLOAD_ERR_CANT_WRITE: // 7
-                $errorMessage = "Your web server does not have permissions to write to disk. Please contact your administrator.";
-                break;
-            case UPLOAD_ERR_EXTENSION: // 8
-                $errorMessage = "A PHP extension stopped the upload. Please contact your administrator.";
-                break;
-        }
-        return $errorMessage;
-    }
-
 
     // Examples on how to use exceptions in some of the above methods
 
@@ -180,7 +44,7 @@ class FileAccess
      * keys.
      * @throws FileAccessException Throws an exception if the file could not be locked or does not exist.
      */
-    public function loadContentsWithException(string $filename): array
+    public function loadContents(string $filename): array
     {
         if (file_exists($filename)) {
             $fp = fopen($filename, "r");
@@ -211,7 +75,7 @@ class FileAccess
      * @return bool Returns true if the operation was successful, otherwise false.
      * @throws FileAccessException Throws an exception when writing was not successful.
      */
-    public function storeContentsWithExceptions(string $filename, array $data): bool
+    public function storeContents(string $filename, array $data): bool
     {
         $bytes = file_put_contents($filename, json_encode($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT), LOCK_EX);
 
