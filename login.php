@@ -53,7 +53,7 @@ final class Login extends AbstractNormForm
         // TODO: Do the necessary initializations in the constructor.
 
         /*--
-        require '../../phpuesolution/login/construct.inc.php';
+        require '../wbt2uesolution/login/construct.inc.php';
         //*/
     }
 
@@ -68,7 +68,7 @@ final class Login extends AbstractNormForm
         // TODO: The code for correct form validation goes here. Check for empty fields and correct authentication.
 
         /*--
-        require '../../phpuesolution/login/isValid.inc.php';
+        require '../wbt2uesolution/login/isValid.inc.php';
         //*/
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
@@ -86,10 +86,10 @@ final class Login extends AbstractNormForm
         // TODO: Save the login confirmation and other important data in the session.
 
         /*--
-        require '../../phpuesolution/login/business.inc.php';
+        require '../wbt2uesolution/login/business.inc.php';
         //*/
 
-        LoginSystem::redirectTo(INDEX);
+        View::redirectTo($_SESSION['redirect']);
     }
 
     /**
@@ -102,19 +102,26 @@ final class Login extends AbstractNormForm
         // TODO: Check if the provided user name and password combination is correct.
 
         /*--
-        return require '../../phpuesolution/login/authenticateUser.inc.php';
+        return require '../wbt2uesolution/login/authenticateUser.inc.php';
         //*/
 
         //##
         return true;
         //*/
     }
+
+    /**
+     * Generates a 128 character hash value using the SHA-512 algorithm. The user's IP address as well as the user agent
+     * string are hashed. This hash can then be stored in the $_SESSION array to act as a token for a logged in user.
+     * @return string The login hash value.
+     */
+    public static function generateLoginHash(): string
+    {
+        return hash("sha512", $_SERVER["REMOTE_ADDR"] . $_SERVER["HTTP_USER_AGENT"]);
+    }
 }
 
 // --- This is the main call of the norm form process
-
-// Use this method call to enable login protection for this page (redirects to INDEX when logged in)
-//LoginSystem::protectPage();
 
 // Defines a new view that specifies the template and the parameters that are passed to the template
 $view = new View("loginMain.tpl", [

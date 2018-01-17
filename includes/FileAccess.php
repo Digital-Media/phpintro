@@ -126,18 +126,9 @@ class FileAccess
             </html>
 ERRORPAGE;
 
-        if (DEBUG) {
-            // Return the error message back to the catch block
-            // Can be passed on using throw in the catch block as DatabaseException and printed using echo.
-            return $formattedError;
-        } else {
-            // Writes using error_log so that errors are hidden in the browser
-            // Default output for XAMPP is <xamppdir>/apache/logs/error.log if no target file is specified
-            error_log($formattedError, 0);
-            // Redirects to a neutral error page that informs the user about the problem
-            // Test it by not starting the database and set DEBUG = false
-            header("Location: ../includes/errorpage.html");
-            exit;
-        }
+        // Write $formattedError using error_log
+        error_log($formattedError, 0);
+        // Return $formattedError
+        return $formattedError;
     }
 }

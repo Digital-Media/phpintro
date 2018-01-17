@@ -50,20 +50,28 @@ final class DEMO extends AbstractNormForm
     {
             $this->statusMessage = "Your file has been uploaded successfully";
             $this->currentView->setParameter(new GenericParameter("statusMessage", $this->statusMessage));
-            $this->errorMessages ["demoerror"] = "Error adding image. Please try again";
+            $this->errorMessages ["demo_error"] = "Error occurred. Please try again";
     }
-
 }
 
 // --- This is the main call of the norm form process
-
-// Use this method call to enable login protection for this page
-View::redirectTo('login.php');
+try {
+    // Store current page in SESSION array. login.php uses this entry to redirect back after successful login.
+    $_SESSION['redirect']=basename($_SERVER["SCRIPT_NAME"]);
+    if (!isset($_SESSION[IS_LOGGED_IN])) {
+        // Use this method call to enable login protection for this page
+        //View::redirectTo('login.php');
+    }
 
 // Defines a new view that specifies the template and the parameters that are passed to the template
-$view = new View(View::FORM, "indexMain.tpl", [
-]);
+    $view = new View("demoMain.tpl", [
+    ]);
 
 // Creates a new DEMO object and triggers the NormForm process
-$demo = new DEMO($view);
-$demo->normForm();
+    $demo = new DEMO($view);
+    $demo->normForm();
+} catch (FileAccessException $e) {
+    echo $e->getMessage();
+} catch (Exception $e) {
+    header("Location: errorpage.html");
+}

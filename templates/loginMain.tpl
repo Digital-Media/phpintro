@@ -26,7 +26,7 @@
     <section class="Section">
         <div class="Container">
             <h2 class="Section-heading">No Account?</h2>
-            <p>Register your {$smarty.const.TITLE} account <a href="{$smarty.const.REGISTER}">here.</a></p>
+            <p>Register your {$smarty.const.TITLE} account <a href="register.php">here.</a></p>
         </div>
     </section>
 </main>

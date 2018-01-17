@@ -82,7 +82,7 @@ final class Contact extends AbstractNormForm {
     {
         //TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
         //TODO see vendor/normform/NormFormExample
-        //TODO Add: Sanitize input before it is sent to template. Use htmlspecialchars, htmlentities, ...
+        //TODO Add: Sanitize input before you send $_POST array to template. Use htmlspecialchars, htmlentities, ...
         /*--
         require '../wbt2uesolution/contact/business.inc.php';
         //*/
@@ -92,12 +92,6 @@ final class Contact extends AbstractNormForm {
 /**
  * Instantiate the class Contact and call the method AbstractNormForm::normForm()
  *
- * PHP exception are forwarded to an error page
  */
-try {
-    // Creates a new Shop object and triggers the NormForm process
-    $contact = new Contact();
-    $contact->normForm();
-} catch (Exception $e) {
-    //header("Location: https://localhost/phpue/includes/errorpage.html");
-}
+$contact = new Contact();
+$contact->normForm();

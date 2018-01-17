@@ -35,7 +35,7 @@
     <section class="Section">
         <div class="Container">
             <h2 class="Section-heading">Already Registered?</h2>
-            <p>Use your existing {$smarty.const.TITLE} account to login <a href="{$smarty.const.LOGIN}">here</a>.</p>
+            <p>Use your existing {$smarty.const.TITLE} account to login <a href="login.php">here</a>.</p>
         </div>
     </section>
 </main>
