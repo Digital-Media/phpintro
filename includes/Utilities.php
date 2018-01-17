@@ -165,4 +165,15 @@ class Utilities
         ];
         return strtr($string, $charReplace);
     }
+
+    /**
+     * Generates a 128 character hash value using the SHA-512 algorithm. The user's IP address as well as the user agent
+     * string are hashed. This hash can then be stored in the $_SESSION array to act as a token for a logged in user.
+     * @return string The login hash value.
+     */
+    public static function generateLoginHash(): string
+    {
+        return hash("sha512", $_SERVER["REMOTE_ADDR"] . $_SERVER["HTTP_USER_AGENT"]);
+    }
+
 }

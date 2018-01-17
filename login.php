@@ -46,9 +46,9 @@ final class Login extends AbstractNormForm
      * @param string $templateDir The Smarty template directory.
      * @param string $compileDir The Smarty compiled template directory.
      */
-    public function __construct(View $defaultView, $templateDir = "templates", $compileDir = "templates_c")
+    public function __construct(View $defaultView)
     {
-        parent::__construct($defaultView, $templateDir, $compileDir);
+        parent::__construct($defaultView);
 
         // TODO: Do the necessary initializations in the constructor.
 
@@ -89,7 +89,8 @@ final class Login extends AbstractNormForm
         require '../wbt2uesolution/login/business.inc.php';
         //*/
 
-        View::redirectTo($_SESSION['redirect']);
+        isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='demo.php';
+        View::redirectTo($redirect);
     }
 
     /**
@@ -109,26 +110,23 @@ final class Login extends AbstractNormForm
         return true;
         //*/
     }
-
-    /**
-     * Generates a 128 character hash value using the SHA-512 algorithm. The user's IP address as well as the user agent
-     * string are hashed. This hash can then be stored in the $_SESSION array to act as a token for a logged in user.
-     * @return string The login hash value.
-     */
-    public static function generateLoginHash(): string
-    {
-        return hash("sha512", $_SERVER["REMOTE_ADDR"] . $_SERVER["HTTP_USER_AGENT"]);
-    }
 }
 
 // --- This is the main call of the norm form process
-
+try {
 // Defines a new view that specifies the template and the parameters that are passed to the template
-$view = new View("loginMain.tpl", [
-    new PostParameter(Login::USERNAME),
-    new GenericParameter("passwordKey", Login::PASSWORD)
-]);
+    $view = new View("loginMain.tpl", [
+        new PostParameter(Login::USERNAME),
+        new GenericParameter("passwordKey", Login::PASSWORD)
+    ]);
 
 // Creates a new Login object and triggers the NormForm process
-$login = new Login($view);
-$login->normForm();
+    $login = new Login($view);
+    $login->normForm();
+} catch (FileAccessException $e) {
+    echo $e->getMessage();
+} catch (Exception $e) {
+    header("Location: errorpage.html");
+}
+
+

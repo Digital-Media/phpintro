@@ -58,9 +58,9 @@ final class DEMO extends AbstractNormForm
 try {
     // Store current page in SESSION array. login.php uses this entry to redirect back after successful login.
     $_SESSION['redirect']=basename($_SERVER["SCRIPT_NAME"]);
-    if (!isset($_SESSION[IS_LOGGED_IN])) {
+    if (!isset($_SESSION[IS_LOGGED_IN]) || $_SESSION[IS_LOGGED_IN] !== Utilities::generateLoginHash()) {
         // Use this method call to enable login protection for this page
-        //View::redirectTo('login.php');
+        View::redirectTo('login.php');
     }
 
 // Defines a new view that specifies the template and the parameters that are passed to the template

@@ -63,9 +63,9 @@ final class Register extends AbstractNormForm
      * @param string $templateDir The Smarty template directory.
      * @param string $compileDir The Smarty compiled template directory.
      */
-    public function __construct(View $defaultView, $templateDir = "templates", $compileDir = "templates_c")
+    public function __construct(View $defaultView)
     {
-        parent::__construct($defaultView, $templateDir, $compileDir);
+        parent::__construct($defaultView);
 
         // TODO: Do the necessary initializations in the constructor.
 
@@ -148,18 +148,20 @@ final class Register extends AbstractNormForm
 }
 
 // --- This is the main call of the norm form process
-
-// Use this method call to enable login protection for this page (redirects to INDEX when logged in)
-//LoginSystem::protectPage();
-
+try {
 // Defines a new view that specifies the template and the parameters that are passed to the template
-$view = new View("registerMain.tpl", [
-    new PostParameter(Register::USERNAME),
-    new PostParameter(Register::EMAIL),
-    new GenericParameter("passwordKey1", Register::PASSWORD1),
-    new GenericParameter("passwordKey2", Register::PASSWORD2)
-]);
+    $view = new View("registerMain.tpl", [
+        new PostParameter(Register::USERNAME),
+        new PostParameter(Register::EMAIL),
+        new GenericParameter("passwordKey1", Register::PASSWORD1),
+        new GenericParameter("passwordKey2", Register::PASSWORD2)
+    ]);
 
 // Creates a new Register object and triggers the NormForm process
-$register = new Register($view);
-$register->normForm();
+    $register = new Register($view);
+    $register->normForm();} catch (FileAccessException $e) {
+    echo $e->getMessage();
+} catch (Exception $e) {
+    header("Location: errorpage.html");
+}
+

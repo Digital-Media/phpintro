@@ -2,7 +2,7 @@
 <main class="Site-content">
     <section class="Section">
         <div class="Container">
-            <h2 class="Section-heading">Register an {$smarty.const.TITLE} Account</h2>
+            <h2 class="Section-heading">Register an PHPUE Account</h2>
             {include file="errorMessages.tpl"}
             {include file="statusMessage.tpl"}
             <form action="{$smarty.server.SCRIPT_NAME}" method="post" enctype="multipart/form-data">
@@ -35,7 +35,13 @@
     <section class="Section">
         <div class="Container">
             <h2 class="Section-heading">Already Registered?</h2>
-            <p>Use your existing {$smarty.const.TITLE} account to login <a href="login.php">here</a>.</p>
+            <p>Use your existing PHPUE account to login <a href="login.php">here</a>.</p>
+        </div>
+    </section>
+    <section class="Section">
+        <div class="Container">
+            <h2 class="Section-heading">Need a DEMO?</h2>
+            <p>Go to DEMO page <a href="demo.php">here</a>.</p>
         </div>
     </section>
 </main>
