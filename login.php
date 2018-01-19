@@ -124,9 +124,17 @@ try {
     $login = new Login($view);
     $login->normForm();
 } catch (FileAccessException $e) {
-    echo $e->getMessage();
+    if (DEBUG) {
+        echo $e->getMessage();
+    } else {
+        header("Location: errorpage.html");
+    }
 } catch (Exception $e) {
-    header("Location: errorpage.html");
+    if (DEBUG) {
+        echo $e->getMessage();
+    } else {
+        header("Location: errorpage.html");
+    }
 }
 
 
