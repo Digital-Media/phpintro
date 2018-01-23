@@ -1,0 +1,1 @@
+Your 10,00 EUR and 12,- EUR and 3 EUR are a valid result, since 7EUR and ,50 EUR are invalid. Valid is also 924,30 EUR. Yet, invalid are 16,0056 EUR or 12 eur or 11.00 EUR or 17,7 EUR 03,17 EUR and 50,70 EURwith something added without a space. Still, it also counts without a whitespace at the end for the amount of 50,70 EUR
