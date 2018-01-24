@@ -1,2 +1,2 @@
-# wbt2ue
-PHP-Templates for classroom lessons in SIB/WBT2
+# phpintro
+PHP-Templates for classroom lessons
