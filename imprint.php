@@ -41,7 +41,7 @@ final class Imprint {
     {
         //TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
         /*--
-        require '../wbt2uesolution/imprint/show.inc.php';
+        require '../phpintrosolution/imprint/show.inc.php';
         //*/
         //TODO Replace the text below with a imprint of your own using valid HTML5 syntax
         //##

@@ -70,7 +70,7 @@ final class Register extends AbstractNormForm
         // TODO: Do the necessary initializations in the constructor.
 
         /*--
-        require '../wbt2uesolution/register/construct.inc.php';
+        require '../phpintrosolution/register/construct.inc.php';
         //*/
     }
 

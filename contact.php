@@ -84,7 +84,7 @@ final class Contact extends AbstractNormForm {
         //TODO see vendor/normform/NormFormExample
         //TODO Add: Sanitize input before you send $_POST array to template. Use htmlspecialchars, htmlentities, ...
         /*--
-        require '../wbt2uesolution/contact/business.inc.php';
+        require '../phpintrosolution/contact/business.inc.php';
         //*/
     }
 }
