@@ -28,6 +28,10 @@ final class DEMO extends AbstractNormForm
     public function __construct(View $defaultView)
     {
         parent::__construct($defaultView);
+        // uncomment following lines to demonstrate error_handling
+        //$x=1/0; // PHP Warning sichtbar im Browser bei display_errors=1
+        //$this->hugo; // PHP Notice sichtbar im Browser bei display_errors=1
+        //§this->hugo; // HTTP Status: 500 Page not Working, ist nur in /var/log/apache2/error.log zu sehen, wenn log_errors=On
     }
 
     /**
@@ -70,16 +74,10 @@ try {
 // Creates a new DEMO object and triggers the NormForm process
     $demo = new DEMO($view);
     $demo->normForm();
-} catch (FileAccessException $e) {
-    if (DEBUG) {
-        echo $e->getMessage();
-    } else {
-        header("Location: errorpage.html");
-    }
 } catch (Exception $e) {
     if (DEBUG) {
         echo $e->getMessage();
     } else {
-        header("Location: errorpage.html");
+        echo "<h2>Something went wrong</h2>";
     }
 }

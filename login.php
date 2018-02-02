@@ -123,18 +123,10 @@ try {
 // Creates a new Login object and triggers the NormForm process
     $login = new Login($view);
     $login->normForm();
-} catch (FileAccessException $e) {
-    if (DEBUG) {
-        echo $e->getMessage();
-    } else {
-        header("Location: errorpage.html");
-    }
 } catch (Exception $e) {
     if (DEBUG) {
-        echo $e->getMessage();
+        echo "An error occured in file " . $e->getFile() ." on line " . $e->getLine() .":" . $e->getMessage();
     } else {
-        header("Location: errorpage.html");
+        echo "<h2>Something went wrong</h2>";
     }
 }
-
-
