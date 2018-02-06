@@ -70,6 +70,7 @@ final class Login extends AbstractNormForm
         /*--
         require '../wbt2uesolution/login/isValid.inc.php';
         //*/
+        $this->authenticateUser();
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
 
@@ -89,7 +90,7 @@ final class Login extends AbstractNormForm
         require '../wbt2uesolution/login/business.inc.php';
         //*/
 
-        isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='demo.php';
+        isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='register.php';
         View::redirectTo($redirect);
     }
 
@@ -107,6 +108,7 @@ final class Login extends AbstractNormForm
         //*/
 
         //##
+        $_SESSION[IS_LOGGED_IN] = Utilities::generateLoginHash();
         return true;
         //*/
     }
