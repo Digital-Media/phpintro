@@ -28,7 +28,7 @@ final class Imprint {
     /**
      * Imprint constructor.
      *
-     * Calls the constructor of class AbstractNormform.
+     * Creates a new Smarty Object and sets default templates and compiled templates directories
      */
     public function __construct($templateDir = "templates", $compileDir = "templates_c") {
         $this->smarty = new Smarty();
@@ -39,24 +39,25 @@ final class Imprint {
 
     public function show()
     {
-        //TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
+        // TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
         /*--
         require '../phpintrosolution/imprint/show.inc.php';
         //*/
-        //TODO Replace the text below with a imprint of your own using valid HTML5 syntax
+        // TODO Replace the text below with a imprint of your own using valid HTML5 syntax
         //##
         $this->imprint = "<p> Place the requested Imprint here </p>";
         //*/
-        //TODO keep these two lines.
+        // TODO keep these two lines.
         // Assigning the PHP variable $this->imprint to the Smarty variable imprint
         $this->smarty->assign('imprint', $this->imprint);
         // Defining the Smarty template to use. See __construct for template directory
+        // TODO Have a look at the template code and figure out, how it works
         $this->smarty->display('imprintMain.tpl');
 
     }
 }
 /**
- * Instantiate the class Contact and call the method show()
+ * Create the class Contact and call its method show()
  */
     $imprint = new Imprint();
     $imprint->show();

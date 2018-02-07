@@ -90,7 +90,8 @@ final class Contact extends AbstractNormForm {
 }
 
 /**
- * Instantiate the class Contact and call the method AbstractNormForm::normForm()
+ * Create the class Contact and call the method AbstractNormForm::normForm(), now inherited by Contact
+ * In case of inheritance, the object operator can be used for the call.
  *
  */
 $contact = new Contact();

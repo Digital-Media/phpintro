@@ -68,7 +68,7 @@
         </header>
         <?php
         $var = "variable";
-        echo '$var set to Test<br>';
+        echo '$var set to variable<br>';
         $source = <<<SOURCE
 '$var within single quotes.'<br>
 'This is a ' . $var . " with string concatenation."<br>

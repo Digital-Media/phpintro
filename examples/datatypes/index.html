@@ -8,20 +8,20 @@
             <h1>Data Type Conversion</h1>
             <p>Demonstrate the impact of implicit data type conversion and different HTML-input types</p>
             <h3>Please give a random text</h3>
-            <h3>Fill the field with text, numbers and try a xss attack in chrome and firefox. See what happens</h3>
+            <h3>Fill the input field of type text with strings or numbers and try a xss attack in chrome and firefox. See what happens</h3>
             <form action="datatypes.php" method="post">
                 <input name="textinput" type="text"><br>
                 <button type="submit" name="submittext">Submit Text</button>
             </form>
-            <h3>Fill the fields with numbers and strings, that contain numbers</h3>
+            <h3>Fill the input fields with numbers and strings, that contain numbers</h3>
             <form action="datatypes.php" method="post">
-                <p>This is field of type number</p>
+                <p>This is field of type number. Examples "a", "1", "10" </p>
                 <input name="numberinput" type="number" min="10" max="10"><br>
-                <p>This is field of type text. Try "" "10", "10ab", "10.00", "10,00", "10.00ab", "a10b", "a10.00b"</p>
+                <p>This is field of type text. Examples "" "10", "10ab", "10.00", "10,00", "10.00ab", "a10b", "a10.00b"</p>
                 <input name="stringnumberinput" type="text"><br>
                 <button type="submit" name="submitnumber">Submit Number</button>
             </form>
-            <h3>Fill the fields with numbers</h3>
+            <h3>Fill the input array (ARRAY!!!)with numbers</h3>
             <form action="datatypes.php" method="post">
                 <input name="arrayinput[0]" type="number" min="0" step="1" max="2"><br>
                 <input name="arrayinput[1]" type="number" min="3" step="1" max="6"><br>
