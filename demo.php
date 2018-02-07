@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require_once("includes/defines.inc.php");
 
 require_once UTILITIES;
@@ -19,7 +18,6 @@ require_once TNORMFORM;
  */
 final class DEMO extends AbstractNormForm
 {
-
     /**
      * Creates a new DEMO object based on AbstractNormForm. Takes a View object that holds the information about which
      * template will be shown and which parameters (e.g. for form fields) are passed on to the template.
@@ -27,11 +25,9 @@ final class DEMO extends AbstractNormForm
      */
     public function __construct(View $defaultView)
     {
+        // invoke parent constructor explicitly, cause it requires one parameter
+        // this is not done implicitly while creating the object from this subclass
         parent::__construct($defaultView);
-        // uncomment following lines to demonstrate error_handling
-        //$x=1/0; // PHP Warning sichtbar im Browser bei display_errors=1
-        //$this->hugo; // PHP Notice sichtbar im Browser bei display_errors=1
-        //§this->hugo; // HTTP Status: 500 Page not Working, ist nur in /var/log/apache2/error.log zu sehen, wenn log_errors=On
     }
 
     /**
@@ -64,7 +60,8 @@ try {
     $_SESSION['redirect']=basename($_SERVER["SCRIPT_NAME"]);
     if (!isset($_SESSION[IS_LOGGED_IN]) || $_SESSION[IS_LOGGED_IN] !== Utilities::generateLoginHash()) {
         // Use this method call to enable login protection for this page
-        View::redirectTo('login.php');
+        // redirect before creating object
+        //View::redirectTo('login.php');
     }
 
 // Defines a new view that specifies the template and the parameters that are passed to the template

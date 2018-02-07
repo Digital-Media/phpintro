@@ -28,7 +28,7 @@ try {
     // TODO uncomment to see fatal errors and see which echos disappear
     //echo MyExceptionClass::$fatalError;
 } catch (MyException $e) {
-    echo "This is my first Exception" . $e->getFile() . "on line " . $e->getLine() . ": " . $e->getMessage();
+    echo "This is my first Exception thrown in " . $e->getFile() . " on line " . $e->getLine() . ": " . $e->getMessage();
 } catch (Exception $e) {
     echo "All other Exceptions in " . $e->getFile() . "on line " . $e->getLine() . ": " . $e->getMessage();
 } finally {

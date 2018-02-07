@@ -78,6 +78,23 @@ class FileAccess
     }
 
     /**
+     * Creates an auto-increment ID for a given file. The file is opened and all data stored under the key $idName is
+     * retrieved. This data is then searched for the highest ID value. This value is incremented by one and returned.
+     * @param string $filename The file containing IDs where an auto-increment ID should be generated.
+     * @param string $idName The name of the fields containing the ID values.
+     * @return int Returns an auto-increment ID.
+     */
+    public function autoincrementID(string $filename, string $idName): int
+    {
+        if (file_exists($filename)) {
+            $data = $this->loadContents($filename);
+            $highestID = max(array_column($data, $idName)) ?? 0;
+            return ++$highestID;
+        }
+        return 0;
+    }
+
+    /**
      * Formats error messages for DEBUG error pages in a nicer way. Values receive names and the PHP call stack is
      * added. This method redirects to errorpage.html if DEBUG = false is set in defines.inc.php.
      * @param string $message The message to be included in the debug output.

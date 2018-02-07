@@ -1,16 +1,19 @@
 <?php
 
 /**
- * Offers static helper methods that for often used tasks.
+ * Offers static helper methods for often used tasks.
  *
- * This class offers methods for sanitizing form input, checks for valid e-mail addresses, phone numbers and other kinds
- * of data.
+ * This trait offers methods for sanitizing form input, checks for valid e-mail addresses, phone numbers and other kinds
+ * of data. This code can be used in different classes.
+ *
+ * combined with "use Utilities" at the beginning of a class declaration this methods can be accessed via $this->method()
+ * or with Utilities::method() in any context
  *
  * @author Wolfgang Hochleitner <wolfgang.hochleitner@fh-hagenberg.at>
  * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
  * @version 2017
  */
-class Utilities
+trait Utilities
 {
     /**
      * Filters unwanted HTML tags from an input string and returns the filtered (a.k.a. sanitized) string.

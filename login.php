@@ -21,6 +21,8 @@ require_once FILE_ACCESS;
  */
 final class Login extends AbstractNormForm
 {
+    // trait Utilities can now be used as part of class Login. For Example: $this->sanitizeFilter($string) instead of Utilities::sanitizeFilter($string)
+    use Utilities;
     /**
      * @var string USERNAME Form field constant that defines how the form field for holding the username is called
      * (id/name).
@@ -53,7 +55,7 @@ final class Login extends AbstractNormForm
         // TODO: Do the necessary initializations in the constructor.
 
         /*--
-        require '../wbt2uesolution/login/construct.inc.php';
+        require '../phpintrosolution/login/construct.inc.php';
         //*/
     }
 
@@ -68,7 +70,7 @@ final class Login extends AbstractNormForm
         // TODO: The code for correct form validation goes here. Check for empty fields and correct authentication.
 
         /*--
-        require '../wbt2uesolution/login/isValid.inc.php';
+        require '../phpintrosolution/login/isValid.inc.php';
         //*/
         $this->authenticateUser();
 
@@ -87,7 +89,7 @@ final class Login extends AbstractNormForm
         // TODO: Save the login confirmation and other important data in the session.
 
         /*--
-        require '../wbt2uesolution/login/business.inc.php';
+        require '../phpintrosolution/login/business.inc.php';
         //*/
 
         isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='register.php';
@@ -104,7 +106,7 @@ final class Login extends AbstractNormForm
         // TODO: Check if the provided user name and password combination is correct.
 
         /*--
-        return require '../wbt2uesolution/login/authenticateUser.inc.php';
+        return require '../phpintrosolution/login/authenticateUser.inc.php';
         //*/
 
         //##
@@ -125,6 +127,8 @@ try {
 // Creates a new Login object and triggers the NormForm process
     $login = new Login($view);
     $login->normForm();
+} catch (FileAccessException $e) {
+    echo $e->getMessage();
 } catch (Exception $e) {
     if (DEBUG) {
         echo "An error occured in file " . $e->getFile() ." on line " . $e->getLine() .":" . $e->getMessage();
