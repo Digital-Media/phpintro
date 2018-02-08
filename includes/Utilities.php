@@ -178,5 +178,4 @@ trait Utilities
     {
         return hash("sha512", $_SERVER["REMOTE_ADDR"] . $_SERVER["HTTP_USER_AGENT"]);
     }
-
 }
