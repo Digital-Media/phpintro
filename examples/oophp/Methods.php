@@ -28,7 +28,7 @@ class Methods
         echo "The constructor is always invoked when a class or subclass is created<br><br>";
     }
 
-    private function _myPrivateMethod()
+    private function myPrivateMethod()
     {
         echo "A private method can only be accessed within the enclosing class<br>";
         echo "Therefore it is invoked by a public method of this class<br><br>";
@@ -51,7 +51,7 @@ class Methods
     public function myPublicMethod()
     {
         echo "A public method can be invoked from any context<br><br>";
-        $this->_myPrivateMethod();
+        $this->myPrivateMethod();
         return $this->firstName . " " . $this->lastName;
     }
 }

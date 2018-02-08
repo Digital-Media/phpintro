@@ -13,7 +13,7 @@ class PublicProtectedPrivateProperties
      * $var string private property written in camelCase
      * This is one choice in PSR-1 out of three: $StudlyCaps, $camelCase or $under_score
      */
-    private $_privateVar="I am private";
+    private $privateVar="I am private";
 
     /*
      * $var string protected property written in camelCase
@@ -42,7 +42,7 @@ class PublicProtectedPrivateProperties
         // $this references methods and variables defined for "this" class
         // You can replace $this with the phrase "The current instance"
         echo "<p><strong>echo \$this->privateVar; gives:</strong></p>";
-        echo $this->_privateVar;
+        echo $this->privateVar;
 
         echo "<p><strong>echo \$this->protectedVar; gives:</strong></p>";
         echo $this->protectedVar;
@@ -68,7 +68,7 @@ echo "<h2>the rest gives fatal errors, uncomment for testing</h2>";
  * private properties can only be seen inside class
  */
 echo "<p><strong>echo \$defineAndConst->privateVar gives a fatal error:</strong></p>";
-//echo $publicProtectedPrivateProperties->_privateVar;
+//echo $publicProtectedPrivateProperties->privateVar;
 /*
  * protected properties can only be seen inside another class, that inherits from this class
  */

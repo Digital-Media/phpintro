@@ -2,6 +2,7 @@
 namespace phpintro\examples\advancedPHP;
 
 use Exception;
+
 /**
  * Implements an exception for demonstration purposes
  */
