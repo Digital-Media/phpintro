@@ -1,10 +1,16 @@
 <?php
-include 'error_handling.inc.php';
-require_once("MyException.php");
+namespace phpintro\examples\advancedPHP;
+
+use Exception;
+
+require_once 'error_handling.php';
+require_once 'MyException.php';
 
 class ExceptionsVersusErrors
 {
-    // the constructor is always invoked, when the object is created
+    /**
+     * The constructor is always invoked, when the object is created
+     */
     public function __construct()
     {
         // TODO uncomment commented lines and see which echos disappear to find out differences between exceptions errors and parse problems

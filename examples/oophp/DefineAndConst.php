@@ -1,6 +1,8 @@
 <?php
-include 'error_handling.inc.php';
-/*
+namespace phpintro\examples\oophp;
+
+require_once 'error_handling.php';
+/**
  * class to demonstrate the difference of the visibility of define and const
  *
  * give a class name according to PSR-1 in StudlyCaps
@@ -15,6 +17,10 @@ class DefineAndConst
      */
     const CLASS_CONST = "I am visible within the class and can be called statically from outside";
 
+    /**
+     * DefineAndConst constructor.
+     * With some demo code
+     */
     public function __construct()
     {
         echo "<h1>dumping constants inside the class</h1>";

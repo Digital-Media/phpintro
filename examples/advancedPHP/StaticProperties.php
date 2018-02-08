@@ -1,7 +1,9 @@
 <?php
-include 'error_handling.inc.php';
-/*
- * class to demonstrate visibility of static properties
+namespace phpintro\examples\advancedPHP;
+
+require_once 'error_handling.php';
+/**
+ * Class to demonstrate visibility of static properties
  */
 
 class StaticProperties
@@ -16,6 +18,9 @@ class StaticProperties
      */
     public static $publicStaticVar="I am public and static";
 
+    /**
+     * Constructor with some demo code
+     */
     public function __construct($param)
     {
 
@@ -29,13 +34,13 @@ class StaticProperties
         echo "<p><strong>echo self::\$publicStaticVar; gives:</strong></p>";
         echo self::$publicStaticVar;
     }
-
 }
 // no exceptions thrown, therefore no exception handling
 $staticProperties = new StaticProperties("I was passed to constructor of the class");
 
 echo "<h1>dumping static properties outside the class</h1>";
-echo "<h2> dumping the object with var_dump()</h2> <p><strong>reveals content of properties partially not visible to others</strong></p>";
+echo "<h2> dumping the object with var_dump()</h2>";
+echo "<p><strong>reveals content of properties partially not visible to others</strong></p>";
 var_dump($staticProperties);
 
 echo "<h2>calling object StaticProperties with object operator -> PHP style!!</h2>";

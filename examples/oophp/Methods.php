@@ -1,5 +1,12 @@
 <?php
-/*
+/**
+ * Declaring class Methods
+ *
+ * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
+ */
+namespace phpintro\examples\oophp;
+
+/**
  * Class to demonstrate visibility of public, protected and private methods
  * Methods allow objects to perform tasks. In this case just sending an echo.
  * Method declarations are similar to function declarations, but need a public, protected or private keyword in front
@@ -10,10 +17,9 @@
  */
 class Methods
 {
-
     public $firstName="John";
     public $lastName="Doe";
-    /*
+    /**
      * __construct must be public
      * TODO try private or protected for __construct
      */
@@ -22,7 +28,7 @@ class Methods
         echo "The constructor is always invoked when a class or subclass is created<br><br>";
     }
 
-    private function myPrivateMethod()
+    private function _myPrivateMethod()
     {
         echo "A private method can only be accessed within the enclosing class<br>";
         echo "Therefore it is invoked by a public method of this class<br><br>";
@@ -35,14 +41,17 @@ class Methods
         return $this->firstName . " " . $this->lastName;
     }
 
-    // If no keyword is given in front, it defaults to public.
-    // But according to PSR-2 visibility must be declared explicitly
-    // Only the public keyword enables a method to be invoked from outside the current object
+    /**
+     * If no keyword is given in front, it defaults to public.
+     * But according to PSR-2 visibility must be declared explicitly
+     * Only the public keyword enables a method to be invoked from outside the current object
+     *
+     * @return string
+     * */
     public function myPublicMethod()
     {
         echo "A public method can be invoked from any context<br><br>";
-        $this->myPrivateMethod();
+        $this->_myPrivateMethod();
         return $this->firstName . " " . $this->lastName;
     }
-
 }
