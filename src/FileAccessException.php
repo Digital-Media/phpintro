@@ -1,4 +1,7 @@
 <?php
+namespace phpintro\src;
+
+use Exception;
 
 /**
  * Implements an exception used for file access errors.

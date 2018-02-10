@@ -1,4 +1,5 @@
 <?php
+namespace phpintro\src;
 
 require_once("FileAccessException.php");
 
