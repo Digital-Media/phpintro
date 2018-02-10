@@ -13,7 +13,7 @@ require_once 'src/defines.inc.php';
 require_once TNORMFORM;
 $_SESSION = [];
 if (isset($_COOKIE[session_name()])) {
-setcookie(session_name(), "", time() - 86400, "/");
+    setcookie(session_name(), "", time() - 86400, "/");
 }
 session_destroy();
 View::redirectTo('register.php');
