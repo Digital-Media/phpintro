@@ -1,4 +1,6 @@
 <?php
+use phpintro\src\exercises\login\Login;
+
 session_start();
 
 require_once("../src/defines.inc.php");

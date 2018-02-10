@@ -1,4 +1,6 @@
 <?php
+use phpintro\src\exercises\templates\Contact;
+
 session_start();
 /**
  * include define declarations

@@ -1,4 +1,10 @@
 <?php
+namespace phpintro\src;
+
+use AbstractNormForm;
+use GenericParameter;
+use View;
+
 final class DEMO extends AbstractNormForm
 {
     /**

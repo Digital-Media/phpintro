@@ -1,4 +1,6 @@
 <?php
+use phpintro\src\DEMO;
+
 session_start();
 require_once("../src/defines.inc.php");
 require_once UTILITIES;

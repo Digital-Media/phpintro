@@ -1,4 +1,12 @@
 <?php
+namespace phpintro\src\exercises\login;
+
+use AbstractNormForm;
+use FileAccess;
+use GenericParameter;
+use Utilities;
+use View;
+
 /**
  * The login page of the IMAR image archive.
  *
@@ -13,7 +21,8 @@
  */
 final class Login extends AbstractNormForm
 {
-    // trait Utilities can now be used as part of class Login. For Example: $this->sanitizeFilter($string) instead of Utilities::sanitizeFilter($string)
+    // trait Utilities can now be used as part of class Login.
+    // For Example: $this->sanitizeFilter($string) instead of Utilities::sanitizeFilter($string)
     use Utilities;
     /**
      * @var string USERNAME Form field constant that defines how the form field for holding the username is called

@@ -1,4 +1,11 @@
 <?php
+namespace phpintro\src\exercises\templates;
+
+use AbstractNormForm;
+use GenericParameter;
+use PostParameter;
+use View;
+
 /*
  * the object-oriented and template based Contact implements a contact form.
  * *
@@ -6,9 +13,11 @@
  * @package phpue
  * @version 2017
  */
-final class Contact extends AbstractNormForm {
+final class Contact extends AbstractNormForm
+{
     /**
-     * constants for HTML attributes : <input name='pname' id='pname' ... >, <label for='pname' ... >, keys for $_POST[self::PNAME]..
+     * constants for HTML attributes : <input name='pname' id='pname' ... >,
+     * <label for='pname' ... >, keys for $_POST[self::PNAME]..
      *
      * @var string SUBJECT Key for $_POST-Array
      * @var string REQUEST Key for $_POST-Array
@@ -23,10 +32,12 @@ final class Contact extends AbstractNormForm {
     /**
      * Contact Constructor.
      *
-     * Uses Class View included by AbstractNormForm to define, which template to use and the names of the HTML input fields
+     * Uses Class View included by AbstractNormForm to define,
+     * which template to use and the names of the HTML input fields
      * Calls the constructor of class AbstractNormform.
      */
-    public function __construct() {
+    public function __construct()
+    {
         $view = new View("contactMain.tpl", [
             new PostParameter(Contact::SUBJECT),
             new PostParameter(Contact::REQUEST),
@@ -45,8 +56,11 @@ final class Contact extends AbstractNormForm {
      *
      * @return bool true, wenn $errorMessages leer ist. Ansonsten false
      */
-    protected function isValid(): bool {
-        //TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
+    protected function isValid(): bool
+    {
+        // TODO Add your own solution here. Keep code that ist already there.
+        // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
+        // TODO Decide before you finish your work
         /*--
         require '../wbt2uesolution/contact/isValid.inc.php';
         //*/
@@ -63,9 +77,11 @@ final class Contact extends AbstractNormForm {
      */
     protected function business()
     {
-        //TODO Add your own solution here. Keep code that ist already there. Sometimes it will be part of your solution. Sometimes you will have to discard it. Decide before you finish your work
-        //TODO see vendor/normform/NormFormExample
-        //TODO Add: Sanitize input before you send $_POST array to template. Use htmlspecialchars, htmlentities, ...
+        // TODO Add your own solution here. Keep code that ist already there.
+        // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
+        // TODO Decide before you finish your work
+        // TODO see vendor/normform/NormFormExample
+        // TODO Add: Sanitize input before you send $_POST array to template. Use htmlspecialchars, htmlentities, ...
         /*--
         require '../phpintrosolution/contact/business.inc.php';
         //*/

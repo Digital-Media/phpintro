@@ -1,4 +1,6 @@
 <?php
+use phpintro\src\exercises\templates\Imprint;
+
 /**
  * Adding define declarations
 */

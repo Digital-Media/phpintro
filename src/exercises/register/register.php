@@ -1,4 +1,12 @@
 <?php
+namespace phpintro\src\exercises\register;
+
+use AbstractNormForm;
+use FileAccess;
+use GenericParameter;
+use Utilities;
+use View;
+
 /**
  * The registration page of the IMAR image archive.
  *
