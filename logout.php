@@ -9,7 +9,7 @@
  * @version 2018
  */
 session_start();
-require_once 'includes/defines.inc.php';
+require_once 'src/defines.inc.php';
 require_once TNORMFORM;
 $_SESSION = [];
 if (isset($_COOKIE[session_name()])) {

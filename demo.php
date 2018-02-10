@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("includes/defines.inc.php");
+require_once("src/defines.inc.php");
 
 require_once UTILITIES;
 require_once TNORMFORM;

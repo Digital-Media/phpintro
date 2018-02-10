@@ -4,7 +4,7 @@ session_start();
 /**
  * include define declarations
  */
-require_once 'includes/defines.inc.php';
+require_once 'src/defines.inc.php';
 
 /**
  * include static helper class with methods to validate email, integer, password ...
@@ -56,7 +56,7 @@ final class Contact extends AbstractNormForm {
     /**
      * Validates the input after sending the form.
      *
-     * Examples for REGEX to validate input can be found in includes/Utilities.php
+     * Examples for REGEX to validate input can be found in src/Utilities.php
      *
      * Abstract methods of class AbstractNormForm have to be implemented here
      *
