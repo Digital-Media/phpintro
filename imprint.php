@@ -3,7 +3,7 @@
  * Adding define declarations
 */
 require_once 'src/defines.inc.php';
-require_once 'vendor/normform/vendor/smarty/smarty/libs/Smarty.class.php';
+require_once 'vendor/smarty/smarty/libs/Smarty.class.php';
 require_once 'src/exercises/templates/imprint.php';
 
 /**

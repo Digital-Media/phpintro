@@ -40,7 +40,7 @@ define("TNORMFORM", NORM_DIR . "AbstractNormForm.php");
 /**
  * @var string CSS_DIR Path to the CSS files provided by NormForm.
  */
-define("CSS_DIR", NORM_DIR . "css");
+define("CSS_DIR", "css");
 
 /**
  * @var string FILE_ACCESS Path to the FileAccess class.
