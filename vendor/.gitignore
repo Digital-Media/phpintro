@@ -1,0 +1,8 @@
+# We want vendor to include only external components included with composer ...
+# Yet, Git does not track empty directories, so this file serves the purpose that something is in it
+
+# Exclude all the files in this directory
+*
+
+# But of course, keep .gitignore
+!.gitignore
