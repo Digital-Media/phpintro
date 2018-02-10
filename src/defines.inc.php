@@ -25,12 +25,17 @@ if (DEBUG) {
 /**
  * @var string NORM_DIR The Path to the NormForm library.
  */
-define("NORM_DIR", "vendor/normform/");
+define("SMARTY", "../vendor/smarty/smarty/libs/Smarty.class.php");
+
+/**
+ * @var string NORM_DIR The Path to the NormForm library.
+ */
+define("NORM_DIR", "../vendor/normform/");
 
 /**
  * @var string UTILITIES Path to the Utilities class.
  */
-define("UTILITIES", "src/Utilities.php");
+define("UTILITIES", "../src/Utilities.php");
 
 /**
  * @var string NORM_FORM Path to the NormForm class.
@@ -45,12 +50,12 @@ define("CSS_DIR", "css");
 /**
  * @var string FILE_ACCESS Path to the FileAccess class.
  */
-define("FILE_ACCESS", "src/FileAccess.php");
+define("FILE_ACCESS", "../src/FileAccess.php");
 
 /**
  * @var string DATA_DIRECTORY Sets the directory where the meta data (JSON files) for images and users is stored.
  */
-define("DATA_DIRECTORY", "data/");
+define("DATA_DIRECTORY", "../data/");
 
 /**
  * @var string USER_DATA_PATH The full path for the user meta data JSON file.

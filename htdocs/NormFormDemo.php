@@ -2,9 +2,10 @@
 /**
  * include define declarations
  */
-require_once 'src/defines.inc.php';
+require_once '../src/defines.inc.php';
+require_once SMARTY;
 require_once TNORMFORM;
-require_once 'src/NormFormDemo.php';
+require_once '../src/NormFormDemo.php';
 // --- This is the main call of the norm form process
 
 /* First, define a View object. It will usually be of type FORM. You'll usually need to supply parameters for the template.

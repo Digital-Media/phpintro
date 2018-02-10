@@ -1,12 +1,13 @@
 <?php
 session_start();
 
-require_once("src/defines.inc.php");
+require_once("../src/defines.inc.php");
 
 require_once UTILITIES;
+require_once SMARTY;
 require_once TNORMFORM;
 require_once FILE_ACCESS;
-require_once 'src/exercises/login/login.php';
+require_once '../src/exercises/login/login.php';
 
 // --- This is the main call of the norm form process
 try {
