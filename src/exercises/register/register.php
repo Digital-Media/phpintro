@@ -70,7 +70,7 @@ final class Register extends AbstractNormForm
         // TODO: Do the necessary initializations in the constructor.
 
         /*--
-        require '../phpintrosolution/register/construct.inc.php';
+        require '../../phpintrosolution/register/construct.inc.php';
         //*/
     }
 
@@ -85,7 +85,7 @@ final class Register extends AbstractNormForm
         // TODO: The code for correct form validation goes here. Check for empty fields correct e-mail and passwords.
 
         /*--
-        require '../phpintrosolution/register/isValid.inc.php';
+        require '../../phpintrosolution/register/isValid.inc.php';
         //*/
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
@@ -118,7 +118,7 @@ final class Register extends AbstractNormForm
         // TODO: Check if the provided user name or password is unique (meaning not already in the data).
 
         /*--
-        return require '../phpintrosolution/register/isUnique.inc.php';
+        return require '../../phpintrosolution/register/isUnique.inc.php';
         //*/
 
         //##
@@ -138,7 +138,7 @@ final class Register extends AbstractNormForm
         // TODO: Add the user (ID, user name, e-mail, password) to the two-dimensional array and store it.
 
         /*--
-        return require '../phpintrosolution/register/addUser.inc.php';
+        return require '../../phpintrosolution/register/addUser.inc.php';
         //*/
 
         //##

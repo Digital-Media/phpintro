@@ -62,7 +62,7 @@ final class Contact extends AbstractNormForm
         // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
         // TODO Decide before you finish your work
         /*--
-        require '../wbt2uesolution/contact/isValid.inc.php';
+        require '../../phpintrosolution/contact/isValid.inc.php';
         //*/
         //TODO keep the next two lines
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
@@ -83,7 +83,7 @@ final class Contact extends AbstractNormForm
         // TODO see vendor/normform/NormFormExample
         // TODO Add: Sanitize input before you send $_POST array to template. Use htmlspecialchars, htmlentities, ...
         /*--
-        require '../phpintrosolution/contact/business.inc.php';
+        require '../../phpintrosolution/contact/business.inc.php';
         //*/
     }
 }

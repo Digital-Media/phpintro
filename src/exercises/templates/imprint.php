@@ -41,7 +41,7 @@ final class Imprint
         // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
         // TODO Decide before you finish your work
         /*--
-        require '../phpintrosolution/imprint/show.inc.php';
+        require '../../phpintrosolution/imprint/show.inc.php';
         //*/
         // TODO Replace the text below with a imprint of your own using valid HTML5 syntax
         //##

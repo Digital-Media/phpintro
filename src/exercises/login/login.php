@@ -56,7 +56,7 @@ final class Login extends AbstractNormForm
         // TODO: Do the necessary initializations in the constructor.
 
         /*--
-        require '../phpintrosolution/login/construct.inc.php';
+        require '../../phpintrosolution/login/construct.inc.php';
         //*/
     }
 
@@ -71,7 +71,7 @@ final class Login extends AbstractNormForm
         // TODO: The code for correct form validation goes here. Check for empty fields and correct authentication.
 
         /*--
-        require '../phpintrosolution/login/isValid.inc.php';
+        require '../../phpintrosolution/login/isValid.inc.php';
         //*/
         $this->authenticateUser();
 
@@ -90,7 +90,7 @@ final class Login extends AbstractNormForm
         // TODO: Save the login confirmation and other important data in the session.
 
         /*--
-        require '../phpintrosolution/login/business.inc.php';
+        require '../../phpintrosolution/login/business.inc.php';
         //*/
 
         isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='register.php';
@@ -107,7 +107,7 @@ final class Login extends AbstractNormForm
         // TODO: Check if the provided user name and password combination is correct.
 
         /*--
-        return require '../phpintrosolution/login/authenticateUser.inc.php';
+        return require '../../phpintrosolution/login/authenticateUser.inc.php';
         //*/
 
         //##
