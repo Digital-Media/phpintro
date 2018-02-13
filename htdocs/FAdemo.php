@@ -1,12 +1,13 @@
 <?php
-use phpintro\src\DEMO;
+use phpintro\src\FAdemo;
 
 session_start();
 require_once("../src/defines.inc.php");
 require_once UTILITIES;
 require_once SMARTY;
 require_once TNORMFORM;
-require_once '../src/demo.php';
+require_once FILE_ACCESS;
+require_once '../src/FAdemo.php';
 
 // --- This is the main call of the norm form process
 try {
@@ -19,11 +20,12 @@ try {
     }
 
 // Defines a new view that specifies the template and the parameters that are passed to the template
-    $view = new View("demoMain.tpl", [
+    $view = new View("FAdemoMain.tpl", [
+        new PostParameter(FAdemo::DEMO_FIELD),
     ]);
 
-// Creates a new DEMO object and triggers the NormForm process
-    $demo = new DEMO($view);
+// Creates a new FAdemo object and triggers the NormForm process
+    $demo = new FAdemo($view);
     $demo->normForm();
 } catch (Exception $e) {
     if (DEBUG) {

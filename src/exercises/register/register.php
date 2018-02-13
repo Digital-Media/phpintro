@@ -51,6 +51,11 @@ final class Register extends AbstractNormForm
     const USER_ID = "userid";
 
     /**
+     * @var string USER_DATA_PATH The full path for the user meta data JSON file.
+     */
+    const USER_DATA_PATH = DATA_DIRECTORY . "userdata.json";
+
+    /**
      * @var FileAccess $fileAccess The object handling all file access operations.
      */
     private $fileAccess;
@@ -59,6 +64,7 @@ final class Register extends AbstractNormForm
      * Creates a new Register object based on AbstractNormForm. Takes a View object that holds the information about
      * which template will be shown and which parameters (e.g. for form fields) are passed on to the template.
      * The constructor needs to initialize the object for file handling.
+     *
      * @param View $defaultView The default View object with information on what will be displayed.
      * @param string $templateDir The Smarty template directory.
      * @param string $compileDir The Smarty compiled template directory.
@@ -67,7 +73,8 @@ final class Register extends AbstractNormForm
     {
         parent::__construct($defaultView);
 
-        // TODO: Do the necessary initializations in the constructor.
+        // TODO: Create the class FileAccess and assign it to $fileAccess;
+        // TODO: @see src/FAdemo.php for this
 
         /*--
         require '../../phpintrosolution/register/construct.inc.php';
@@ -78,11 +85,13 @@ final class Register extends AbstractNormForm
      * Validates user input after submitting registration information. The function first has to check if all fields
      * were filled out and then checks for uniqueness of username and e-mail address. The latter also has to be a valid
      * address. Passwords need to correspond to certain criteria and also match.
+     *
      * @return bool Returns true if no errors occurred and therefore no error messages were set, otherwise false.
      */
     protected function isValid(): bool
     {
-        // TODO: The code for correct form validation goes here. Check for empty fields correct e-mail and passwords.
+        // TODO: The code for correct form validation goes here. Check for empty fields, correct e-mail and passwords.
+        // TODO: @see src/FAdemo.php for this
 
         /*--
         require '../../phpintrosolution/register/isValid.inc.php';
@@ -115,7 +124,11 @@ final class Register extends AbstractNormForm
      */
     private function isUnique(string $name): bool
     {
-        // TODO: Check if the provided user name or password is unique (meaning not already in the data).
+        // TODO: Check if the provided user name is unique (meaning not already in the data).
+        // TODO: @see src/FAdemo.php for this
+        // TODO: Read whole array and step throw it comparing each username with the entry in $_POST with foreach or
+        // TODO: use in_array() see PHP Documentation
+        // TODO: Handle the special case, that the array is empty.
 
         /*--
         return require '../../phpintrosolution/register/isUnique.inc.php';
@@ -136,6 +149,12 @@ final class Register extends AbstractNormForm
     private function addUser(): bool
     {
         // TODO: Add the user (ID, user name, e-mail, password) to the two-dimensional array and store it.
+        // TODO: @see src/FAdemo.php for this
+        // TODO: add the fields userid, username, email and password
+        // TODO: use FileAccess::AutoIncrement for userid
+        // TODO: use Utilities::sanitizeFilter for username, email is validated by isValid() with regex, that doesn't
+        // TODO: allow XSS
+        // TODO: use password_hash() for the password
 
         /*--
         return require '../../phpintrosolution/register/addUser.inc.php';

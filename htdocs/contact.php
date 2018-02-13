@@ -18,7 +18,7 @@ require_once UTILITIES;
 require_once SMARTY;
 require_once TNORMFORM;
 
-require_once '../src/exercises/templates/contact.php';
+require_once '../src/exercises/using-templates/contact.php';
 
 /**
  * Create the class Contact and call the method AbstractNormForm::normForm(), now inherited by Contact

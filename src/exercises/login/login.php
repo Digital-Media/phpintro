@@ -2,13 +2,13 @@
 namespace phpintro\src\exercises\login;
 
 use AbstractNormForm;
-use FileAccess;
+use phpintro\src\FileAccess;
 use GenericParameter;
 use Utilities;
 use View;
 
 /**
- * The login page of the IMAR image archive.
+ * The login page of phpintro.
  *
  * This class enables users to log in to the system with a provided user name and password. Both items are match with
  * stored credentials. If they match, a login hash is stored in the session that acts as a token for a successful login.
@@ -24,6 +24,7 @@ final class Login extends AbstractNormForm
     // trait Utilities can now be used as part of class Login.
     // For Example: $this->sanitizeFilter($string) instead of Utilities::sanitizeFilter($string)
     use Utilities;
+
     /**
      * @var string USERNAME Form field constant that defines how the form field for holding the username is called
      * (id/name).
@@ -37,6 +38,11 @@ final class Login extends AbstractNormForm
     const PASSWORD = "password";
 
     /**
+     * @var string USER_DATA_PATH The full path for the user meta data JSON file.
+     */
+    const USER_DATA_PATH = DATA_DIRECTORY . "userdata.json";
+
+    /**
      * @var FileAccess $fileAccess The object handling all file access operations.
      */
     private $fileAccess;
@@ -45,6 +51,7 @@ final class Login extends AbstractNormForm
      * Creates a new Login object based on AbstractNormForm. Takes a View object that holds the information about which
      * template will be shown and which parameters (e.g. for form fields) are passed on to the template.
      * The constructor needs initialize the object for file handling.
+     *
      * @param View $defaultView The default View object with information on what will be displayed.
      * @param string $templateDir The Smarty template directory.
      * @param string $compileDir The Smarty compiled template directory.
@@ -53,7 +60,8 @@ final class Login extends AbstractNormForm
     {
         parent::__construct($defaultView);
 
-        // TODO: Do the necessary initializations in the constructor.
+        // TODO: Create the class FileAccess and assign it to $fileAccess;
+        // TODO: @see src/FAdemo.php for this
 
         /*--
         require '../../phpintrosolution/login/construct.inc.php';
@@ -69,6 +77,7 @@ final class Login extends AbstractNormForm
     protected function isValid(): bool
     {
         // TODO: The code for correct form validation goes here. Check for empty fields and correct authentication.
+        // TODO: @see src/FAdemo.php for this
 
         /*--
         require '../../phpintrosolution/login/isValid.inc.php';
@@ -76,42 +85,48 @@ final class Login extends AbstractNormForm
         $this->authenticateUser();
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
-
         return (count($this->errorMessages) === 0);
     }
 
     /**
-     * This method is only called when the form input was validated successfully. It generates a login hash and adds it
-     * to session and also stores the username in the session for further use (e.g. in the template). It then forwards
-     * to the INDEX page.
+     * This method is only called when the form input was validated successfully.
+     * It stores the username in the session for further use (e.g. in the template).
+     * It then forwards to the register page.
      */
     protected function business()
     {
-        // TODO: Save the login confirmation and other important data in the session.
+        // TODO: Save the username in $_SESSION
 
         /*--
         require '../../phpintrosolution/login/business.inc.php';
         //*/
-
+        $_SESSION[IS_LOGGED_IN] = $this->generateLoginHash();
         isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='register.php';
         View::redirectTo($redirect);
     }
 
     /**
      * Authenticates a user by matching the entered username and password with the stored records. If the username is
-     * present and the entered password matches the stored password, a valid login is assumed.
+     * present and the entered password matches the stored password, a valid login is assumed and stored in $_SESSION
+     *
      * @return bool Returns true if the combination of username and password is valid, otherwise false.
      */
     private function authenticateUser(): bool
     {
         // TODO: Check if the provided user name and password combination is correct.
+        // TODO: See src/FileAcess.php loadcontents and FAdemo.php for calling it
+        // TODO: @see src/FAdemo.php for this
+        // TODO: load whole file TEST_DATA_PATH
+        // TODO: Step throw the array with forach
+        // TODO: Compare each username with the value in $_POST
+        // TODO: Validate the password with password_verify()
+        // TODO: return true or false, depending on result of verification
 
         /*--
         return require '../../phpintrosolution/login/authenticateUser.inc.php';
         //*/
 
         //##
-        $_SESSION[IS_LOGGED_IN] = Utilities::generateLoginHash();
         return true;
         //*/
     }

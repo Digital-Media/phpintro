@@ -51,9 +51,7 @@ class FileAccess
             fclose($fp);
             return $data;
         } else {
-            $message = "File $filename is missing.";
-            $formattedError = $this->debugFileError($message);
-            throw new FileAccessException($formattedError);
+            return [];
         }
     }
 

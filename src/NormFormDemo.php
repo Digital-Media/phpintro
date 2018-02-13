@@ -24,7 +24,6 @@ use View;
  */
 class NormFormDemo extends AbstractNormForm
 {
-
     /**
      * @var string FIRST_NAME Form field constant that defines
      *                        how the form field for holding a first name is called (id/name).

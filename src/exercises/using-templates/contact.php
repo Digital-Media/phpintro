@@ -38,6 +38,7 @@ final class Contact extends AbstractNormForm
      */
     public function __construct()
     {
+        // TODO Look into htdocs/templates/contactForm.tpl and complete the template
         $view = new View("contactMain.tpl", [
             new PostParameter(Contact::SUBJECT),
             new PostParameter(Contact::REQUEST),
@@ -80,8 +81,8 @@ final class Contact extends AbstractNormForm
         // TODO Add your own solution here. Keep code that ist already there.
         // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
         // TODO Decide before you finish your work
-        // TODO see vendor/normform/NormFormExample
-        // TODO Add: Sanitize input before you send $_POST array to template. Use htmlspecialchars, htmlentities, ...
+        // TODO see src/NormFormDemo
+        // TODO Add: Sanitize input before you send $_POST array to the template. Use htmlspecialchars, htmlentities, ...
         /*--
         require '../../phpintrosolution/contact/business.inc.php';
         //*/

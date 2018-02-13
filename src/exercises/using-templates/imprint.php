@@ -44,6 +44,12 @@ final class Imprint
         require '../../phpintrosolution/imprint/show.inc.php';
         //*/
         // TODO Replace the text below with a imprint of your own using valid HTML5 syntax
+        // TODO Use string operator .= or heredoc for concating the lines
+        // For a small site the imprint has to contain
+        // name/company name
+        // purpose of the site
+        // address of the owner of the site
+
         //##
         $this->imprint = "<p> Place the requested Imprint here </p>";
         //*/

@@ -2,9 +2,7 @@
 use phpintro\src\exercises\login\Login;
 
 session_start();
-
 require_once("../src/defines.inc.php");
-
 require_once UTILITIES;
 require_once SMARTY;
 require_once TNORMFORM;
@@ -22,8 +20,6 @@ try {
 // Creates a new Login object and triggers the NormForm process
     $login = new Login($view);
     $login->normForm();
-} catch (FileAccessException $e) {
-    echo $e->getMessage();
 } catch (Exception $e) {
     if (DEBUG) {
         echo "An error occured in file " . $e->getFile() ." on line " . $e->getLine() .":" . $e->getMessage();

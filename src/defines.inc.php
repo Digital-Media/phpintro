@@ -62,6 +62,11 @@ define("DATA_DIRECTORY", "../data/");
  */
 define ("USER_DATA_PATH", DATA_DIRECTORY . "userdata.json");
 
+/**
+ * @var string USER_DATA_PATH The full path for the user meta data JSON file.
+ */
+define ("TEST_DATA_PATH", DATA_DIRECTORY . "testdata.json");
+
 
 // Login Handling
 
