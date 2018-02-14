@@ -116,7 +116,7 @@ final class Login extends AbstractNormForm
         // TODO: Check if the provided user name and password combination is correct.
         // TODO: See src/FileAcess.php loadcontents and FAdemo.php for calling it
         // TODO: @see src/FAdemo.php for this
-        // TODO: load whole file TEST_DATA_PATH
+        // TODO: load whole file TEST_DATA_PATH: user1 and user2 have password "geheim"
         // TODO: Step throw the array with forach
         // TODO: Compare each username with the value in $_POST
         // TODO: Validate the password with password_verify()

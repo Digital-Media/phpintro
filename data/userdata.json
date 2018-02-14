@@ -10,23 +10,5 @@
         "username": "user2",
         "email": "user2@email.com",
         "password": "$2y$10$8V8ls4sWL2bbJva.XSbJkeBFsGKwIMcujhjTgKiWGcpW1ZdKvPUNG"
-    },
-    {
-        "userid": 2,
-        "username": "asdf",
-        "email": "a1.a@a.at",
-        "password": "$2y$10$VnixVvieW.HCvy1S3pZrsu5x2.B33vVyViaznbTYgbyTPbFGD16Ua"
-    },
-    {
-        "userid": 3,
-        "username": "sdafdfdfsdfasdfa",
-        "email": "jku@a.at",
-        "password": "$2y$10$GLoJBYk/voIpUT1RReKUb.RCw5zYRqnolFX0UCFMG/3V/vyeuCen."
-    },
-    {
-        "userid": 4,
-        "username": "asdfdfdasfasdf",
-        "email": "z7@fh.at",
-        "password": "$2y$10$17LlS5vqclNAZFMh2T9bIepKoT6qOcA5ng48pfWm5wyF7yQPZEa5."
     }
 ]

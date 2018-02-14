@@ -53,20 +53,9 @@ define("CSS_DIR", "css");
 define("FILE_ACCESS", "../src/FileAccess.php");
 
 /**
- * @var string DATA_DIRECTORY Sets the directory where the meta data (JSON files) for images and users is stored.
+ * @var string DATA_DIRECTORY Sets the directory where the meta data (JSON files) for users is stored.
  */
 define("DATA_DIRECTORY", "../data/");
-
-/**
- * @var string USER_DATA_PATH The full path for the user meta data JSON file.
- */
-define ("USER_DATA_PATH", DATA_DIRECTORY . "userdata.json");
-
-/**
- * @var string USER_DATA_PATH The full path for the user meta data JSON file.
- */
-define ("TEST_DATA_PATH", DATA_DIRECTORY . "testdata.json");
-
 
 // Login Handling
 

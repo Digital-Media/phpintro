@@ -29,7 +29,7 @@ use View;
     /**
      * @var string USER_DATA_PATH The full path for the user meta data JSON file.
      */
-    //const USER_DATA_PATH = DATA_DIRECTORY . "testdata.json";
+    const TEST_DATA_PATH = DATA_DIRECTORY . "testdata.json";
 
     /**
      * @var FileAccess $fileAccess The object handling all file access operations.
@@ -51,9 +51,7 @@ use View;
         // creating the fileaccess object
         $this->fileAccess = new FileAccess();
         // filling the result array if data exist in the file TEST_DATA_PATH
-        if (file_exists(TEST_DATA_PATH)) {
-            $this->currentView->setParameter(new GenericParameter("result", $this->readText()));
-        }
+        $this->currentView->setParameter(new GenericParameter("result", $this->readText()));
     }
 
     /**
@@ -86,27 +84,22 @@ use View;
         $this->currentView->setParameter(new PostParameter(self::DEMO_FIELD, true));
     }
 
-    protected function readText() {
-        $fields = $this->fileAccess->loadContents(TEST_DATA_PATH);
+    protected function readText()
+    {
+        $fields = $this->fileAccess->loadContents(self::TEST_DATA_PATH);
         return $fields;
     }
 
-    protected function writeText() {
-        if (!file_exists(DATA_DIRECTORY)) {
-            mkdir(DATA_DIRECTORY);
-        }
-
+    protected function writeText()
+    {
         $demofield = Utilities::sanitizeFilter($_POST[self::DEMO_FIELD]);
 
-        $fields = $this->fileAccess->loadContents(TEST_DATA_PATH);
+        $fields = $this->fileAccess->loadContents(self::TEST_DATA_PATH);
 
         $fields[] = [
             "demofield" => $demofield
         ];
 
-        if ($this->fileAccess->storeContents(TEST_DATA_PATH, $fields)) {
-            return true;
-        }
-        return false;
+        $this->fileAccess->storeContents(self::TEST_DATA_PATH, $fields);
     }
 }
