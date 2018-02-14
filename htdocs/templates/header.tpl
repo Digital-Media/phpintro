@@ -15,7 +15,7 @@
             <h1 class="Header-title">{$smarty.const.ICON}{$smarty.const.TITLE}</h1>
             <p class="Header-subtitle">{$smarty.const.SUBTITLE}</p>
         </div>
-        {if isset($smarty.session.ISLOGGEDIN)}
+        {if isset($smarty.session.isloggedin)}
         <div class="Header-logout">
             You are logged in as  {$smarty.session.username} <a href="{$smarty.const.LOGOUT}" class="Button u-spaceLM">Logout</a>
         </div>
