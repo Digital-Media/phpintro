@@ -1,7 +1,7 @@
 <?php
 namespace phpintro\src;
 
-require_once("FileAccessException.php");
+require_once "FileAccessException.php";
 
 /**
  * Implements base functionality for reading data from a file and writing data back to it.
@@ -10,8 +10,8 @@ require_once("FileAccessException.php");
  * data from a JSON file as well as write a JSON file with the same kind of data. This class also handles functionality
  * of uploads. Methods using exception handling are included for demonstration purposes.
  *
- * @author Wolfgang Hochleitner <wolfgang.hochleitner@fh-hagenberg.at>
- * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
+ * @author  Wolfgang Hochleitner <wolfgang.hochleitner@fh-hagenberg.at>
+ * @author  Martin Harrer <martin.harrer@fh-hagenberg.at>
  * @version 2017
  */
 class FileAccess
@@ -30,7 +30,8 @@ class FileAccess
      * Loads the contents of a JSON file into an according two-dimensional array. Works with both image meta data and
      * user meta data. The method uses file_get_contents to read the whole file into a string and the create an array
      * using json_decode. A file lock has to be obtained since file_get_contents does not implement this by itself.
-     * @param string $filename The file that is to be read.
+     *
+     * @param  string $filename The file that is to be read.
      * @return array Returns a two-dimensional array with the information of the JSON file. The array keys are the JSON
      *               keys. If the file doesn't exist, an empty array is returned.
      * @throws FileAccessException Throws an exception if the file could not be locked or does not exist.
@@ -60,8 +61,8 @@ class FileAccess
      * method uses file_put_contents to write a string into a file that is being created by json_encode. JSON output is
      * pretty printed, an exclusive file lock is obtain to avoid problems with concurrent access.
      *
-     * @param string $filename The file to be written.
-     * @param array $data The array of data that is read.
+     * @param  string $filename The file to be written.
+     * @param  array  $data     The array of data that is read.
      * @return bool Returns true if the operation was successful
      * @throws FileAccessException Throws an exception when writing was not successful.
      */
@@ -89,8 +90,8 @@ class FileAccess
      * Creates an auto-increment ID for a given file. The file is opened and all data stored under the key $idName is
      * retrieved. This data is then searched for the highest ID value. This value is incremented by one and returned.
      *
-     * @param string $filename The file containing IDs where an auto-increment ID should be generated.
-     * @param string $idName The name of the fields containing the ID values.
+     * @param  string $filename The file containing IDs where an auto-increment ID should be generated.
+     * @param  string $idName   The name of the fields containing the ID values.
      * @return int Returns an auto-increment ID.
      */
     public function autoincrementID(string $filename, string $idName): int
@@ -107,7 +108,7 @@ class FileAccess
      * Formats error messages for DEBUG error pages in a nicer way. Values receive names and the PHP call stack is
      * added. This method redirects to errorpage.html if DEBUG = false is set in defines.inc.php.
      *
-     * @param string $message The message to be included in the debug output.
+     * @param  string $message The message to be included in the debug output.
      * @return string The formatted message. If DEBUG = true is set a formatted error page is returned.
      */
     public function debugFileError(string $message): string
