@@ -80,7 +80,7 @@ require_once 'error_handling.php';
  */
 
 
-// TODO Geben sie das Objekt mir var_dump() aus
+// TODO Geben sie das Objekt mit var_dump() aus
 
 
 // TODO Geben sie die oben definierte Klasseneigenschaft hier aus.
