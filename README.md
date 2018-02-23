@@ -13,11 +13,12 @@ entwickelt.
 Ein passendes [Vagrantfile](https://github.com/Digital-Media/hgb-phpdev-base) findet sich ebenfalls auf GitHub. 
 *PHPintro* lässt sich aber auch unter anderen Entwicklungsumgebungen installieren.
 
-PHP 7.0 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
+PHP 7.1 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
 
 * [HTML5](https://www.w3.org/TR/html5/)
 * [CSS3](https://www.w3.org/Style/CSS/specs)
 * [PHP 7.0](http://php.net/manual/en/migration70.new-features.php)
+* [PHP 7.1](http://php.net/manual/en/migration71.new-features.php)
 * [TNormform](https://github.com/Digital-Media/normform)
 * [Smarty Templates](http://www.smarty.net/)
 * [CSS3 Flexbox](https://www.w3.org/TR/css-flexbox-1/)
