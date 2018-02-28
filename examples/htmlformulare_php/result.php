@@ -9,6 +9,7 @@
 <a href="index.html">Go to index.html</a>
 <p>
     <?php
+    session_start();
     // case method="post"
     if (isset($_POST['myinput'])) {
         echo "<br>Eingabe POST: " . $_POST['myinput'];
