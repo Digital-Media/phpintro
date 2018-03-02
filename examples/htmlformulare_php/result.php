@@ -10,6 +10,7 @@
 <p>
     <?php
     session_start();
+    // header("X-XSS-Protection: 0"); // for use with chrome 2.3.2018
     // case method="post"
     if (isset($_POST['myinput'])) {
         echo "<br>Eingabe POST: " . $_POST['myinput'];
