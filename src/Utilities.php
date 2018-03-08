@@ -138,7 +138,7 @@ trait Utilities
      */
     public static function isEmptyString(string $string): bool
     {
-        return (strlen(trim($string)) === 0);
+        return (mb_strlen(trim($string)) === 0);
     }
 
     /**

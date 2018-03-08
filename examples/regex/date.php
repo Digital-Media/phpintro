@@ -9,7 +9,7 @@
             <p>Using Regular Expressions</p>
             <h2>Conversion Result</h2>
             <?php
-            if (isset($_POST["date"]) && strlen($_POST["date"]) !== 0) {
+            if (isset($_POST["date"]) && mb_strlen($_POST["date"]) !== 0) {
                 $date = $_POST["date"];
 
                 if (preg_match("/(^[0-9]{4})-([0-9]{1,2})-([[:digit:]]{1,2}$)/", $date, $matches)) {

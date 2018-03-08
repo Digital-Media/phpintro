@@ -4,23 +4,20 @@
     <meta charset="utf-8">
     <title>Crafting Text</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../css/main.css">
 </head>
-<body class="Site">
-<header class="Site-header">
-    <div class="Header Header--small">
-        <div class="Header-titles">
-            <h1 class="Header-title"><i class="fa fa-scissors" aria-hidden="true"></i>Crafting Text</h1>
-            <p class="Header-subtitle">Using String Functions</p>
+<body>
+<header>
+    <div>
+        <div>
+            <h1>Crafting Text</h1>
+            <p>Using String Functions</p>
         </div>
     </div>
 </header>
-<main class="Site-content">
-    <section class="Section">
-        <div class="Container">
-            <h2 class="Section-heading">Crafting Results</h2>
+<main>
+    <section>
+        <div>
+            <h2>Crafting Results</h2>
             <h3>Trim, Substring & Concatenation</h3>
             <?php
             $output1 = substr(trim($_REQUEST["text1"]), 0, 3);
@@ -62,7 +59,7 @@
         </div>
     </section>
     <section>
-        <div class="Container">
+        <div>
         <header>
             <h2>Demonstrate strings with included variables</h2>
         </header>
@@ -89,10 +86,10 @@ SOURCE;
             </div>
     </section>
 </main>
-<footer class="Site-footer">
-    <div class="Footer Footer--small">
-        <p class="Footer-credits">Created and maintained by <a href="mailto:martin.harrer@fh-hagenberg.at">Martin Harrer</a> and <a href="mailto:wolfgang.hochleitner@fh-hagenberg.at">Wolfgang Hochleitner</a>.</p>
-        <p class="Footer-version"><i class="fa fa-scissors" aria-hidden="true"></i><a href="https://github.com/Digital-Media/phpue">Crafting Text Version 2017</a></p>
+<footer>
+    <div>
+        <p>Created and maintained by <a href="mailto:martin.harrer@fh-hagenberg.at">Martin Harrer</a> and <a href="mailto:wolfgang.hochleitner@fh-hagenberg.at">Wolfgang Hochleitner</a>.</p>
+        <p><a href="https://github.com/Digital-Media/phpue">Crafting Text Version 2018</a></p>
     </div>
 </footer>
 </body>
