@@ -93,6 +93,7 @@ class FileAccess
      * @param  string $filename The file containing IDs where an auto-increment ID should be generated.
      * @param  string $idName   The name of the fields containing the ID values.
      * @return int Returns an auto-increment ID.
+     * @throws FileAccessException Exception is being forwarded to the caller.
      */
     public function autoincrementID(string $filename, string $idName): int
     {
