@@ -48,7 +48,7 @@ require_once 'error_handling.php';
 
 
     /**
-     * TODO Definieren Sie Methode mit Scope public
+     * TODO Definieren Sie eine Methode mit Scope public
      * TODO siehe examples/oophp/Inheritance.php
      * TODO Geben Sie in dieser Methode den Inhalt des $_POST-Arrays das von indes.html geschickt wird aus
      * TODO Verwenden sie echo und testen Sie XSS in Chrome und Firefox: <script>alert('hacked')</script>
