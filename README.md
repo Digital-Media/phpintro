@@ -45,7 +45,7 @@ Folder | Description
 ``data`` | Directory to hold the json files, to store user credentials or testdata with class FileAccess 
 ``examples`` | Examples for developing with PHP 7.x. 
 ``htdocs`` |Frontend stuff. Files called by Webserver, that create the objects with the real implementation, templates and css
-``htdocs/css`` | A set of predefined styles to be used with [TNormform](https://github.com/Digital-Media/normform). Include ``main.css`` to use it.
+``htdocs/css`` | A set of predefined styles to be used with [AbstractNormForm](https://github.com/Digital-Media/normform). Include ``main.css`` to use it.
 ``htdocs/templates`` | HTML templates for the Smarty template engine used in ``/src/*.php``.
 ``htdocs/templates_c`` | Output folder for Smarty's compiled templates.
 ``src`` | Classes implemented for *PHPintro*. Including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper method to be used in any context.
