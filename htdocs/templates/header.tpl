@@ -17,7 +17,7 @@
         </div>
         {if isset($smarty.session.isloggedin)}
         <div class="Header-logout">
-            You are logged in as  {$smarty.session.username} <a href="{$smarty.const.LOGOUT}" class="Button u-spaceLM">Logout</a>
+            You are logged in as  {$smarty.session.username} <a href="logout.php" class="Button u-spaceLM">Logout</a>
         </div>
         {/if}
     </div>

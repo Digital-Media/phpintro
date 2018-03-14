@@ -95,8 +95,8 @@ final class Login extends AbstractNormForm
      */
     protected function business()
     {
-        // TODO: Save the username in $_SESSION
-
+        // TODO: Save the username in $_SESSION. Replace John Doe with the named used to login
+        $_SESSION['username']= "John Doe";
         /*--
         require '../../phpintrosolution/login/business.inc.php';
         //*/
@@ -117,7 +117,7 @@ final class Login extends AbstractNormForm
         // TODO: See src/FileAcess.php loadcontents and FAdemo.php for calling it
         // TODO: @see src/FAdemo.php for this
         // TODO: load whole file TEST_DATA_PATH: user1 and user2 have password "geheim"
-        // TODO: Step throw the array with forach
+        // TODO: Step throw the array with foreach
         // TODO: Compare each username with the value in $_POST
         // TODO: Validate the password with password_verify()
         // TODO: return true or false, depending on result of verification

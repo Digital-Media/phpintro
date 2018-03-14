@@ -41,7 +41,7 @@
     <section class="Section">
         <div class="Container">
             <h2 class="Section-heading">Need a DEMO?</h2>
-            <p>Go to DEMO page <a href="demo.php">here</a>.</p>
+            <p>Go to DEMO page <a href="NormFormDemo.php">here</a>.</p>
         </div>
     </section>
 </main>
