@@ -27,6 +27,9 @@
 // TODO: Display the text used for testing and the resulting amount (echo).
 
 // TODO: Use number_format() for formatting the sum. Use htmlentities() or a similar function to avoid xss.
+
+// TODO: Use the text snippet in teststring.txt to test your regex. It shows all valid and invalid test cases and should sum up to 1000 EUR.
+
 ?>
     <a href="index.html">Start Over</a>
 </body>
