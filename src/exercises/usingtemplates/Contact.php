@@ -1,5 +1,5 @@
 <?php
-namespace phpintro\src\exercises\templates;
+namespace phpintro\src\exercises\usingtemplates;
 
 use AbstractNormForm;
 use GenericParameter;
