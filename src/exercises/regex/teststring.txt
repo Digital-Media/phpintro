@@ -1,7 +1,7 @@
 50,30 EUR is valid at the begin of the text. 10,00 EUR  (with a tab after EUR) is also valid.
 23,30 EUR, 3 EUR, 0,70 EUR or 12,- EUR in the middle of the text are valid.
 Invalid are:
-03,17 EUR (leading 0), ,56 EUR (no digit before comma), 16,0056 EUR (more the 2 digits after comma),
+03,17 EUR (leading 0), ,56 EUR (no digit before comma), 16,0056 EUR (more than 2 digits after comma),
 11.00 EUR (decimal separator is a comma, not a point), 7EUR (no blank between digits and EUR),
 13,17 eur (EUR should be written in UPPERCASE) and 17,7 EUR (exactly 2 digits after comma).
 15,89 EURhas no blank after EUR.
