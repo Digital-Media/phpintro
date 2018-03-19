@@ -1,1 +1,10 @@
-Your 10,00 EUR and 12,- EUR and 3 EUR are a valid result, though 7EUR (no black between 7 and EUR) and ,50 EUR (no number before comma) are invalid. Valid is also 924,30 EUR. (. instead of blank at the end (word boundary!) Yet, invalid are 16,0056 EUR (only to decimals after komma) or 12 eur (eur should be in upper case) or 11.00 EUR (. instaed ov ,) or 17,7 EUR (there should be exactly 2 decimals after comma) 03,17 EUR (no leading zero). 50,70 EURwith something added without a space is also invalid. This amount is valid without a whitespace at the end for the amount of 50,70 EUR
+50,30 EUR is valid at the begin of the text. 10,00 EUR  (with a tab after EUR) is also valid.
+23,30 EUR, 3 EUR, 0,70 EUR or 12,- EUR in the middle of the text are valid.
+Invalid are:
+03,17 EUR (leading 0), ,56 EUR (no digit before comma), 16,0056 EUR (more the 2 digits after comma),
+11.00 EUR (decimal separator is a comma, not a point), 7EUR (no blank between digits and EUR),
+13,17 eur (EUR should be written in UPPERCASE) and 17,7 EUR (exactly 2 digits after comma).
+15,89 EURhas no blank after EUR.
+All valid amounts of money should sum up to 1000. A valid amount is identified by " EUR " or " EUR," or " EUR."
+after a valid decimal number(\b) or any type of whitespace after " EUR" ( EUR\h) in the middle of the text.
+At the end of the text " EUR" is also valid. Valid at the end of the text is 900,70 EUR
