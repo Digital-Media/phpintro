@@ -42,7 +42,7 @@ require_once 'error_handling.php';
         // TODO Im Konstrutor
         // TODO Geben sie die oben definierte Klassenkonstante hier aus.
         // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
-        // TODO Umgeben sie Dazu den Wert mit einem <p> oder einem anderem Tag
+        // TODO Umgeben sie dazu den Wert mit einem <p> oder einem anderem Tag
 
         // TODO Geben sie die oben definierte Klasseneigenschaft hier aus.
         // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
