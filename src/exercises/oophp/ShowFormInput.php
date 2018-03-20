@@ -106,4 +106,4 @@ require_once 'error_handling.php';
 // TODO Umgeben sie dazu den Wert mit einem <p> oder einem anderem Tag
 
 
-// TODO Geben Sie nur einen Zeilenumbruch am Ende an und kein closing Tag für PHP gemäß PSR2
+// Am Ende ist nur ein Zeilenumbruch und kein closing Tag für PHP gemäß PSR2
