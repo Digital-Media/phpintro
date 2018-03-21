@@ -11,7 +11,7 @@ require_once 'error_handling.php';
  * TODO Zu Beginn DefineAndConst.php und Inheritance.php
  * TODO danach auch Methods.php. (Vor allem wenn sie vollständig PSR2 konform werden möchten. Nicht Teil dieser UE)
  *
- * TODO Definieren Sie ein Klasse mit einem Klassennamen passend zu PSR1 in StudlyCaps
+ * TODO Definieren Sie eine Klasse mit einem Klassennamen passend zu PSR1 in StudlyCaps
  * Diese Klasse soll nicht mehr können, als den Inhalt von $_POST aus index.html ausgeben
  * Zusätzlich sollen noch Klassenkonstanten und Eigenschaften der Klasse ausgegeben werden
  * In einer Methode wird der Inhalt von $_POST verarbeitet und diese Methode dann aufgerufen
@@ -41,15 +41,14 @@ require_once 'error_handling.php';
 
         // TODO Im Konstrutor
         // TODO Geben sie die oben definierte Klassenkonstante hier aus.
-        // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
-        // TODO Umgeben sie dazu den Wert mit einem <p> oder einem anderem Tag
+        // TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
+        // TODO Verwenden sie dazu die Möglichkeiten von PHP zur Stringconcatenation echo "<p>". variable oder constant ."</p>"
 
         // TODO Geben sie die oben definierte Klasseneigenschaft hier aus.
-        // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
-        // TODO Umgeben sie dazu den Wert mit einem <p> oder einem anderem Tag
+        // TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
 
         // TODO Geben Sie den Wert der globalen Konstante DEBUG aus error_handling.php hier aus
-        // TODO Verfahren sie dazu wie bei der Klassenkonstante
+        // TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
 
         // TODO Ende Konstruktor
 
@@ -62,8 +61,9 @@ require_once 'error_handling.php';
          // TODO Innerhalb der Methode
 
          // TODO Geben Sie in dieser Methode den Inhalt des $_POST-Arrays das von index.html geschickt wird aus
-         // TODO Verwenden sie echo und testen Sie XSS in Chrome und Firefox: <script>alert('hacked')</script>
+         // TODO Verwenden sie echo und testen Sie XSS in Chrome und Firefox mit der Eingabe: <script>alert('hacked')</script>
          // TODO In einem zweiten Schritt verhindern Sie XSS für alle Browser
+         // TODO Benutzen sie dafür htmlentities() oder htmlspecialchars()
 
 
 
@@ -84,8 +84,7 @@ require_once 'error_handling.php';
 
 
 // TODO Geben sie die oben definierte Klassenkonstante hier aus.
-// TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
-// TODO Umgeben sie dazu den Wert mit einem <p> oder einem anderem Tag
+// TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
 
 
 
@@ -97,13 +96,11 @@ require_once 'error_handling.php';
 
 
 // TODO Geben sie die oben definierte Klasseneigenschaft hier aus.
-// TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
-// TODO Umgeben sie dazu den Wert mit einem <p> oder einem anderem Tag
+// TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
 
 
 // TODO Geben Sie den Wert der globalen Konstante DEBUG aus error_handling.php hier aus
-// TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
-// TODO Umgeben sie dazu den Wert mit einem <p> oder einem anderem Tag
+// TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
 
 
 // Am Ende ist nur ein Zeilenumbruch und kein closing Tag für PHP gemäß PSR2
