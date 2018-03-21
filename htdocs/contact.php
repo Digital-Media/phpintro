@@ -1,5 +1,5 @@
 <?php
-use phpintro\src\exercises\templates\Contact;
+use phpintro\src\exercises\usingtemplates\Contact;
 
 session_start();
 /**
@@ -18,7 +18,7 @@ require_once UTILITIES;
 require_once SMARTY;
 require_once TNORMFORM;
 
-require_once '../src/exercises/using-templates/Contact.php';
+require_once '../src/exercises/usingtemplates/Contact.php';
 
 /**
  * Create the class Contact and call the method AbstractNormForm::normForm(), now inherited by Contact
