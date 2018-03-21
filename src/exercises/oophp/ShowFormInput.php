@@ -39,7 +39,7 @@ require_once 'error_handling.php';
      */
 
 
-        // TODO Im Konstrutor
+        // TODO Im Konstruktor
         // TODO Geben sie die oben definierte Klassenkonstante hier aus.
         // TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
         // TODO Verwenden sie dazu die Möglichkeiten von PHP zur Stringconcatenation echo "<p>". variable oder constant ."</p>"
