@@ -51,3 +51,7 @@ Folder | Description
 ``src`` | Classes implemented for *PHPintro*. Including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper method to be used in any context.
 ``src/exercises`` | Classes to be implemented for *PHPintro* exercises.
 ``vendor`` | Third party libraries installed with composer: [TNormform](https://github.com/Digital-Media/normform), [Smarty Templates](http://www.smarty.net/), Javascript Libraries ...
+
+Ein grobes Klassendiagramm für PHPintro (erstellt mit http://www.umlet.com/umletino/
+
+![PHPintro Klassendiagramm](src/KlassenDiagrammPHPintro.png "OnlineShop Klassendiagramm")

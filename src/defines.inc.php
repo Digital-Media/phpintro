@@ -15,7 +15,7 @@ define ('DEBUG',true);
 if (DEBUG) {
     echo "<br>WARNING: Debugging is enabled. Set DEBUG to false for production use in " . __FILE__;
     echo "<br>Connect via SSH and send tail -f /var/log/apache2/error.log";
-    echo "to see errors not displayed in Browser<br><br>";
+    echo " to see errors not displayed in Browser<br><br>";
     error_reporting(E_ALL);
     ini_set('html_errors', '1');
     ini_set('display_errors', '1');
