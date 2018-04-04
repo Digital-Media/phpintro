@@ -1,10 +1,1 @@
-50,30 EUR is valid at the begin of the text. 10,00 EUR  (with a tab after EUR) is also valid.
-23,30 EUR, 3 EUR, 0,70 EUR or 12,- EUR in the middle of the text are valid.
-Invalid are:
-03,17 EUR (leading 0), ,56 EUR (no digit before comma), 16,0056 EUR (more than 2 digits after comma),
-11.00 EUR (decimal separator is a comma, not a point), 7EUR (no blank between digits and EUR),
-13,17 eur (EUR should be written in UPPERCASE) and 17,7 EUR (exactly 2 digits after comma).
-15,89 EURhas no blank after EUR.
-All valid amounts of money should sum up to 1000. A valid amount is identified by " EUR " or " EUR," or " EUR."
-after a valid decimal number(\b) or any type of whitespace after " EUR" ( EUR\h) in the middle of the text.
-At the end of the text " EUR" is also valid. Valid at the end of the text is 900,70 EUR
+This 50,30 EUR are valid at the begin of the text. 10,70 EUR  (with a tab after EUR) is also valid. 23,30 EUR, 3 EUR or 12,- EUR in the middle of the text are valid. Invalid are: 03,17 EUR (leading 0), ,56 EUR (no digit before comma), 16,0056 EUR (more than 2 digits after comma), a10,00 EUR (no blank before decimal), 11.00 EUR (decimal separator is a comma, not a point), 7EUR (no blank between digits and EUR), 13,17 eur (EUR should be written in UPPERCASE) and 17,7 EUR (exactly 2 digits after comma). 15,89 EURhas no blank after EUR. All valid amounts of money should sum up to 1000. Amounts between 0 and 1 and linebreaks are not part of this exercise. A valid amount is identified by " EUR " or " EUR," or " EUR." after a valid decimal number(\b) in the middle of the text or at the end of the text " EUR" is also valid. Valid at the end of the text is 900,70 EUR

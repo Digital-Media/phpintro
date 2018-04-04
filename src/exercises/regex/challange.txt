@@ -1,0 +1,22 @@
+50,30 EUR is valid at the begin of the text.
+This 10,00 EUR	 are also valid.
+(with a tabulator after EUR)
+23,30 EUR, 3 EUR, are valid.
+Also valid 0,70 EUR or 12,- EUR.
+Invalid are:
+03,17 EUR and 03,17 EUR (leading 0),
+ ,56 EUR (no digit before comma),
+ 16,0056 EUR (more than 2 digits after comma),
+ a10,00 EUR (no blank before decimal),
+11.00 EUR (decimal separator is not a point),
+7EUR (no blank between digits and EUR),
+13,17 eur (EUR should be written in UPPERCASE)
+and 17,7 EUR (exactly 2 digits after comma).
+15,89 EURhas no blank after EUR.
+Total sum of valid amounts is 1000,00.
+A valid amount is identified by
+" EUR " or " EUR," or " EUR."
+or " EUR" at the end of the text
+or before a new line "\n"
+after a valid decimal number(\b).
+Valid at the end of the text is 900,70 EUR
