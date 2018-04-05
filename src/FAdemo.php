@@ -16,7 +16,7 @@ use View;
  * @version 2017
  */final class FAdemo extends AbstractNormForm
 {
-    // trait Utilities can now be used as part of class Login.
+    // trait Utilities can now be used as part of class FAdemo.
     // For Example: $this->sanitizeFilter($string) instead of Utilities::sanitizeFilter($string)
     use Utilities;
 
