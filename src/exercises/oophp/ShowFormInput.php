@@ -61,8 +61,7 @@ require_once 'error_handling.php';
          // TODO Innerhalb der Methode
 
          // TODO Geben Sie in dieser Methode den Inhalt des $_POST-Arrays das von index.html geschickt wird aus
-         // TODO Verwenden sie echo und testen Sie XSS in Chrome und Firefox mit der Eingabe: <script>alert('hacked')</script>
-         // TODO In einem zweiten Schritt verhindern Sie XSS für alle Browser
+         // TODO Verhindern Sie XSS für alle Browser
          // TODO Benutzen sie dafür htmlentities() oder htmlspecialchars()
 
 
@@ -77,7 +76,7 @@ require_once 'error_handling.php';
 // TODO Benennen sie das Objekt passend zur Klasse und zu PSR1 in camelCase.
 
 
-// TODO Rufen Sie die Methode der Klasse mit Scope public hier aus
+// TODO Rufen Sie die Methode der Klasse mit Scope public hier auf
 
 
 // TODO Geben sie das erste Objekt mit var_dump() aus
