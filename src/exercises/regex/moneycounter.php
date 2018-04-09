@@ -14,7 +14,6 @@
 // TODO: Get the data from the form in index.html. Check if the given key exists in $_POST (isset())
 
 // TODO: Create a regular expression that matches the required criteria using preg_match_all (see PHP Documentation)
-// TODO: complete the empty capturing group (...) of the regex "/((^[1-9]| [1-9]|(\R[1-9]))([0-9]*)| 0)(...)( EUR\h| EUR\b)/"
 // TODO: @see https://regex101.com/ for an explanation
 // TODO: Use the text snippet in teststring.txt to test your regex on http://www.phpliveregex.com/.
 // TODO: It shows all valid and invalid test cases and should sum up to 1000 EUR.
