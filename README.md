@@ -22,7 +22,7 @@ PHP 7.1 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
 * [TNormform](https://github.com/Digital-Media/normform)
 * [Smarty Templates](http://www.smarty.net/)
 * [CSS3 Flexbox](https://www.w3.org/TR/css-flexbox-1/)
-* [PHP-FIG Namenskonventionen (PSR: PHP Standards Recommendations)](https://www.php-fig.org/psr/)
+* [PHP-FIG PSR: PHP Standards Recommendations](https://www.php-fig.org/psr/)
 
 
 Die Übungen, die umzusetzen sind, liegen in einem Unterverzeichnis von src/exercises. 
