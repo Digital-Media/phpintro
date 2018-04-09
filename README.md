@@ -38,7 +38,7 @@ Zum Beispiel:
     ``require '<path-to-solution>/index/construct.inc.php';``
     ``//*/``
 
-Codeteile die wie folgt gekennzeichnet sind, dienen dazu die Vorlage ohne PHP-Fehler lauffähig zu machen.
+Vorgegebene Codeteile die wie folgt gekennzeichnet sind, dienen dazu die Vorlage ohne PHP-Fehler lauffähig zu machen.
      
      ``//##``
      ``return true;``
