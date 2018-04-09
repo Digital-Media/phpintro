@@ -25,18 +25,32 @@ PHP 7.1 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
 * [PHP-FIG Namenskonventionen (PSR: PHP Standards Recommendations)](https://www.php-fig.org/psr/)
 
 
-Die Übungen, die umzusetzen sind, liegen in src/exercises. 
-Lösungen werden mit require_once aus einem privaten Repository eingebunden.
-Diese Abschnitte sind durch eine eigene Lösung zu ersetzen.
+Die Übungen, die umzusetzen sind, liegen in einem Unterverzeichnis von src/exercises. 
+Für jede Übung gibt es ein eigenes Unterverzeichnis. Nur an den Files in diesem Verzeichnis sind Änderungen vorzunehmen.
+
+Musterlösungen werden mit require aus einem privaten Repository eingebunden.
+Statt diese Files einzubinden ist direkt in den Vorlagenfiles eine eigene Lösung an Hand der TODOs zu erstellen.
 
 Zum Beispiel:  
+    
     ``/*--``
-    ``require_once '<path-to-solution>/index/construct.inc.php';``
+    ``require '<path-to-solution>/index/construct.inc.php';``
     ``//*/``
 
 Durch Ein- und Auskommentieren der Lösung kann sowohl die Funktionalität der Vorlage als auch der Lösung einfach
-demonstriert werden.
-Das Umschalten erfolgt über Linux Shell-Scripten, die im Lösungsrepository liegen und dazu GNU sed nutzen.
+demonstriert werden. Diese Abschnitte können für die Lösung ignoriert oder vollständig gelöscht werden.
+Das Umschalten erfolgt über Linux Shell-Scripten, die im Lösungsrepository liegen und dazu GNU sed nutzen. 
+
+Codeteile die wie folgt auskommentiert sind, dienen dazu die Vorlage ohne PHP-Fehler lauffähig zu machen.
+     
+     ``//##``
+     ``return true;``
+     ``//*/``
+     
+Zum Beispiel wird eine erfolgreiche Authentifizierung vorgetäuscht, damit ein Login auch ohne Filezugriff bereits für
+den Erfolgsfall funktioniert. Diese Codeteile müssen behalten werden, an der richtige Stelle im eigenen Code verwendet
+oder entsprechend angepasst werden, damit sie der Aufgabenstellung entsprechen.
+     
 
 ## Structure of this Repository
 
@@ -48,10 +62,10 @@ Folder | Description
 ``htdocs/css`` | A set of predefined styles to be used with [AbstractNormForm](https://github.com/Digital-Media/normform). Include ``main.css`` to use it.
 ``htdocs/templates`` | HTML templates for the Smarty template engine used in ``/src/*.php``.
 ``htdocs/templates_c`` | Output folder for Smarty's compiled templates.
-``src`` | Classes implemented for *PHPintro*. Including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper method to be used in any context.
+``src`` | Classes implemented for *PHPintro*. Including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper methods to be used in any context.
 ``src/exercises`` | Classes to be implemented for *PHPintro* exercises.
 ``vendor`` | Third party libraries installed with composer: [TNormform](https://github.com/Digital-Media/normform), [Smarty Templates](http://www.smarty.net/), Javascript Libraries ...
 
 Ein grobes Klassendiagramm für PHPintro (erstellt mit http://www.umlet.com/umletino/
 
-![PHPintro Klassendiagramm](src/KlassenDiagrammPHPintro.png "OnlineShop Klassendiagramm")
+![PHPintro Klassendiagramm](src/KlassenDiagrammPHPintro.png "PHPIntro Klassendiagramm")
