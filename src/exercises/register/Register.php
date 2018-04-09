@@ -156,12 +156,12 @@ final class Register extends AbstractNormForm
         // TODO: allow XSS
         // TODO: use password_hash() for the password
 
+        //##
+        return true;
+        //*/
         /*--
         return require '../../phpintrosolution/register/addUser.inc.php';
         //*/
 
-        //##
-        return true;
-        //*/
     }
 }

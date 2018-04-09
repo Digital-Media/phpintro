@@ -37,13 +37,7 @@ final class Imprint
 
     public function show()
     {
-        // TODO Add your own solution here. Keep code that ist already there.
-        // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
-        // TODO Decide before you finish your work
-        /*--
-        require '../../phpintrosolution/imprint/show.inc.php';
-        //*/
-        // TODO Replace the text below with a imprint of your own using valid HTML5 syntax
+        // TODO Replace the text in $this->imprint with a imprint of your own using valid HTML5 syntax
         // TODO Use string operator .= or heredoc for concating the lines
         // For a small site the imprint has to contain
         // name/company name
@@ -53,7 +47,9 @@ final class Imprint
         //##
         $this->imprint = "<p> Place the requested Imprint here </p>";
         //*/
-        // TODO keep these two lines.
+        /*--
+        require '../../phpintrosolution/imprint/show.inc.php';
+        //*/
         // Assigning the PHP variable $this->imprint to the Smarty variable imprint
         $this->smarty->assign('imprint', $this->imprint);
         // Defining the Smarty template to use. See __construct for template directory
