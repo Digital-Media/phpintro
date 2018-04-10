@@ -22,13 +22,14 @@ PHP 7.1 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
 * [TNormform](https://github.com/Digital-Media/normform)
 * [Smarty Templates](http://www.smarty.net/)
 * [CSS3 Flexbox](https://www.w3.org/TR/css-flexbox-1/)
-* [PHP-FIG Namenskonventionen (PSR: PHP Standards Recommendations)](https://www.php-fig.org/psr/)
+* [PHP-FIG PSR: PHP Standards Recommendations](https://www.php-fig.org/psr/)
 
 
 Die Übungen, die umzusetzen sind, liegen in einem Unterverzeichnis von src/exercises. 
 Für jede Übung gibt es ein eigenes Unterverzeichnis. Nur an den Files in diesem Verzeichnis sind Änderungen vorzunehmen.
 
 Musterlösungen werden mit require aus einem privaten Repository eingebunden.
+Diese Abschnitte können für die Lösung ignoriert oder vollständig gelöscht werden.
 Statt diese Files einzubinden ist direkt in den Vorlagenfiles eine eigene Lösung an Hand der TODOs zu erstellen.
 
 Zum Beispiel:  
@@ -37,20 +38,19 @@ Zum Beispiel:
     ``require '<path-to-solution>/index/construct.inc.php';``
     ``//*/``
 
-Durch Ein- und Auskommentieren der Lösung kann sowohl die Funktionalität der Vorlage als auch der Lösung einfach
-demonstriert werden. Diese Abschnitte können für die Lösung ignoriert oder vollständig gelöscht werden.
-Das Umschalten erfolgt über Linux Shell-Scripten, die im Lösungsrepository liegen und dazu GNU sed nutzen. 
-
-Codeteile die wie folgt auskommentiert sind, dienen dazu die Vorlage ohne PHP-Fehler lauffähig zu machen.
+Vorgegebene Codeteile die wie folgt gekennzeichnet sind, dienen dazu die Vorlage ohne PHP-Fehler lauffähig zu machen.
      
      ``//##``
      ``return true;``
      ``//*/``
      
-Zum Beispiel wird eine erfolgreiche Authentifizierung vorgetäuscht, damit ein Login auch ohne Filezugriff bereits für
+Zum Beispiel wird eine erfolgreiche Authentifizierung vorgetäuscht, damit ein Login auch ohne Datenbankzugriff bereits für
 den Erfolgsfall funktioniert. Diese Codeteile müssen behalten werden, an der richtige Stelle im eigenen Code verwendet
 oder entsprechend angepasst werden, damit sie der Aufgabenstellung entsprechen.
-     
+
+Durch Ein- und Auskommentieren der Lösung bzw. der vorgegebenen Codeteile kann sowohl die Funktionalität der 
+Vorlage als auch der Lösung einfach demonstriert werden. 
+Das Umschalten erfolgt über Linux Shell-Scripten, die im Lösungsrepository liegen und dazu GNU sed nutzen.      
 
 ## Structure of this Repository
 
