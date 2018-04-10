@@ -2,7 +2,7 @@
 namespace phpintro\src\exercises\register;
 
 use AbstractNormForm;
-use FileAccess;
+use phpintro\src\FileAccess;
 use GenericParameter;
 use Utilities;
 use View;
