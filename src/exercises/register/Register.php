@@ -73,7 +73,7 @@ final class Register extends AbstractNormForm
     {
         parent::__construct($defaultView);
 
-        // TODO: Create a FileAccess object and assign it to $fileAccess;
+        // TODO: Create a FileAccess object and assign it to $this->fileAccess;
         // TODO: @see src/FAdemo.php for this
 
         /*--
