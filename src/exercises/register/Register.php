@@ -125,7 +125,7 @@ final class Register extends AbstractNormForm
     private function isUnique(string $name): bool
     {
         // TODO: Check if the provided user name is unique (meaning not already in the data).
-        // TODO: @see src/FAdemo.php for this
+        // TODO: @see src/FAdemo.php for this. Use self::USER_DATA_PATH instead of self::TEST_DATA_PATH
         // TODO: Read whole array and step throw it comparing each username with the entry in $_POST with foreach or
         // TODO: use in_array() see PHP Documentation
         // TODO: Handle the special case, that the array is empty.
@@ -149,7 +149,7 @@ final class Register extends AbstractNormForm
     private function addUser(): bool
     {
         // TODO: Add the user (ID, user name, e-mail, password) to the two-dimensional array and store it.
-        // TODO: @see src/FAdemo.php for this
+        // TODO: @see src/FAdemo.php for this. Use self::USER_DATA_PATH instead of self::TEST_DATA_PATH
         // TODO: add the fields userid, username, email and password
         // TODO: use FileAccess::AutoIncrement for userid
         // TODO: use Utilities::sanitizeFilter for username, email is validated by isValid() with regex, that doesn't
