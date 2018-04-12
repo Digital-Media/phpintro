@@ -103,7 +103,7 @@ trait Utilities
      */
     public static function isSingleWord(string $string, int $min = 0, int $max = 50): bool
     {
-        $string_pattern = "/^[a-zäöüA-ZÄÖÜ-]{" . $min . "," . $max . "}$/i";
+        $string_pattern = "/^[a-zäöüA-ZÄÖÜ0-9]{" . $min . "," . $max . "}$/i";
         if (preg_match($string_pattern, $string)) {
             return true;
         } else {
