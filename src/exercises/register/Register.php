@@ -124,10 +124,10 @@ final class Register extends AbstractNormForm
      */
     private function isUnique(string $name): bool
     {
-        // TODO: Check if the provided user name is unique (meaning not already in the data).
+        // TODO: Check if the provided username or email is unique (meaning not already in the data).
         // TODO: @see src/FAdemo.php for this. Use self::USER_DATA_PATH instead of self::TEST_DATA_PATH
         // TODO: Read whole array and step throw it comparing each username with the entry in $_POST with foreach or
-        // TODO: use in_array() see PHP Documentation
+        // TODO: use in_array() combined with array_column() see PHP Documentation
         // TODO: Handle the special case, that the array is empty.
 
         /*--
@@ -164,4 +164,6 @@ final class Register extends AbstractNormForm
         //*/
 
     }
+
+
 }
