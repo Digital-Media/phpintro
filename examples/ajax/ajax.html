@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="author" content="Martin Harrer"/>
+    <meta charset="UTF-8"/>
+    <title>Immediate Search</title>
+    <script type="text/javascript" src="search.js"></script>
+</head>
+<body>
+    <h1>Search for entries in a text file GET</h1>
+    <div id="contentGET">
+        <!-- trigger onkeyup event and call js function getSearchResultGET defined in search.js -->
+        <!--
+             onkeyup:
+                      During keyboard input each character triggers the javascript function getSearchResultGET/POST
+                      document.getElementById('searchStringGET/POST').value forwards actual keyboard input to function getSearchResultGET/POST
+        -->
+        <form onkeyup="getSearchResultGET(document.getElementById('searchStringGET').value)">
+            <label for="searchStringGET"><b>Search: </b></label>
+            <input type="text" id="searchStringGET" name="searchStringGET"
+                   placeholder="Enter Search String"/>
+        </form>
+    </div>
+    <div id="searchResultGET">
+        <!-- left empty, will be filled with AJAX-response by DisplayResultGET() in search.js -->
+    </div>
+    <h1>Search for entries in a text file POST</h1>
+    <div id="contentPOST">
+        <form onkeyup="getSearchResultPOST(document.getElementById('searchStringPOST').value)">
+            <label for="searchStringPOST"><b>Search: </b></label>
+            <input type="text" id="searchStringPOST" name="searchStringPOST" placeholder="Enter Search String"/>
+        </form>
+    </div>
+    <div id="searchResultPOST">
+        <!-- left empty, will be filled with AJAX-response DisplayResultPOST() in search.js -->
+    </div>
+</body>
+</html>

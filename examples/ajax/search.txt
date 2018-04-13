@@ -1,0 +1,21 @@
+Das ist die erste Zeile des Testfiles zum Suchen
+2. Zeile
+3. Zeile
+Jetzt ist es die 4. Zeile
+5. Zeile
+6. Zeile ist auch nicht viel sinnvoller
+7. Zeile
+Das ist die achte Zeile des Testfiles zum Suchen
+9. Zeile
+10. Zeile
+Jetzt ist es die 11. Zeile
+12. Zeile
+13. Zeile ist auch nicht viel sinnvoller
+14. Zeile
+Das ist die fünfzehnte Zeile des Testfiles zum Suchen
+16. Zeile
+17. Zeile
+Jetzt ist es die 18. Zeile
+19. Zeile
+20. Zeile ist auch nicht viel sinnvoller
+21. Zeile
