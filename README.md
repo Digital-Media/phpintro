@@ -1,4 +1,4 @@
-# PHPintro 2018.0
+# PHPintro
 
 *PHPintro* stellt das Grundgerüst für einführende Übungen im Bereich Webprogrammierung zur Verfügung.
 
