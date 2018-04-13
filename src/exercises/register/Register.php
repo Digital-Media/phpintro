@@ -82,15 +82,19 @@ final class Register extends AbstractNormForm
     }
 
     /**
-     * Validates user input after submitting registration information. The function first has to check if all fields
-     * were filled out and then checks for uniqueness of username and e-mail address. The latter also has to be a valid
+     * Validates user input after submitting registration information. The function has to check if all fields
+     * were filled out and then checks for uniqueness of username and e-mail address. Email has to be a valid
      * address. Passwords need to correspond to certain criteria and also match.
      *
      * @return bool Returns true if no errors occurred and therefore no error messages were set, otherwise false.
      */
     protected function isValid(): bool
     {
-        // TODO: The code for correct form validation goes here. Check for empty fields, correct e-mail and passwords.
+        // TODO: The code for correct form validation goes here.
+        // TODO: Check for empty fields, correct e-mail and passwords and username
+        // TODO: Look into src/Utilities.php to find regex examples.
+        // TODO: You can either call this examples by Utilitis::method() or copy them to this class and adapt them
+        // TODO: When copying, make the method private instead of public static
         // TODO: @see src/FAdemo.php for this
 
         /*--
@@ -126,7 +130,7 @@ final class Register extends AbstractNormForm
     {
         // TODO: Check if the provided username or email is unique (meaning not already in the data).
         // TODO: @see src/FAdemo.php for this. Use self::USER_DATA_PATH instead of self::TEST_DATA_PATH
-        // TODO: Read whole array and step throw it comparing each username with the entry in $_POST with foreach or
+        // TODO: Read whole array and step throw it comparing each username or email with the entry in $_POST with foreach or
         // TODO: use in_array() combined with array_column() see PHP Documentation
         // TODO: Handle the special case, that the array is empty.
 
