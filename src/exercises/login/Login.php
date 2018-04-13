@@ -101,7 +101,9 @@ final class Login extends AbstractNormForm
         require '../../phpintrosolution/login/business.inc.php';
         //*/
         $_SESSION[IS_LOGGED_IN] = $this->generateLoginHash();
-        isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='register.php';
+        // using the null coalesce operator
+        $redirect= $_SESSION['redirect'] ?? $redirect='register.php';
+        // equivalent to: isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='register.php';
         View::redirectTo($redirect);
     }
 
