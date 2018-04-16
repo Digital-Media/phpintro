@@ -34,15 +34,15 @@ Statt diese Files einzubinden ist direkt in den Vorlagenfiles eine eigene Lösun
 
 Zum Beispiel:  
     
-    ``/*--``
-    ``require '<path-to-solution>/index/construct.inc.php';``
-    ``//*/``
+    `/*--`
+    `require '<path-to-solution>/index/construct.inc.php';`
+    `//*/`
 
 Vorgegebene Codeteile die wie folgt gekennzeichnet sind, dienen dazu die Vorlage ohne PHP-Fehler lauffähig zu machen.
      
-     ``//##``
-     ``return true;``
-     ``//*/``
+     `//##`
+     `return true;`
+     `//*/`
      
 Zum Beispiel wird eine erfolgreiche Authentifizierung vorgetäuscht, damit ein Login auch ohne Datenbankzugriff bereits für
 den Erfolgsfall funktioniert. Diese Codeteile müssen behalten werden, an der richtige Stelle im eigenen Code verwendet
