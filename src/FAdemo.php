@@ -48,7 +48,7 @@ use View;
         // invoke parent constructor explicitly, cause it requires one parameter
         // this is not done implicitly while creating the object from this subclass
         parent::__construct($defaultView);
-        // creating the fileaccess object
+        // creating the FileAccess object
         $this->fileAccess = new FileAccess();
         // filling the result array if data exist in the file TEST_DATA_PATH
         $this->currentView->setParameter(new GenericParameter("result", $this->readText()));

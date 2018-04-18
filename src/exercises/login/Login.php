@@ -60,7 +60,7 @@ final class Login extends AbstractNormForm
     {
         parent::__construct($defaultView);
 
-        // TODO: Create the class FileAccess and assign it to $fileAccess;
+        // TODO: Create the FileAccess object and assign it to $fileAccess;
         // TODO: @see src/FAdemo.php for this
 
         /*--
@@ -82,7 +82,9 @@ final class Login extends AbstractNormForm
         /*--
         require '../../phpintrosolution/login/isValid.inc.php';
         //*/
+        //##
         $this->authenticateUser();
+        //*/
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
         return (count($this->errorMessages) === 0);
@@ -116,12 +118,13 @@ final class Login extends AbstractNormForm
     private function authenticateUser(): bool
     {
         // TODO: Check if the provided user name and password combination is correct.
-        // TODO: See src/FileAcess.php loadcontents and FAdemo.php for calling it
+        // TODO: See src/FileAcess.php loadContents and FAdemo.php for calling it
         // TODO: @see src/FAdemo.php for this
         // TODO: load whole file USER_DATA_PATH: user1 and user2 have password "geheim"
         // TODO: Step throw the array with foreach
         // TODO: Compare each username with the value in $_POST
-        // TODO: Validate the password associated with the username with password_verify() against the value in $_POST
+        // TODO: Validate the password associated with the username with the
+        // TODO: PHP function password_verify() against the value in $_POST
         // TODO: return true or false, depending on result of verification
 
         //##

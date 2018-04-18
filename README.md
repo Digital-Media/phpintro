@@ -25,7 +25,7 @@ PHP 7.1 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
 * [PHP-FIG PSR: PHP Standards Recommendations](https://www.php-fig.org/psr/)
 
 
-Die Übungen, die umzusetzen sind, liegen in einem Unterverzeichnis von src/exercises. 
+Die Übungen, die umzusetzen sind, liegen in einem Unterverzeichnis von src/Exercises. 
 Für jede Übung gibt es ein eigenes Unterverzeichnis. Nur an den Files in diesem Verzeichnis sind Änderungen vorzunehmen.
 
 Musterlösungen werden mit require aus einem privaten Repository eingebunden.
@@ -63,7 +63,7 @@ Folder | Description
 ``htdocs/templates`` | HTML templates for the Smarty template engine used in ``/src/*.php``.
 ``htdocs/templates_c`` | Output folder for Smarty's compiled templates.
 ``src`` | Classes implemented for *PHPintro*. Including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper methods to be used in any context.
-``src/exercises`` | Classes to be implemented for *PHPintro* exercises.
+``src/Exercises`` | Classes to be implemented for *PHPintro* exercises.
 ``vendor`` | Third party libraries installed with composer: [TNormform](https://github.com/Digital-Media/normform), [Smarty Templates](http://www.smarty.net/), Javascript Libraries ...
 
 Ein grobes Klassendiagramm für PHPintro (erstellt mit http://www.umlet.com/umletino/
