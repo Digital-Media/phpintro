@@ -12,7 +12,7 @@
     margin: 0;
 }
 
-.Header-title i:after {
+.Header-title i::after {
     content: "\00a0";
 }
 

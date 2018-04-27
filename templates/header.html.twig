@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHPUE &mdash;Introduction to PHP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="Site">
+<header class="Site-header">
+    <div class="Header Header--small">
+        <div class="Header-titles">
+            <h1 class="Header-title">PHPIntro</h1>
+            <p class="Header-subtitle">Introduction to PHP</p>
+        </div>
+        {% if _session.isloggedin is defined %}
+                <div class="Header-logout">
+                     You are logged in as  {{ _session.username }} <a href="logout.php" class="Button u-spaceLM">Logout</a>
+                </div>
+        {% endif %}
+    </div>
+</header>

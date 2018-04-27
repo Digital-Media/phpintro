@@ -1,30 +1,40 @@
 <?php
-use phpintro\src\FAdemo;
+
+require "../vendor/autoload.php";
+
+/**
+ * include define declarations
+ */
+require_once '../src/defines.inc.php';
 
 session_start();
-require_once("../src/defines.inc.php");
-require_once UTILITIES;
-require_once SMARTY;
-require_once TNORMFORM;
-require_once FILE_ACCESS;
-require_once '../src/FAdemo.php';
+
+use FileAccess\FAdemo;
+use Fhooe\NormForm\Parameter\PostParameter;
+use Fhooe\NormForm\View\View;
+use Utilities\Utilities;
 
 // --- This is the main call of the norm form process
 try {
-    // Store current page in SESSION array. login.php uses this entry to redirect back after successful login.
+    // Store current page in SESSION array. Login.php uses this entry to redirect back after successful Login.
     $_SESSION['redirect']=basename($_SERVER["SCRIPT_NAME"]);
     if (!isset($_SESSION[IS_LOGGED_IN]) || $_SESSION[IS_LOGGED_IN] !== Utilities::generateLoginHash()) {
-        // Use this method call to enable login protection for this page
+        // Use this method call to enable Login protection for this page
         // redirect before creating object
-        View::redirectTo('login.php');
+        View::redirectTo('Login.php');
     }
 
-// Defines a new view that specifies the template and the parameters that are passed to the template
-    $view = new View("FAdemoMain.tpl", [
-        new PostParameter(FAdemo::DEMO_FIELD),
-    ]);
+    // Defines a new view that specifies the template and the parameters that are passed to the template
+    $view = new View(
+        "fademoMain.html.twig",
+        "../templates",
+        "../templates_c",
+        [
+        new PostParameter(FAdemo::DEMO_FIELD)
+        ]
+    );
 
-// Creates a new FAdemo object and triggers the NormForm process
+    // Creates a new FAdemo object and triggers the NormForm process
     $demo = new FAdemo($view);
     $demo->normForm();
 } catch (Exception $e) {

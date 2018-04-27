@@ -1,12 +1,13 @@
 <?php
-use phpintro\src\exercises\usingtemplates\Imprint;
+
+require "../vendor/autoload.php";
+
+use Exercises\UsingTemplates\Imprint;
 
 /**
  * Adding define declarations
 */
 require_once '../src/defines.inc.php';
-require_once '../vendor/smarty/smarty/libs/Smarty.class.php';
-require_once '../src/exercises/usingtemplates/Imprint.php';
 
 /**
  * Create the class Contact and call its method show()

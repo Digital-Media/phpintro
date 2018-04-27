@@ -7,7 +7,7 @@
 <body>
 <?php
 
-// TODO: see examples/regex for an example, how to implent this exercise
+// TODO: see Examples/regex for an example, how to implent this exercise
 
 // TODO: Declare and initialize a variable, that holds the sum of EUROs
 

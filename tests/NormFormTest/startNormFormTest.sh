@@ -1,0 +1,1 @@
+../../vendor/phpunit/phpunit/phpunit NormFormTest.php --bootstrap ../../vendor/autoload.php

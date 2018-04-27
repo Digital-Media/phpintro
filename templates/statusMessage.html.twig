@@ -1,0 +1,6 @@
+{% if statusMessage is defined and statusMessage|length != 0 %}
+    <div class="Status">
+        <p class="Status-message"><i class="fas fa-check"></i>{{ statusMessage }}</p>
+    </div>
+{% endif %}
+

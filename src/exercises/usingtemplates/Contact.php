@@ -1,10 +1,11 @@
 <?php
-namespace phpintro\src\exercises\usingtemplates;
+namespace Exercises\UsingTemplates;
 
-use AbstractNormForm;
-use GenericParameter;
-use PostParameter;
-use View;
+use Fhooe\NormForm\Core\AbstractNormForm;
+use Fhooe\NormForm\Parameter\GenericParameter;
+use Fhooe\NormForm\Parameter\PostParameter;
+use Fhooe\NormForm\View\View;
+use Utilities\Utilities;
 
 /*
  * the object-oriented and template based Contact implements a contact form.
@@ -38,13 +39,18 @@ final class Contact extends AbstractNormForm
      */
     public function __construct()
     {
-        // TODO Look into htdocs/templates/contactForm.tpl and complete the template
-        $view = new View("contactMain.tpl", [
-            new PostParameter(Contact::SUBJECT),
-            new PostParameter(Contact::REQUEST),
-            new PostParameter(Contact::EMAIL),
-            new PostParameter(Contact::PRIORITY)
-        ]);
+        // TODO Look into htdocs/templates/contactForm.html.twig and complete the template
+        $view = new View(
+            "contactMain.html.twig",
+            "../templates",
+            "../templates_c",
+            [
+                new PostParameter(Contact::SUBJECT),
+                new PostParameter(Contact::REQUEST),
+                new PostParameter(Contact::EMAIL),
+                new PostParameter(Contact::PRIORITY)
+            ]
+        );
         parent::__construct($view);
     }
 
@@ -76,13 +82,12 @@ final class Contact extends AbstractNormForm
      *
      * abstract methods in AbstractNormForm have to be implemented here
      */
-    protected function business()
+    protected function business(): void
     {
         // TODO Add your own solution here. Keep code that ist already there.
         // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
         // TODO Decide before you finish your work
         // TODO @see src/NormFormDemo
-        // TODO Add: Sanitize input before you send $_POST array to the template. Use htmlspecialchars, htmlentities, ...
         /*--
         require '../../phpintrosolution/contact/business.inc.php';
         //*/

@@ -10,5 +10,17 @@
         "username": "user2",
         "email": "user2@email.com",
         "password": "$2y$10$8V8ls4sWL2bbJva.XSbJkeBFsGKwIMcujhjTgKiWGcpW1ZdKvPUNG"
+    },
+    {
+        "userid": 3,
+        "username": "asdf",
+        "email": "martin.harrer@fh-hagenberg.at",
+        "password": "$2y$10$rVSUxphUBP0TCKnLaQrpe.g7kssUgcMvmveQx2Hp3BCedEYuICzGq"
+    },
+    {
+        "userid": 4,
+        "username": "asdfasdfasdf",
+        "email": "shopuser3@onlineshop.at",
+        "password": "$2y$10$FmUI3rYgOSBpa5XYjhJMS.nyAGsxRIY5RJbKFAiDYHhnxLzTA9nLa"
     }
 ]
