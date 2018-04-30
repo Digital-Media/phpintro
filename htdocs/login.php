@@ -1,23 +1,39 @@
 <?php
-use phpintro\src\exercises\login\Login;
+
+require "../vendor/autoload.php";
+
+/**
+ * include define declarations
+ */
+require_once '../src/defines.inc.php';
 
 session_start();
-require_once("../src/defines.inc.php");
-require_once UTILITIES;
-require_once SMARTY;
-require_once TNORMFORM;
-require_once FILE_ACCESS;
-require_once '../src/exercises/login/Login.php';
+
+use Exercises\Login\Login;
+use Fhooe\NormForm\Parameter\PostParameter;
+use Fhooe\NormForm\View\View;
+use Utilities\Utilities;
 
 // --- This is the main call of the norm form process
 try {
-// Defines a new view that specifies the template and the parameters that are passed to the template
-    $view = new View("loginMain.tpl", [
+    if (isset($_SESSION[IS_LOGGED_IN]) && $_SESSION[IS_LOGGED_IN] === Utilities::generateLoginHash()) {
+        // Use this method call to enable Login protection for this page
+        // redirect before creating object
+        $redirect= $_SESSION['redirect'] ?? $redirect='Register.php';
+        // equivalent to: isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='Register.php';
+        View::redirectTo($redirect);
+    }    // Defines a new view that specifies the template and the parameters that are passed to the template
+    $view = new View(
+        "loginMain.html.twig",
+        "../templates",
+        "../templates_c",
+        [
         new PostParameter(Login::USERNAME),
-        new GenericParameter("passwordKey", Login::PASSWORD)
-    ]);
+        new PostParameter(Login::PASSWORD)
+        ]
+    );
 
-// Creates a new Login object and triggers the NormForm process
+    // Creates a new Login object and triggers the NormForm process
     $login = new Login($view);
     $login->normForm();
 } catch (Exception $e) {

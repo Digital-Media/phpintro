@@ -1,0 +1,9 @@
+{% if errorMessages is defined and errorMessages|length > 0 %}
+    <div class="Error">
+        <ul class="Error-list">
+            {% for error in errorMessages %}
+                <li class="Error-listItem">{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

@@ -1,1 +1,5 @@
 .idea
+cache
+templates_c
+vendor
+sami.phar

@@ -7,7 +7,7 @@ namespace phpintro\src\exercises\oophp;
  */
 require_once 'error_handling.php';
 /**
- * TODO Sehen Sie sich die Bespiele in examples/oophp an
+ * TODO Sehen Sie sich die Bespiele in Examples/OoPhp an
  * TODO Zu Beginn DefineAndConst.php und Inheritance.php
  * TODO danach auch Methods.php. (Vor allem wenn sie vollständig PSR2 konform werden möchten. Nicht Teil dieser UE)
  *
@@ -23,26 +23,27 @@ require_once 'error_handling.php';
 
     /**
      * TODO definieren sie eine Klassenkonstante
-     * TODO siehe examples/oophp/DefindeAndConst.php
+     * TODO siehe Examples/OoPhp/DefindeAndConst.php
      */
 
 
     /**
      * TODO definieren sie eine Klasseneigenschaft mit Scope public
-     * TODO siehe examples/oophp/PublicProtectedPrivateProperties.php
+     * TODO siehe Examples/OoPhp/PublicProtectedPrivateProperties.php
      */
 
 
     /**
      * TODO Definieren sie einen Konstruktor
-     * TODO siehe examples/oophp/DefindeAndConst.php
+     * TODO siehe Examples/OoPhp/DefindeAndConst.php
      */
 
 
         // TODO Im Konstruktor
         // TODO Geben sie die oben definierte Klassenkonstante hier aus.
         // TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
-        // TODO Verwenden sie dazu die Möglichkeiten von PHP zur Stringconcatenation echo "<p>". variable oder constant ."</p>"
+        // TODO Verwenden sie dazu die Möglichkeiten von PHP zur Stringconcatenation
+        // Example: echo "<p>". variable oder constant ."</p>"
 
         // TODO Geben sie die oben definierte Klasseneigenschaft hier aus.
         // TODO Umgeben sie den Wert mit einem <p> oder einem anderem Tag
@@ -55,7 +56,7 @@ require_once 'error_handling.php';
 
     /**
      * TODO Definieren Sie eine Methode mit Scope public
-     * TODO siehe examples/oophp/Inheritance.php
+     * TODO siehe Examples/OoPhp/Inheritance.php
      */
 
          // TODO Innerhalb der Methode

@@ -20,7 +20,7 @@ PHP 7.1 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
 * [PHP 7.0](http://php.net/manual/en/migration70.new-features.php)
 * [PHP 7.1](http://php.net/manual/en/migration71.new-features.php)
 * [TNormform](https://github.com/Digital-Media/normform)
-* [Smarty Templates](http://www.smarty.net/)
+* [TWIG Templates](https://twig.symfony.com/)
 * [CSS3 Flexbox](https://www.w3.org/TR/css-flexbox-1/)
 * [PHP-FIG PSR: PHP Standards Recommendations](https://www.php-fig.org/psr/)
 

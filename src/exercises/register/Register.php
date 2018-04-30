@@ -1,11 +1,11 @@
 <?php
-namespace phpintro\src\exercises\register;
+namespace Exercises\Register;
 
-use AbstractNormForm;
-use phpintro\src\FileAccess;
-use GenericParameter;
-use Utilities;
-use View;
+use Fhooe\NormForm\Core\AbstractNormForm;
+use Fhooe\NormForm\Parameter\GenericParameter;
+use Fhooe\NormForm\View\View;
+use FileAccess\FileAccess;
+use Utilities\Utilities;
 
 /**
  * The registration page of the IMAR image archive.
@@ -15,8 +15,8 @@ use View;
  * list of existing accounts the system checks if user name and e-mail address are unique and if (simple) password
  * criteria are met.
  *
- * @author Wolfgang Hochleitner <wolfgang.hochleitner@fh-hagenberg.at>
- * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
+ * @author  Wolfgang Hochleitner <wolfgang.hochleitner@fh-hagenberg.at>
+ * @author  Martin Harrer <martin.harrer@fh-hagenberg.at>
  * @version 2017
  */
 final class Register extends AbstractNormForm
@@ -37,13 +37,13 @@ final class Register extends AbstractNormForm
      * @var string PASSWORD1 Form field constant that defines how the form field for holding the password is called
      * (id/name).
      */
-    const PASSWORD1 = "password1";
+    const PASSWORD = "password";
 
     /**
      * @var string PASSWORD2 Form field constant that defines how the form field for holding the password repetition is
      * called (id/name).
      */
-    const PASSWORD2 = "password2";
+    const PASSWORD_RETYPE = "passwordretype";
 
     /**
      * @var string USER_ID Constant used to specify the name of the auto-increment key.
@@ -65,9 +65,9 @@ final class Register extends AbstractNormForm
      * which template will be shown and which parameters (e.g. for form fields) are passed on to the template.
      * The constructor needs to initialize the object for file handling.
      *
-     * @param View $defaultView The default View object with information on what will be displayed.
+     * @param View   $defaultView The default View object with information on what will be displayed.
      * @param string $templateDir The Smarty template directory.
-     * @param string $compileDir The Smarty compiled template directory.
+     * @param string $compileDir  The Smarty compiled template directory.
      */
     public function __construct(View $defaultView)
     {
@@ -77,7 +77,7 @@ final class Register extends AbstractNormForm
         // TODO: @see src/FAdemo.php for this
 
         /*--
-        require '../../phpintrosolution/register/construct.inc.php';
+        require '../../phpintrosolution/Register/construct.inc.php';
         //*/
     }
 
@@ -92,13 +92,13 @@ final class Register extends AbstractNormForm
     {
         // TODO: The code for correct form validation goes here.
         // TODO: Check for empty fields, correct e-mail and passwords and username
-        // TODO: Look into src/Utilities.php to find regex examples.
+        // TODO: Look into src/Utilities.php to find Regex examples.
         // TODO: You can either call this examples by Utilitis::method() or copy them to this class and adapt them
         // TODO: When copying, make the method private instead of public static
         // TODO: @see src/FAdemo.php for this
 
         /*--
-        require '../../phpintrosolution/register/isValid.inc.php';
+        require '../../phpintrosolution/Register/isValid.inc.php';
         //*/
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
@@ -110,10 +110,10 @@ final class Register extends AbstractNormForm
      * This method is only called when the form input was validated successfully. It adds the newly entered user to the
      * list of existing users and then forwards to the LOGIN page.
      */
-    protected function business()
+    protected function business(): void
     {
         if ($this->addUser()) {
-            View::redirectTo('login.php');
+            View::redirectTo('Login.php');
         } else {
             $this->errorMessages["addingUser"] = "The user could not be added.";
         }
@@ -123,19 +123,20 @@ final class Register extends AbstractNormForm
      * Checks for uniqueness of a certain value in the $_POST array. This method is used to check if the user name or
      * e-mail address are unique or already existing. Therefore the existing users are loaded and the array is searched
      * for the supplied value.
-     * @param string $name The name of the entry in the $_POST array.
+     *
+     * @param  string $name The name of the entry in the $_POST array.
      * @return bool Returns true if no match is found, otherwise false.
      */
     private function isUnique(string $name): bool
     {
         // TODO: Check if the provided username or email is unique (meaning not already in the data).
         // TODO: @see src/FAdemo.php for this. Use self::USER_DATA_PATH instead of self::TEST_DATA_PATH
-        // TODO: Read whole array and step throw it comparing each username or email with the entry in $_POST with foreach or
-        // TODO: use in_array() combined with array_column() see PHP Documentation
+        // TODO: Read whole array and step throw it comparing each username or email with the entry in $_POST
+        // TODO: with foreach or use in_array() combined with array_column() see PHP Documentation
         // TODO: Handle the special case, that the array is empty.
 
         /*--
-        return require '../../phpintrosolution/register/isUnique.inc.php';
+        return require '../../phpintrosolution/Register/isUnique.inc.php';
         //*/
 
         //##
@@ -148,6 +149,7 @@ final class Register extends AbstractNormForm
      * for user name, e-mail-address and password are taken from the values in $_POST. Additionally an auto-increment ID
      * is generated and added as well in order to assign a unique user id. After the entry is created, the updated
      * two-dimensional array is stored again in the JSON file.
+     *
      * @return bool Returns true if the operation was successful, otherwise false.
      */
     private function addUser(): bool
@@ -156,7 +158,7 @@ final class Register extends AbstractNormForm
         // TODO: @see src/FAdemo.php for this. Use self::USER_DATA_PATH instead of self::TEST_DATA_PATH
         // TODO: add the fields userid, username, email and password
         // TODO: use FileAccess::AutoIncrement for userid
-        // TODO: use Utilities::sanitizeFilter for username, email is validated by isValid() with regex, that doesn't
+        // TODO: use Utilities::sanitizeFilter for username, email is validated by isValid() with Regex, that doesn't
         // TODO: allow XSS
         // TODO: use password_hash() for the password
 
@@ -164,10 +166,7 @@ final class Register extends AbstractNormForm
         return true;
         //*/
         /*--
-        return require '../../phpintrosolution/register/addUser.inc.php';
+        return require '../../phpintrosolution/Register/addUser.inc.php';
         //*/
-
     }
-
-
 }

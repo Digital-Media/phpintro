@@ -1,30 +1,37 @@
 <?php
-use phpintro\src\exercises\register\Register;
+
+require "../vendor/autoload.php";
+
+/**
+ * include define declarations
+ */
+require_once '../src/defines.inc.php';
 
 session_start();
 
-require_once("../src/defines.inc.php");
+use Exercises\Register\Register;
+use Fhooe\NormForm\Parameter\PostParameter;
+use Fhooe\NormForm\Parameter\GenericParameter;
+use Fhooe\NormForm\View\View;
 
-require_once UTILITIES;
-require_once SMARTY;
-require_once TNORMFORM;
-require_once FILE_ACCESS;
-require_once '../src/exercises/register/Register.php';
 // --- This is the main call of the norm form process
 try {
-// Defines a new view that specifies the template and the parameters that are passed to the template
-    $view = new View("registerMain.tpl", [
-        new PostParameter(Register::USERNAME),
-        new PostParameter(Register::EMAIL),
-        new GenericParameter("passwordKey1", Register::PASSWORD1),
-        new GenericParameter("passwordKey2", Register::PASSWORD2)
-    ]);
+    // Defines a new view that specifies the template and the parameters that are passed to the template
+    $view = new View(
+        "registerMain.html.twig",
+        "../templates",
+        "../templates_c",
+        [
+        new PostParameter(Exercises\Register\Register::USERNAME),
+        new PostParameter(Exercises\Register\Register::EMAIL),
+        new PostParameter(Exercises\Register\Register::PASSWORD),
+        new PostParameter(Exercises\Register\Register::PASSWORD_RETYPE)
+        ]
+    );
 
-// Creates a new Register object and triggers the NormForm process
+    // Creates a new Register object and triggers the NormForm process
     $register = new Register($view);
     $register->normForm();
-} catch (FileAccessException $e) {
-    echo $e->getMessage();
 } catch (Exception $e) {
     if (DEBUG) {
         echo "An error occured in file " . $e->getFile() ." on line " . $e->getLine() .":" . $e->getMessage();

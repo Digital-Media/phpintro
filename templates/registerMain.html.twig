@@ -1,0 +1,54 @@
+{% include "header.html.twig" %}
+<main class="Site-content">
+    <section class="Section">
+        <div class="Container">
+            <h2 class="Section-heading">Register an PHPIntro Account</h2>
+            {% include "errorMessages.html.twig" %}
+            {% include "statusMessage.html.twig" %}
+            <form action="{{ _server.SCRIPT_NAME }}" method="post" enctype="multipart/form-data">
+                <div class="Grid Grid--gutters">
+                    <div class="InputCombo Grid-full">
+                        <label for="{{ username.getName() }}" class="InputCombo-label">User Name*</label>
+                        <input type="text" id="{{ username.getName() }}" name="{{ username.getName() }}"
+                               value="{{ username.getValue() }}" class="InputCombo-field">
+                    </div>
+                    <div class="InputCombo Grid-full">
+                        <label for="{{ email.getName() }}" class="InputCombo-label">E-mail Address*</label>
+                        <input type="email" id="{{ email.getName() }}" name="{{ email.getName() }}"
+                               value="{{ email.getValue() }}" class="InputCombo-field">
+                    </div>
+                    <div class="InputCombo Grid-cell">
+                        <label for="{{ password.getName() }}" class="InputCombo-label">Password*</label>
+                        <input type="password" id="{{ password.getName() }}" name="{{ password.getName() }}" class="InputCombo-field">
+                    </div>
+                    <div class="InputCombo Grid-cell">
+                        <label for="{{ passwordretype.getName() }}" class="InputCombo-label">Repeat Password*</label>
+                        <input type="password" id="{{ passwordretype.getName() }}" name="{{ passwordretype.getName() }}" class="InputCombo-field">
+                    </div>
+                    <div class="Grid-full">
+                        <button type="submit" class="Button">Create my account</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="Section">
+        <div class="Container">
+            <h2 class="Section-heading">Already Registered?</h2>
+            <p>Use your existing PHPIntro account to login <a href="login.php">here</a>.</p>
+        </div>
+    </section>
+    <section class="Section">
+        <div class="Container">
+            <h2 class="Section-heading">Need a DEMO?</h2>
+            <p>Go to NormForm demo page <a href="normFormDemoCSS.php">here</a>.</p>
+        </div>
+    </section>
+    <section class="Section">
+        <div class="Container">
+            <h2 class="Section-heading">Need a DEMO for File Access?</h2>
+            <p>Go to FileAccess demo page <a href="fademo.php">here</a>.</p>
+        </div>
+    </section>
+</main>
+{% include "footer.html.twig" %}

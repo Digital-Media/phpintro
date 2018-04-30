@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NormForm-Skeleton (Simple UI)</title>
+</head>
+<body>
+<header>
+    <h1>NormForm Skeleton (Simple UI)</h1>
+</header>
+<main>
+    <section>
+        <h2>Enter Your Name and Message</h2>
+        {% if errorMessages is defined and errorMessages|length > 0 %}
+            <ul>
+                {% for error in errorMessages %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if statusMessage is defined and statusMessage|length != 0 %}
+            <p>{{ statusMessage }}</p>
+        {% endif %}
+        <form action="{{ _server.SCRIPT_NAME }}" method="post">
+            <div>
+                <label for="{{ firstname.getName() }}">First Name*:</label>
+                <input type="text" id="{{ firstname.getName() }}" name="{{ firstname.getName() }}"
+                       value="{{ firstname.getValue() }}">
+            </div>
+            <div>
+                <label for="{{ lastname.getName() }}">Last Name*:</label>
+                <input type="text" id="{{ lastname.getName() }}" name="{{ lastname.getName() }}"
+                       value="{{ lastname.getValue() }}">
+            </div>
+            <div>
+                <label for="{{ message.getName() }}">Message:</label>
+                <textarea name="{{ message.getName() }}"
+                          id="{{ message.getName() }}">{{ message.getValue() }}</textarea>
+            </div>
+            <div>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>Result in $_POST</h2>
+        {% if result is defined %}
+            <table border="1">
+                <colgroup span="2"></colgroup>
+                <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for key, value in result %}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>{{ value | escape | nl2br }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </section>
+</main>
+<footer>
+    <p>Created and maintained by <a href="mailto:martin.harrer@fh-hagenberg.at">Martin Harrer</a> and <a
+                href="mailto:wolfgang.hochleitner@fh-hagenberg.at">Wolfgang Hochleitner</a>.</p>
+    <p><a href="https://github.com/Digital-Media/normform-skeleton">NormForm-Skeleton Version 1.0.0</a></p>
+</footer>
+</body>
+</html>
