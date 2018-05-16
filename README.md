@@ -63,7 +63,7 @@ and
      //*/
 
 Shell scripts are used to switch comments. They are stored in a private git repository, that holds the solution. 
-They use GNU sed to replace the comments.
+They use GNU sed to toggle the commenting of both blocks between /* and //.
 
 ## Structure of this Repository
 
@@ -71,13 +71,13 @@ Folder | Description
 --- | ---
 ``data`` | Directory to hold the json files, to store user credentials or testdata with class FileAccess 
 ``examples`` | Examples for developing with PHP 7.x. 
-``htdocs`` |Frontend stuff. Files called by Webserver, that create the objects with the real implementation, templates and css
-``htdocs/css`` | A set of predefined styles to be used with [AbstractNormForm](https://github.com/Digital-Media/normform). Include ``main.css`` to use it.
-``htdocs/templates`` | HTML templates for the Smarty template engine used in ``/src/*.php``.
-``htdocs/templates_c`` | Output folder for Smarty's compiled templates.
-``src`` | Classes implemented for *PHPintro*. Including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper methods to be used in any context.
+``htdocs`` |Frontend stuff. Files accessed by the web server. They initialize the classes with the actual implementation. CSS
+``htdocs/css`` | A set of predefined styles to be used with [NormForm](https://github.com/Digital-Media/normform). Include ``main.css`` to use it.
+``templates`` | HTML templates for the TWIG template engine used in ``/src/*.php``.
+``templates_c`` | Output folder for compiled TWIG templates.
+``src`` | Classes implemented for *PHPintro*, including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper methods to be used in any context.
 ``src/exercises`` | Classes to be implemented for *PHPintro* exercises.
-``vendor`` | Third party libraries installed with composer: [TNormform](https://github.com/Digital-Media/normform), [Smarty Templates](http://www.smarty.net/), Javascript Libraries ...
+``vendor`` | Third party libraries installed with composer: [NormForm](https://github.com/Digital-Media/normform), [TWIG Templates](https://twig.symfony.com/), Javascript Libraries ...
 
 Ein grobes Klassendiagramm für PHPintro (erstellt mit http://www.umlet.com/umletino/
 
