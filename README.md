@@ -48,7 +48,7 @@ For example a fake login is implemented in a way, that you can login without giv
 To complete the solution you have to implement the database access to validate the given user credentials.
 Keep these parts of the code, they can be part of your final solution, if you put them on the right place in your own code.
 
-To demonstrate, how the skeleton works, the comments are set, as seen in the examples avove.
+To demonstrate, how the skeleton works, the comments are set, as seen in the examples above.
 If you have access to the solution repository you can demonstrate, how the pattern solution works.
 In this case the comments are switched to
 
