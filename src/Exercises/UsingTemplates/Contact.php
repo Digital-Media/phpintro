@@ -80,7 +80,7 @@ final class Contact extends AbstractNormForm
      * processes data sent via form
      * shows a status message, when processing data succeeded.
      *
-     * abstract methods in AbstractNormForm have to be implemented here
+     * abstract methods of AbstractNormForm have to be implemented here
      */
     protected function business(): void
     {

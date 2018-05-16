@@ -135,12 +135,11 @@ final class Register extends AbstractNormForm
         // TODO: with foreach or use in_array() combined with array_column() see PHP Documentation
         // TODO: Handle the special case, that the array is empty.
 
-        /*--
-        return require '../../phpintrosolution/Register/isUnique.inc.php';
-        //*/
-
         //##
         return true;
+        //*/
+        /*--
+        return require '../../phpintrosolution/Register/isUnique.inc.php';
         //*/
     }
 
