@@ -75,7 +75,7 @@ Folder | Description
 ``htdocs/css`` | A set of predefined styles to be used with [NormForm](https://github.com/Digital-Media/normform). Include ``main.css`` to use it.
 ``templates`` | HTML templates for the TWIG template engine used in ``/src/*.php``.
 ``templates_c`` | Output folder for compiled TWIG templates.
-``src`` | Classes implemented for *PHPintro*, including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper methods to be used in any context.
+``src`` | Classes implemented for *PHPintro*, including a demo for [NormFormDemo](https://github.com/Digital-Media/normform) and FAdemo for FileAccess. The Trait Utilities provides static helper methods, that can be used in any context.
 ``src/exercises`` | Classes to be implemented for *PHPintro* exercises.
 ``vendor`` | Third party libraries installed with composer: [NormForm](https://github.com/Digital-Media/normform), [TWIG Templates](https://twig.symfony.com/), Javascript Libraries ...
 
