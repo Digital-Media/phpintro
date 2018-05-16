@@ -28,7 +28,7 @@ The files, that have to be completed for the exercises, are stored in the subdir
 Each lesson has its own subdirectory. For one exercise only files in this subdirectory have to be completed.
 All other files are for reference.
 
-Sample solutions are included with require from a solution folder. The git repostitory, that holds the solution is private.
+Sample solutions are included with ``require`` from a solution folder. The git repostitory, that holds the solution is private.
 These parts can be ignored for your own solution or deleted completely.
 Do not include these files, but work directly in the files in src/exercises to complete your solution. TODOs will guide you, what to do for completing the solution.
 
@@ -62,8 +62,8 @@ and
      return true;
      //*/
 
-Shell scripts are used to switch comments. They are stored in a private git repository, that holds the solution. 
-They use GNU sed to toggle the commenting of both blocks between /* and //.
+Shell scripts are used to toggle comments. They are stored in a private git repository, that holds the solution. 
+They use GNU sed to toggle the commenting of both blocks from /* to // and the other way round.
 
 ## Structure of this Repository
 
