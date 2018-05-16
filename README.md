@@ -1,19 +1,18 @@
 # PHPintro
 
-*PHPintro* stellt das Grundgerüst für einführende Übungen im Bereich Webprogrammierung zur Verfügung.
+*PHPintro* provides a basic skeleton for web programming exercises.
 
-Templates und CSS werden in weiten Teilen zur Verfügung gestellt. 
+Templates and CSS are complete, because this part is taught in different lessons. 
 
-Besuchen sie uns unter https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/bachelor/media-technology-and-design/
+Visit us at https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/bachelor/media-technology-and-design/
 
-Verwendete Technologien und Vorraussetzungen
+# Used technologies and requirements
 
-Für das Übungsscenario wurde mit [Vagrant](https://www.vagrantup.com/) und [Virtualbox](https://www.virtualbox.org/) 
-entwickelt. 
-Ein passendes [Vagrantfile](https://github.com/Digital-Media/hgb-phpdev-base) findet sich ebenfalls auf GitHub. 
-*PHPintro* lässt sich aber auch unter anderen Entwicklungsumgebungen installieren.
+The exercises have been developed with [Vagrant](https://www.vagrantup.com/) and [Virtualbox](https://www.virtualbox.org/). 
+A [Vagrantfile](https://github.com/Digital-Media/hgb-phpdev-base) with the installation of the web environment is hosted on GitHub.
+But *PHPintro* can be installed in a different environment as well.
 
-PHP 7.1 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
+PHP 7.1 is required to run the examples.
 
 * [HTML5](https://www.w3.org/TR/html5/)
 * [CSS3](https://www.w3.org/Style/CSS/specs)
@@ -25,32 +24,46 @@ PHP 7.1 ist die Mindestvoraussetzung, damit die Implentierung lauffähig ist.
 * [PHP-FIG PSR: PHP Standards Recommendations](https://www.php-fig.org/psr/)
 
 
-Die Übungen, die umzusetzen sind, liegen in einem Unterverzeichnis von src/exercises. 
-Für jede Übung gibt es ein eigenes Unterverzeichnis. Nur an den Files in diesem Verzeichnis sind Änderungen vorzunehmen.
+The files, that have to be completed for the exercises, are stored in the subdirectory src/exercises.
+Each lesson has its own subdirectory. For one exercise only files in this subdirectory have to be completed.
+All other files are for reference.
 
-Musterlösungen werden mit require aus einem privaten Repository eingebunden.
-Diese Abschnitte können für die Lösung ignoriert oder vollständig gelöscht werden.
-Statt diese Files einzubinden ist direkt in den Vorlagenfiles eine eigene Lösung an Hand der TODOs zu erstellen.
+Sample solutions are included with require from a solution folder. The git repostitory, that holds the solution is private.
+These parts can be ignored for your own solution or deleted completely.
+Do not include these files, but work directly in the files in src/exercises to complete your solution. TODOs will guide you, what to do for completing the solution.
 
-Zum Beispiel:  
+For example:  
     
     /*--
     require '<path-to-solution>/index/construct.inc.php';
     //*/
 
-Vorgegebene Codeteile die wie folgt gekennzeichnet sind, dienen dazu die Vorlage ohne PHP-Fehler lauffähig zu machen.
+Given parts of the solution are marked as seen below. These parts ensure, that the code works without PHP runtime errors, even before the solution is completed.
      
      //##
      return true;
      //*/
      
-Zum Beispiel wird eine erfolgreiche Authentifizierung vorgetäuscht, damit ein Login auch ohne Datenbankzugriff bereits für
-den Erfolgsfall funktioniert. Diese Codeteile müssen behalten werden, an der richtige Stelle im eigenen Code verwendet
-oder entsprechend angepasst werden, damit sie der Aufgabenstellung entsprechen.
+For example a fake login is implemented in a way, that you can login without given user credentials. 
+To complete the solution you have to implement the database access to validate the given user credentials.
+Keep these parts of the code, they can be part of your final solution, if you put them on the right place in your own code.
 
-Durch Ein- und Auskommentieren der Lösung bzw. der vorgegebenen Codeteile kann sowohl die Funktionalität der 
-Vorlage als auch der Lösung einfach demonstriert werden. 
-Das Umschalten erfolgt über Linux Shell-Scripten, die im Lösungsrepository liegen und dazu GNU sed nutzen.      
+To demonstrate, how the skeleton works, the comments are set, as seen in the examples avove.
+If you have access to the solution reposository you can demonstrate, how the pattern solution works.
+In this case the comments are switched to
+
+    //--
+    require '<path-to-solution>/index/construct.inc.php';
+    //*/
+
+and
+
+     /*##
+     return true;
+     //*/
+
+Shell scripts are used to switch comments. They are stored in a private git repository, that holds the solution. 
+They use GNU sed to replace the comments.
 
 ## Structure of this Repository
 
