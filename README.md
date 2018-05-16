@@ -45,7 +45,7 @@ Given parts of the solution are marked as seen below. These parts ensure, that t
      //*/
      
 For example a fake login is implemented in a way, that you can login without given user credentials. 
-To complete the solution you have to implement the database access to validate the given user credentials.
+To complete the solution you have to implement the file access to validate the given user credentials.
 Keep these parts of the code, they can be part of your final solution, if you put them on the right place in your own code.
 
 To demonstrate, how the skeleton works, the comments are set, as seen in the examples above.
