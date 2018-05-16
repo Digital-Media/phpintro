@@ -49,7 +49,7 @@ To complete the solution you have to implement the database access to validate t
 Keep these parts of the code, they can be part of your final solution, if you put them on the right place in your own code.
 
 To demonstrate, how the skeleton works, the comments are set, as seen in the examples avove.
-If you have access to the solution reposository you can demonstrate, how the pattern solution works.
+If you have access to the solution repository you can demonstrate, how the pattern solution works.
 In this case the comments are switched to
 
     //--
