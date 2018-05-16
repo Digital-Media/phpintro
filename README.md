@@ -63,7 +63,7 @@ and
      //*/
 
 Shell scripts are used to toggle comments. They are stored in a private git repository, that holds the solution. 
-They use GNU sed to toggle the commenting of both blocks from ``/*`` to ``//`` and the other way round.
+They use GNU ``sed`` to toggle the commenting of both blocks from ``/*`` to ``//`` and the other way round.
 
 ## Structure of this Repository
 
