@@ -24,7 +24,7 @@ PHP 7.1 is required to run the examples.
 * [PHP-FIG PSR: PHP Standards Recommendations](https://www.php-fig.org/psr/)
 
 
-The files, that have to be completed for the exercises, are stored in the subdirectory src/exercises.
+The files, that have to be completed for the exercises, are stored in the subdirectory ``src/exercises``.
 Each lesson has its own subdirectory. For one exercise only files in this subdirectory have to be completed.
 All other files are for reference.
 
@@ -63,7 +63,7 @@ and
      //*/
 
 Shell scripts are used to toggle comments. They are stored in a private git repository, that holds the solution. 
-They use GNU sed to toggle the commenting of both blocks from /* to // and the other way round.
+They use GNU sed to toggle the commenting of both blocks from ``/*`` to ``//`` and the other way round.
 
 ## Structure of this Repository
 
