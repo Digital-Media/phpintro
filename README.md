@@ -33,7 +33,7 @@ All other files are for reference.
 
 Sample solutions are included with ``require`` from a solution folder. The git repostitory, that holds the solution is private.
 These parts can be ignored for your own solution or deleted completely.
-Do not include these files, but work directly in the files in ``src/exercises`` to complete your solution. ``TODO``s will guide you, what to do for completing the solution. For a better understanding read the PHPDoc comments, that describe the classes, methods, properties and constants and have a look at the provided examples src/NormFormSkeleton and src/FileAccess.
+Do not include these files, but work directly in the files in ``src/exercises`` to complete your solution. ``TODO``s will guide you, what to do for completing the solution. For a better understanding read the PHPDoc comments, that describe the classes, methods, properties and constants and have a look at the provided examples src/Examples, src/NormFormSkeleton/NormFormDemo.php and src/FileAccess/FADemo.php.
 
 For example:  
     
