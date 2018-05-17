@@ -3,7 +3,7 @@
 *PHPintro* provides a basic skeleton for web programming exercises.
 
 The code is meant only for educational purpose, even though some parts can be used for smaller web projects.
-We try to meet web, coding and security standards as good as possible in these basic lessons.
+We try to meet web, coding and security standards as far as possible in these basic lessons.
 
 Templates and CSS are complete, because this part is taught in different lessons. 
 
