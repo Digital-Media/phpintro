@@ -2,6 +2,9 @@
 
 *PHPintro* provides a basic skeleton for web programming exercises.
 
+The code is meant only for educational purpose, even though some parts can be used for smaller web projects.
+We try to meet web, coding and security standards as good as possible, in basic lessons.
+
 Templates and CSS are complete, because this part is taught in different lessons. 
 
 Visit us at https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/bachelor/media-technology-and-design/
@@ -30,7 +33,7 @@ All other files are for reference.
 
 Sample solutions are included with ``require`` from a solution folder. The git repostitory, that holds the solution is private.
 These parts can be ignored for your own solution or deleted completely.
-Do not include these files, but work directly in the files in ``src/exercises`` to complete your solution. ``TODO``s will guide you, what to do for completing the solution.
+Do not include these files, but work directly in the files in ``src/exercises`` to complete your solution. ``TODO``s will guide you, what to do for completing the solution. For a better understanding read the PHPDoc comments, that describe the classes, methods, properties and constants and have a look at the provided examples src/NormFormSkeleton and src/FileAccess.
 
 For example:  
     
