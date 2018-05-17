@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PHPintro
 
 *PHPintro* provides a basic skeleton for web programming exercises.
@@ -171,4 +170,3 @@ Folder | Description
 Ein grobes Klassendiagramm für PHPintro (erstellt mit http://www.umlet.com/umletino/
 
 ![PHPintro Klassendiagramm](src/KlassenDiagrammPHPintro.png "PHPIntro Klassendiagramm")
->>>>>>> c66c5c9d53bcf9bb10bf880b9693a368502c1ead
