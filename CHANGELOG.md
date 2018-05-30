@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 - Unit tests with [PHPUnit](https://phpunit.de/).
 
+## [2.0.2] - 2018-05-16
+### Fixed
+All TODOs in English now
+
+## [2.0.1] - 2018-04-30
+### Fixed
+README now references TWIG instead of Smarty
+
+## [2.0.0] - 2018-04-27
+### Added
+TWIG Templates
+
+### Removed
+Smarty Templates
+
 ## [1.0.0] - 2018-04-12
 ### Added
 - Example files (concrete class, template, index file, CSS).
