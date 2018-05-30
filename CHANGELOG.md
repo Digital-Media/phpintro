@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 - Unit tests with [PHPUnit](https://phpunit.de/).
 
+## [2.0.3] - 2018-05-16
+### Fixed
+Switched to NormForm v1.1.0
+
 ## [2.0.2] - 2018-05-16
 ### Fixed
 All TODOs in English now
