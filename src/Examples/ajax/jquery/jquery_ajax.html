@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="author" content="Martin Harrer"/>
+    <meta charset="UTF-8"/>
+    <title>Immediate Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="search.js"></script>
+</head>
+<body>
+    <h1>Search for entries in a text file POST</h1>
+    <div id="contentPOST">
+        <form>
+            <label for="searchStringPOST"><b>Search: </b></label>
+            <input type="text" id="searchStringPOST" name="searchStringPOST" placeholder="Enter Search String"/>
+        </form>
+    </div>
+    <div id="searchResultPOST">
+        <!-- left empty, will be filled with AJAX-response in search.js -->
+    </div>
+    <h1>Search for entries in a text file GET</h1>
+    <div id="contentGET">
+        <form>
+            <label for="searchStringGET"><b>Search: </b></label>
+            <input type="text" id="searchStringGET" name="searchStringGET" placeholder="Enter Search String"/>
+        </form>
+    </div>
+    <div id="searchResultGET">
+        <!-- left empty, will be filled with AJAX-response in search.js -->
+    </div>
+</body>
+</html>
