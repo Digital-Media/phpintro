@@ -9,6 +9,13 @@ Templates and CSS are complete, because this part is taught in different lessons
 
 Visit us at https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/bachelor/media-technology-and-design/
 
+# Basic usage
+
+* ``cd <code>`` which should be accessible for your web server.
+* ``sudo git clone https://github.com/Digital-Media/phpintro.git phpintro``
+* ``cd phpintro``
+* ``composer install``
+
 # Used technologies and requirements
 
 The exercises have been developed with [Vagrant](https://www.vagrantup.com/) and [Virtualbox](https://www.virtualbox.org/). 
