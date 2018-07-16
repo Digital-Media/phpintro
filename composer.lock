@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "fhooe/normform",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Digital-Media/normform.git",
-                "reference": "3bd48d6497152dc20073a15d00cee22ffd2a09d1"
+                "reference": "b0764ad0d0edec17fb81559bd571a226cf4d4c5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Digital-Media/normform/zipball/3bd48d6497152dc20073a15d00cee22ffd2a09d1",
-                "reference": "3bd48d6497152dc20073a15d00cee22ffd2a09d1",
+                "url": "https://api.github.com/repos/Digital-Media/normform/zipball/b0764ad0d0edec17fb81559bd571a226cf4d4c5e",
+                "reference": "b0764ad0d0edec17fb81559bd571a226cf4d4c5e",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
                 "form processing",
                 "twig"
             ],
-            "time": "2018-05-14T20:55:56+00:00"
+            "time": "2018-07-16T09:24:32+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",

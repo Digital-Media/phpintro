@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 - Unit tests with [PHPUnit](https://phpunit.de/).
 
+## [2.1.0] - 2018-07-16
+### Added
+- It is now possible to use normform with AJAX requests. show() is not called if currentView is an invalid View object.
+- The template is not displayed in this case. The HTTP response can be sent with echo.
+- Based on fhooe/normform v1.2.0
+
 ## [2.0.3] - 2018-05-16
 ### Fixed
 Switched to NormForm v1.1.0
