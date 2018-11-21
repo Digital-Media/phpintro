@@ -1,5 +1,5 @@
 <?php
-namespace Exercises\Login;
+namespace Exercises;
 
 use Fhooe\NormForm\Core\AbstractNormForm;
 use Fhooe\NormForm\Parameter\GenericParameter;
@@ -60,9 +60,7 @@ final class Login extends AbstractNormForm
         // TODO: Create the FileAccess object and assign it to $fileAccess;
         // TODO: @see src/FAdemo.php for this
 
-        /*--
-        require '../../phpintrosolution/login/construct.inc.php';
-        //*/
+        //%%login/construct
     }
 
     /**
@@ -77,12 +75,10 @@ final class Login extends AbstractNormForm
         // TODO: The code for correct form validation goes here. Check for empty fields and correct authentication.
         // TODO: @see src/FAdemo.php for this
 
-        /*--
-        require '../../phpintrosolution/login/isValid.inc.php';
-        //*/
-        //##
+        //%%login/isValid
+        //##%%
         $this->authenticateUser();
-        //*/
+        //#%#%
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
         return (count($this->errorMessages) === 0);
@@ -97,9 +93,7 @@ final class Login extends AbstractNormForm
     {
         // TODO: Save the username in $_SESSION. Replace John Doe with the username used to login
         $_SESSION['username']= "John Doe";
-        /*--
-        require '../../phpintrosolution/login/business.inc.php';
-        //*/
+        //%%login/business
         $_SESSION[IS_LOGGED_IN] = Utilities::generateLoginHash();
         // using the null coalesce operator
         $redirect= $_SESSION['redirect'] ?? $redirect='Register.php';
@@ -125,11 +119,11 @@ final class Login extends AbstractNormForm
         // TODO: PHP function password_verify() against the value in $_POST
         // TODO: return true or false, depending on result of verification
 
-        //##
+        //##%%
         return true;
-        //*/
+        //#%#%
 
-        //copy solution from '../../phpintrosolution/login/authenticateUser.inc.php' here;
+        //%%login/authenticateUser
         $users = $this->fileAccess->loadContents(self::USER_DATA_PATH);
 
         foreach ($users as $user) {

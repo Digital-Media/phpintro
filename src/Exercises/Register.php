@@ -1,5 +1,5 @@
 <?php
-namespace Exercises\Register;
+namespace Exercises;
 
 use Fhooe\NormForm\Core\AbstractNormForm;
 use Fhooe\NormForm\Parameter\GenericParameter;
@@ -76,9 +76,7 @@ final class Register extends AbstractNormForm
         // TODO: Create a FileAccess object and assign it to $this->fileAccess;
         // TODO: @see src/FAdemo.php for this
 
-        /*--
-        require '../../phpintrosolution/Register/construct.inc.php';
-        //*/
+        //%%Register/construct
     }
 
     /**
@@ -97,9 +95,7 @@ final class Register extends AbstractNormForm
         // TODO: When copying, make the method private instead of public static
         // TODO: @see src/FAdemo.php for this
 
-        /*--
-        require '../../phpintrosolution/Register/isValid.inc.php';
-        //*/
+        //%%Register/isValid
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
 
@@ -135,12 +131,10 @@ final class Register extends AbstractNormForm
         // TODO: with foreach or use in_array() combined with array_column() see PHP Documentation
         // TODO: Handle the special case, that the array is empty.
 
-        //##
+        //##%%
         return true;
-        //*/
-        /*--
-        return require '../../phpintrosolution/Register/isUnique.inc.php';
-        //*/
+        //#%#%
+        //%%Register/isUnique
     }
 
     /**
@@ -161,11 +155,9 @@ final class Register extends AbstractNormForm
         // TODO: allow XSS
         // TODO: use password_hash() for the password
 
-        //##
+        //##%%
         return true;
-        //*/
-        /*--
-        return require '../../phpintrosolution/Register/addUser.inc.php';
-        //*/
+        //#%#%
+        //%%Register/addUser
     }
 }

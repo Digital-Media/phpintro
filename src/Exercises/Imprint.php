@@ -1,5 +1,5 @@
 <?php
-namespace Exercises\UsingTemplates;
+namespace Exercises;
 
 use Twig\Environment;
 use Twig\Error\LoaderError;
@@ -89,12 +89,10 @@ final class Imprint
         // purpose of the site
         // address of the owner of the site
 
-        //##
+        //##%%
         $this->imprint = "<p> Place the requested Imprint here </p>";
-        //*/
-        /*--
-        require '../../phpintrosolution/imprint/show.inc.php';
-        //*/
+        //#%#%
+        //%%imprint/show
         $templateParameters['imprint'] =  $this->imprint;
         try {
             $this->twig->display($this->templateName, $templateParameters);

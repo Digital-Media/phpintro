@@ -1,0 +1,36 @@
+[2018-11-21 15:43:03] ALERT: Fatal Error (E_USER_ERROR): Unable to find template "navigation.html.twig" (looked into: ../templates) in "solutionMain.html.twig" at line 2. 
+[2018-11-21 15:43:52] ALERT: Fatal Error (E_USER_ERROR): Unable to find template "tablestyles.html.twig" (looked into: ../templates) in "solutionMain.html.twig" at line 12. 
+[2018-11-21 15:44:28] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/login/construct.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Login.php 
+[2018-11-21 15:44:28] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/login/isValid.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Login.php 
+[2018-11-21 15:44:28] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/login/business.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Login.php 
+[2018-11-21 15:44:28] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/login/authenticateUser.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Login.php 
+[2018-11-21 15:44:28] INFO: Created backup file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Login.backup. 
+[2018-11-21 15:44:30] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/Register/construct.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php 
+[2018-11-21 15:44:30] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/Register/isValid.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php 
+[2018-11-21 15:44:30] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/Register/isUnique.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php 
+[2018-11-21 15:44:30] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/Register/addUser.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php 
+[2018-11-21 15:44:30] INFO: Created backup file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Register.backup. 
+[2018-11-21 15:44:31] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/imprint/show.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.php 
+[2018-11-21 15:44:31] INFO: Created backup file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.backup. 
+[2018-11-21 15:44:32] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/contact/isValid.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Contact.php 
+[2018-11-21 15:44:32] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/contact/business.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Contact.php 
+[2018-11-21 15:44:32] INFO: Created backup file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Contact.backup. 
+[2018-11-21 15:47:57] INFO: Restored file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Login.backup  to  /var/www/html/code/phpintro/src/Solution/../Exercises/Login.php. 
+[2018-11-21 15:47:57] INFO: Deleted file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Login.backup. 
+[2018-11-21 15:47:59] INFO: Restored file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.backup  to  /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.php. 
+[2018-11-21 15:47:59] INFO: Deleted file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.backup. 
+[2018-11-21 15:48:00] INFO: Restored file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Contact.backup  to  /var/www/html/code/phpintro/src/Solution/../Exercises/Contact.php. 
+[2018-11-21 15:48:00] INFO: Deleted file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Contact.backup. 
+[2018-11-21 15:50:40] INFO: Restored file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Register.backup  to  /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php. 
+[2018-11-21 15:50:40] INFO: Deleted file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Register.backup. 
+[2018-11-21 15:51:50] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/Register/construct.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php 
+[2018-11-21 15:51:50] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/Register/isValid.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php 
+[2018-11-21 15:51:50] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/Register/isUnique.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php 
+[2018-11-21 15:51:50] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/Register/addUser.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php 
+[2018-11-21 15:51:50] INFO: Created backup file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Register.backup. 
+[2018-11-21 15:53:13] INFO: Restored file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Register.backup  to  /var/www/html/code/phpintro/src/Solution/../Exercises/Register.php. 
+[2018-11-21 15:53:13] INFO: Deleted file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Register.backup. 
+[2018-11-21 16:06:34] INFO: Copying  /var/www/html/code/phpintro/src/Solution/../../../phpintrosolution/imprint/show.inc.php to /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.php 
+[2018-11-21 16:06:34] INFO: Created backup file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.backup. 
+[2018-11-21 16:06:42] INFO: Restored file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.backup  to  /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.php. 
+[2018-11-21 16:06:42] INFO: Deleted file:  /var/www/html/code/phpintro/src/Solution/../Exercises/Imprint.backup. 

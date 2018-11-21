@@ -1,0 +1,32 @@
+{% include "header.html.twig" %}
+{% include "navigation.html.twig" %}
+<main class="Site-content">
+    <section class="Section">
+        <div class="Container">
+            <div id="messages">
+                {% include "errorMessages.html.twig" %}
+                {% include "statusMessage.html.twig" %}
+            </div>
+            <h2 class="Section-heading">Create Solutions and Restore Templates</h2>
+            <form action="{{ _server.SCRIPT_NAME }}" method="post" enctype="multipart/form-data">
+                {%  if classArray is defined %}
+                {% include "tablestyles.html.twig" %}
+                <table>
+                    {% for key, value in classArray %}
+                    <tr>
+                        <td>
+                            <button type="submit" class="Button" name="c{{ value }}">Create {{ value }} Solution <i class="Button, fas fa-forward"></i></button>
+                        </td>
+                        <td>
+                            <button type="submit" class="Button" name="r{{ value }}">Restore {{ value }} Template <i class="Button, fas fa-backward"></i></button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% endif %}
+            </form>
+            <br>
+        </div>
+    </section>
+</main>
+{%  include "footer.html.twig"  %}

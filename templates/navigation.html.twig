@@ -1,0 +1,16 @@
+<!-- Styles not needed for NormFormDemo, therefore not in css. So its easier to reuse NormFormDemo -->
+<style type="text/css">
+        .Navigation {
+            text-align: left;
+        }
+</style>
+<div class="Header Navigation">
+    <nav class="Container">
+        <span class="u-spaceRS" > {%  if not(_server.SCRIPT_NAME is same as ('/code/phpintro/htdocs/register.php')) %} <a href="register.php">Register</a> {% endif %} </span>
+        <span class="u-spaceRS" > {%  if not(_server.SCRIPT_NAME is same as ('/code/phpintro/htdocs/imprint.php')) %} <a href="imprint.php">Imprint</a> {% endif %} </span>
+        <span class="u-spaceRS" > {%  if not(_server.SCRIPT_NAME is same as ('/code/phpintro/htdocs/contact.php')) %} <a href="contact.php">Contact</a> {% endif %} </span>
+        <span class="u-spaceRS" > {%  if not(_server.SCRIPT_NAME is same as ('/code/phpintro/htdocs/fademo.php')) %} <a href="fademo.php">File Access Demo</a> {% endif %} </span>
+        <span class="u-spaceRS" > {%  if not(_server.SCRIPT_NAME is same as ('/code/phpintro/htdocs/normFormDemoCSS.php')) %} <a href="normFormDemoCSS.php">Normform Demo with CSS</a> {% endif %} </span>
+        <span class="u-spaceRS" > {%  if not(_server.SCRIPT_NAME is same as ('/code/phpintro/htdocs/normFormDemoNoCSS.php')) %} <a href="normFormDemoNoCSS.php">NormForm Demo No CSS</a> {% endif %} </span>
+    </nav>
+</div>

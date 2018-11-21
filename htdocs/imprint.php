@@ -2,7 +2,7 @@
 
 require "../vendor/autoload.php";
 
-use Exercises\UsingTemplates\Imprint;
+use Exercises\Imprint;
 
 /**
  * Adding define declarations

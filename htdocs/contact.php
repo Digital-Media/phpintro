@@ -2,7 +2,7 @@
 
 require "../vendor/autoload.php";
 
-use Exercises\UsingTemplates\Contact;
+use Exercises\Contact;
 
 session_start();
 

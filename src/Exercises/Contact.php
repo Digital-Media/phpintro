@@ -1,5 +1,5 @@
 <?php
-namespace Exercises\UsingTemplates;
+namespace Exercises;
 
 use Fhooe\NormForm\Core\AbstractNormForm;
 use Fhooe\NormForm\Parameter\GenericParameter;
@@ -68,9 +68,7 @@ final class Contact extends AbstractNormForm
         // TODO Add your own solution here. Keep code that ist already there.
         // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
         // TODO Decide before you finish your work
-        /*--
-        require '../../phpintrosolution/contact/isValid.inc.php';
-        //*/
+        //%%contact/isValid
         //TODO keep the next two lines
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
         return (count($this->errorMessages) === 0);
@@ -88,8 +86,6 @@ final class Contact extends AbstractNormForm
         // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
         // TODO Decide before you finish your work
         // TODO @see src/NormFormDemo
-        /*--
-        require '../../phpintrosolution/contact/business.inc.php';
-        //*/
+        //%%contact/business
     }
 }

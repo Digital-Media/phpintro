@@ -9,7 +9,7 @@ require_once '../src/defines.inc.php';
 
 session_start();
 
-use Exercises\Login\Login;
+use Exercises\Login;
 use Fhooe\NormForm\Parameter\PostParameter;
 use Fhooe\NormForm\View\View;
 use Utilities\Utilities;

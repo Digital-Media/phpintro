@@ -9,7 +9,7 @@ require_once '../src/defines.inc.php';
 
 session_start();
 
-use Exercises\Register\Register;
+use Exercises\Register;
 use Fhooe\NormForm\Parameter\PostParameter;
 use Fhooe\NormForm\Parameter\GenericParameter;
 use Fhooe\NormForm\View\View;
@@ -22,10 +22,10 @@ try {
         "../templates",
         "../templates_c",
         [
-        new PostParameter(Exercises\Register\Register::USERNAME),
-        new PostParameter(Exercises\Register\Register::EMAIL),
-        new PostParameter(Exercises\Register\Register::PASSWORD),
-        new PostParameter(Exercises\Register\Register::PASSWORD_RETYPE)
+        new PostParameter(Exercises\Register::USERNAME),
+        new PostParameter(Exercises\Register::EMAIL),
+        new PostParameter(Exercises\Register::PASSWORD),
+        new PostParameter(Exercises\Register::PASSWORD_RETYPE)
         ]
     );
 
