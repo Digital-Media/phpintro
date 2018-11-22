@@ -19,8 +19,10 @@ Visit us at https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/bachelor/med
 # Used technologies and requirements
 
 The exercises have been developed with [Vagrant](https://www.vagrantup.com/) and [Virtualbox](https://www.virtualbox.org/). 
-A [Vagrantfile](https://github.com/Digital-Media/hgb-phpdev-base) with the installation of the web environment is hosted on GitHub.
+A [Vagrantfile](https://github.com/Digital-Media/fhooe-webdev-base) with the installation of the web environment is hosted on GitHub.
 But *PHPintro* can be installed in a different environment as well.
+[XAMPP](https://www.apachefriends.org/de/download.html) or [MAMP](https://www.mamp.info/de/)
+
 
 PHP 7.1 is required to run the examples.
 
@@ -28,10 +30,11 @@ PHP 7.1 is required to run the examples.
 * [CSS3](https://www.w3.org/Style/CSS/specs)
 * [PHP 7.0](http://php.net/manual/en/migration70.new-features.php)
 * [PHP 7.1](http://php.net/manual/en/migration71.new-features.php)
-* [TNormform](https://github.com/Digital-Media/normform)
+* [Normform](https://github.com/Digital-Media/normform)
 * [TWIG Templates](https://twig.symfony.com/)
 * [CSS3 Flexbox](https://www.w3.org/TR/css-flexbox-1/)
 * [PHP-FIG PSR: PHP Standards Recommendations](https://www.php-fig.org/psr/)
+* [Monolog PSR3](https://github.com/Seldaek/monolog)
 
 
 The files, that have to be completed for the exercises, are stored in the subdirectory ``src/exercises``.
@@ -89,6 +92,7 @@ Folder | Description
 ``src/exercises`` | Classes to be implemented for *PHPintro* exercises.
 ``vendor`` | Third party libraries installed with composer: [NormForm](https://github.com/Digital-Media/normform), [TWIG Templates](https://twig.symfony.com/), Javascript Libraries ...
 
-Ein grobes Klassendiagramm für PHPintro (erstellt mit http://www.umlet.com/umletino/
+Ein grobes Klassendiagramm für PHPintro (erstellt mit http://www.umlet.com/umletino/ 
 
 ![PHPintro Klassendiagramm](src/KlassenDiagrammPHPintro.png "PHPIntro Klassendiagramm")
+A basic class diagramm for OnlineShop (built with http://www.umlet.com/umletino/ can be found at phpintro/src/ClassDiagramPHPintro.png.
