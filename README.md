@@ -92,7 +92,4 @@ Folder | Description
 ``src/exercises`` | Classes to be implemented for *PHPintro* exercises.
 ``vendor`` | Third party libraries installed with composer: [NormForm](https://github.com/Digital-Media/normform), [TWIG Templates](https://twig.symfony.com/), Javascript Libraries ...
 
-Ein grobes Klassendiagramm für PHPintro (erstellt mit http://www.umlet.com/umletino/ 
-
-![PHPintro Klassendiagramm](src/KlassenDiagrammPHPintro.png "PHPIntro Klassendiagramm")
 A basic class diagramm for OnlineShop (built with http://www.umlet.com/umletino/ can be found at phpintro/src/ClassDiagramPHPintro.png.
