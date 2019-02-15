@@ -11,7 +11,7 @@ use Utilities\Utilities;
  * the object-oriented and template based Contact implements a contact form.
  * *
  * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
- * @package phpue
+ * @package phpintro
  * @version 2017
  */
 final class Contact extends AbstractNormForm
@@ -57,17 +57,19 @@ final class Contact extends AbstractNormForm
     /**
      * Validates the input after sending the form.
      *
-     * Examples for REGEX to validate input can be found in src/Utilities.php
+     * Examples for REGEX to validate input can be found in src/Utilities/Utilities.php
      *
      * Abstract methods of class AbstractNormForm have to be implemented here
      *
-     * @return bool true, wenn $errorMessages leer ist. Ansonsten false
+     * @return bool true, if $errorMessages is empty. Else false
      */
     protected function isValid(): bool
     {
         // TODO Add your own solution here. Keep code that ist already there.
         // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
         // TODO Decide before you finish your work
+        // TODO @see src/NormFormSkeleton/NormFormDemo.php and change the code,
+        // TODO to match the requirements of templates/contactMain.html.twig
         //%%contact/isValid
         //TODO keep the next two lines
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
@@ -85,7 +87,7 @@ final class Contact extends AbstractNormForm
         // TODO Add your own solution here. Keep code that ist already there.
         // TODO Sometimes it will be part of your solution. Sometimes you will have to discard it.
         // TODO Decide before you finish your work
-        // TODO @see src/NormFormDemo
+        // TODO @see src/NormFormSkeleton/NormFormDemo.php
         //%%contact/business
     }
 }

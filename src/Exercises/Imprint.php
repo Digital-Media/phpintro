@@ -9,9 +9,10 @@ use Twig\Loader\FilesystemLoader;
 
 /*
  * The object-oriented and template based Imprint shows the implementation of a static page.
+ * It doesn't use the NormForm and just demonstrates how to send data to a Twig template.
  * *
  * @author Martin Harrer <martin.harrer@fh-hagenberg.at>
- * @package phpue
+ * @package phpintro
  * @version 2017
  */
 final class Imprint
@@ -61,7 +62,7 @@ final class Imprint
     /**
      * Imprint constructor.
      *
-     * Creates a new Smarty Object and sets default templates and compiled templates directories
+     * Creates a new Twig Object and sets default templates and compiled templates directories
      */
     public function __construct()
     {
