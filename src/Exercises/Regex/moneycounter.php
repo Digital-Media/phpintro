@@ -31,7 +31,7 @@
 
 // TODO: Finally display the text used for testing and the resulting amount (echo).
 // TODO: Use number_format() for formatting the sum.
-// TODO: Use htmlentities() or a similar function to avoid XSS.
+// TODO: Use htmlentities() or a similar function to avoid XSS, if you return the text input.
 
 ?>
     <a href="index.html">Start Over</a>
