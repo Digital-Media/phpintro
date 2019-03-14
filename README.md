@@ -47,15 +47,13 @@ Do not include these files, but work directly in the files in ``src/exercises`` 
 
 For example:  
     
-    /*--
-    require '<path-to-solution>/index/construct.inc.php';
-    //*/
+    //%%login/construct
 
 Given parts of the solution are marked as seen below. These parts ensure, that the code works without PHP runtime errors, even before the solution is completed.
      
-     //##
-     return true;
-     //*/
+     ///##%%
+     $this->authenticateUser();
+     //#%#%
      
 For example a fake login is implemented in a way, that you can login without given user credentials. 
 To complete the solution you have to implement the file access to validate the given user credentials.
