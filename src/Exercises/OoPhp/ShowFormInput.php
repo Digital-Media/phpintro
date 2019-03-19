@@ -1,9 +1,9 @@
 <?php
 namespace phpintro\src\exercises\oophp;
 /**
- * This class should not be able to do more than returning the content of $_POST sent by index.html.
+ * This class should not be able to do more than printing the content of $_POST sent by index.html.
  * Additionally a class constant and a class property is defined.
- * Both are returned in different context within and outside a class to see differences in the syntax.
+ * Both are printed in different context within and outside a class to see differences in the syntax.
  * An additional objective of this exercise is to understand the scope of class constants, class properties
  * and global constants like DEBUG and see differences in syntax.
  *
