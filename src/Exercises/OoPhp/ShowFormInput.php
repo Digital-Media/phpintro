@@ -34,7 +34,7 @@ require_once 'error_handling.php';
 
     /**
      * TODO Define a class constant
-     * TODO @see Examples/OoPhp/DefindeAndConst.php
+     * TODO @see Examples/OoPhp/DefineAndConst.php
      */
 
 
