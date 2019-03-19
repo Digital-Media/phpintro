@@ -51,14 +51,14 @@ require_once 'error_handling.php';
 
 
         // TODO Within the constructor
-        // TODO Return the class constant defined above with echo or print.
+        // TODO Print the class constant defined above with echo or print.
         // TODO Enclose the value with a <p> tag using string concatenation.
         // Example: echo "<p>". variable or constant ."</p>"
 
-        // TODO Return the class property defined above with echo or print.
+        // TODO Print the class property defined above with echo or print.
         // TODO Enclose the value with a <p> tag.
 
-        // TODO Return the value of the global constant DEBUG defined in error_handling.php
+        // TODO Print the value of the global constant DEBUG defined in error_handling.php with echo or print.
         // TODO Enclose the value with a <p> tag.
 
         // TODO end of constructor (closing curly brake)
@@ -71,7 +71,7 @@ require_once 'error_handling.php';
 
          // TODO Within the method
 
-         // TODO Return the content of the $_POST-Array sent by index.html.
+         // TODO Print the content of the $_POST-Array sent by index.html.
          // TODO Prevent XSS for all browsers.
          // TODO Use htmlentities(), htmlspecialchars() or strip_tags() to do so.
 
@@ -96,10 +96,10 @@ require_once 'error_handling.php';
 // TODO Call the method with scope public of the class
 
 
-// TODO Return the first object with var_dump()
+// TODO Print the first object with var_dump()
 
 
-// TODO Return the class constant defined above with echo or print.
+// TODO Print the class constant defined above with echo or print.
 // TODO Enclose the value with a <p> tag.
 
 
@@ -107,14 +107,14 @@ require_once 'error_handling.php';
 // TODO Name the object according to the class name and to PSR1 in camelCase.
 
 
-// TODO Return the second object with var_dump() here
+// TODO Print the second object with var_dump() here
 
 
-// TODO Return the class property defined above with echo or print.
+// TODO Print the class property defined above with echo or print.
 // TODO Enclose the value with a <p> tag.
 
 
-// TODO Return the value of the global constant DEBUG defined in error_handling.php
+// TODO Print the value of the global constant DEBUG defined in error_handling.php with echo.
 // TODO Enclose the value with a <p> tag.
 
 
