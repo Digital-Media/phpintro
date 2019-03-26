@@ -66,7 +66,7 @@ final class Imprint
      */
     public function __construct()
     {
-        $this->templateName = "ImprintMain.html.twig";
+        $this->templateName = "imprintMain.html.twig";
         $this->templateDirectory = "../templates";
         $this->templateCacheDirectory = "../templates_c";
 
