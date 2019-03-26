@@ -84,7 +84,7 @@ final class Imprint
     public function show()
     {
         // TODO Replace the text in $this->imprint with a imprint of your own using valid HTML5 syntax
-        // TODO Use string operator .= or heredoc for concating the lines
+        // TODO Use string operator .= or heredoc for concatenating the lines
         // For a small site the imprint has to contain
         // name/company name
         // purpose of the site
