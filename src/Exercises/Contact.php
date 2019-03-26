@@ -39,7 +39,7 @@ final class Contact extends AbstractNormForm
      */
     public function __construct()
     {
-        // TODO Look into htdocs/templates/contactForm.html.twig and complete the template
+        // TODO Look into templates/contactForm.html.twig and complete the template
         $view = new View(
             "contactMain.html.twig",
             "../templates",
