@@ -44,10 +44,9 @@ All other files are for reference.
 Sample solutions from a solution folder can be copied into the exercise templates with the class src/Solution/Solution.php.
 The git repository, that holds the solution is private. If necessary ``TODO``s will guide you, what has to be done for completing the exercises. 
 For a better understanding read the PHPDoc comments, that describe the classes, methods, properties and constants 
-and have a look at the provided examples in ``src/DBAccess/`` especially at ``DBDemo.php`` 
-and ``DBAccess`` for queries against MariaDB. 
-You can use ``onlineshop/src/onlinshop.sql`` to restore the MariaDB database provided for the exercises.
-You can use ``onlineshop/src/ESCreateIndex.sh`` to restore the ElasticSearch Index provided for the exercises.
+and have a look at the provided examples in ``src/FileAccess/`` especially at ``FADemo.php``.
+In ``src/NormformSkeleton`` you can find the class, that provides an Example-Implementation of normform, that ist used throughout the Excercises beginning with ``src/Exercises/Contact.php``. There is a Link in the navigation bar. Call ``htdocs/contact.php`` in the Browser, to see the link.
+
 
 For example the following line is replaced with the content of <solutionfolder>/index/construct.inc.php:  
     
