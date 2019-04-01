@@ -41,12 +41,12 @@ The files, that have to be completed for the exercises, are stored in the subdir
 Each lesson has its own subdirectory. For one exercise only files in this subdirectory have to be completed.
 All other files are for reference.
 
-Sample solutions from a solution folder can be copied into the exercise templates with the class src/Solution/Solution.php.
-The git repository, that holds the solution is private. If necessary ``TODO``s will guide you, what has to be done for completing the exercises. 
 For a better understanding read the PHPDoc comments, that describe the classes, methods, properties and constants 
 and have a look at the provided examples in ``src/FileAccess/`` especially at ``FADemo.php``.
 In ``src/NormformSkeleton`` you can find the class, that provides an Example-Implementation of normform, that ist used throughout the Excercises beginning with ``src/Exercises/Contact.php``. There is a Link in the navigation bar. Call ``htdocs/contact.php`` in the Browser, to see the link.
 
+Sample solutions from a solution folder can be copied into the exercise templates with the class src/Solution/Solution.php.
+The git repository, that holds the solution is private. If necessary ``TODO``s will guide you, what has to be done for completing the exercises. 
 
 For example the following line is replaced with the content of <solutionfolder>/index/construct.inc.php:  
     
