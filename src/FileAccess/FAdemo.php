@@ -14,7 +14,8 @@ use Utilities\Utilities;
  * @author  Wolfgang Hochleitner <wolfgang.hochleitner@fh-hagenberg.at>
  * @author  Martin Harrer <martin.harrer@fh-hagenberg.at>
  * @version 2017
- */final class FAdemo extends AbstractNormForm
+ */
+final class FAdemo extends AbstractNormForm
 {
     /**
      * @var string DEMO_FIELD Form field constant that defines
