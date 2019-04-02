@@ -135,7 +135,7 @@ trait Utilities
             return false;
         }
 
-        //so gehts: Utilities::isPassword("string")
+        //use it like this: Utilities::isPassword("string")
     }
 
     /**
