@@ -89,7 +89,9 @@ use Utilities\Utilities;
 
     protected function writeText()
     {
-        $demofield = Utilities::sanitizeFilter($_POST[self::DEMO_FIELD]);
+        //don't need to sanitize with Twig
+        //$demofield = Utilities::sanitizeFilter($_POST[self::DEMO_FIELD]);
+        $demofield = $_POST[self::DEMO_FIELD];
 
         $fields = $this->fileAccess->loadContents(self::TEST_DATA_PATH);
 
