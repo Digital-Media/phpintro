@@ -70,7 +70,7 @@ final class Contact extends AbstractNormForm
         // TODO @see src/NormFormSkeleton/NormFormDemo.php and change the code,
         // TODO to match the requirements of templates/contactMain.html.twig
         //%%contact/isValid
-        //TODO keep the next two lines
+        // TODO keep the next two lines
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
         return (count($this->errorMessages) === 0);
     }
