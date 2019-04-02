@@ -150,7 +150,7 @@ final class Register extends AbstractNormForm
         // TODO: Add the user (ID, user name, e-mail, password) to the two-dimensional array and store it.
         // TODO: @see src/FAdemo.php for this. Use self::USER_DATA_PATH instead of self::TEST_DATA_PATH
         // TODO: add the fields userid, username, email and password
-        // TODO: use FileAccess::AutoIncrement for userid
+        // TODO: use FileAccess::autoincrementID for userid
         // TODO: use Utilities::sanitizeFilter for username, email is validated by isValid() with Regex, that doesn't
         // TODO: allow XSS
         // TODO: use password_hash() for the password
