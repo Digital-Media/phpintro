@@ -90,7 +90,7 @@ final class Register extends AbstractNormForm
     {
         // TODO: The code for correct form validation goes here.
         // TODO: Check for empty fields, correct e-mail and passwords and username
-        // TODO: use isUnique() in this class to test uniqueness of email and username
+        // TODO: implement isUnique() in this class to test uniqueness of email and username
         // TODO: Look into src/Utilities.php to find Regex examples.
         // TODO: You can either call this examples by Utilitis::method() or copy them to this class and adapt them
         // TODO: When copying, make the method private instead of public static
