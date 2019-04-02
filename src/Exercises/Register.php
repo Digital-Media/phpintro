@@ -151,7 +151,7 @@ final class Register extends AbstractNormForm
         // TODO: @see src/FAdemo.php for this. Use self::USER_DATA_PATH instead of self::TEST_DATA_PATH
         // TODO: add the fields userid, username, email and password
         // TODO: use FileAccess::autoincrementID for userid
-        // TODO: use Utilities::sanitizeFilter for username, email is validated by isValid() with Regex, that doesn't
+        // TODO: don't use Utilities::sanitizeFilter for username (TWIG!), email is validated by isValid() with Regex, that doesn't
         // TODO: allow XSS
         // TODO: use password_hash() for the password
 
