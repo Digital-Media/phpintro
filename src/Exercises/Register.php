@@ -110,7 +110,7 @@ final class Register extends AbstractNormForm
     protected function business(): void
     {
         if ($this->addUser()) {
-            View::redirectTo('Login.php');
+            View::redirectTo('login.php');
         } else {
             $this->errorMessages["addingUser"] = "The user could not be added.";
         }
