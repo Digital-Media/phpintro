@@ -19,7 +19,7 @@ try {
     if (isset($_SESSION[IS_LOGGED_IN]) && $_SESSION[IS_LOGGED_IN] === Utilities::generateLoginHash()) {
         // Use this method call to enable Login protection for this page
         // redirect before creating object
-        $redirect= $_SESSION['redirect'] ?? $redirect='Register.php';
+        $redirect= $_SESSION['redirect'] ?? $redirect='register.php';
         // equivalent to: isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='Register.php';
         View::redirectTo($redirect);
     }    // Defines a new view that specifies the template and the parameters that are passed to the template
