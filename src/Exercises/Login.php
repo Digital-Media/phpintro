@@ -13,7 +13,7 @@ use Utilities\Utilities;
  *
  * This class enables users to log in to the system with a provided user name and password. Both items are match with
  * stored credentials. If they match, a Login hash is stored in the session that acts as a token for a successful Login.
- * Other pages can then use LoginSystem::protectPage() to check for this token before the site is initialized. If no
+ * Other pages can then use login.php to check for $_SESSION[IS_LOGGED_IN] before the site is initialized. If no
  * hash is present the Login system redirects and prevents accessing the page.
  *
  * @author  Wolfgang Hochleitner <wolfgang.hochleitner@fh-hagenberg.at>
