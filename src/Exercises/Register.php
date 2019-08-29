@@ -76,7 +76,7 @@ final class Register extends AbstractNormForm
         // TODO: Create a FileAccess object and assign it to $this->fileAccess;
         // TODO: @see src/FAdemo.php for this
 
-        //%%Register/construct
+        //%%register/construct
     }
 
     /**
@@ -96,7 +96,7 @@ final class Register extends AbstractNormForm
         // TODO: When copying, make the method private instead of public static
         // TODO: @see src/FAdemo.php for this
 
-        //%%Register/isValid
+        //%%register/isValid
 
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
 
@@ -135,7 +135,7 @@ final class Register extends AbstractNormForm
         //##%%
         return true;
         //#%#%
-        //%%Register/isUnique
+        //%%register/isUnique
     }
 
     /**
@@ -159,6 +159,6 @@ final class Register extends AbstractNormForm
         //##%%
         return true;
         //#%#%
-        //%%Register/addUser
+        //%%register/addUser
     }
 }
