@@ -96,7 +96,7 @@ final class Login extends AbstractNormForm
         //%%login/business
         $_SESSION[IS_LOGGED_IN] = Utilities::generateLoginHash();
         // using the null coalesce operator
-        $redirect= $_SESSION['redirect'] ?? $redirect='Register.php';
+        $redirect= $_SESSION['redirect'] ?? $redirect='register.php';
         // equivalent to: isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='Register.php';
         View::redirectTo($redirect);
     }
