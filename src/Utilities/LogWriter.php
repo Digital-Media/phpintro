@@ -36,7 +36,7 @@ class LogWriter
             self::$logger = new Logger('Shop');
             ErrorHandler::register(self::$logger);
             if ($which_handler === 'files') {
-                $handler = new StreamHandler(__DIR__.'/onlineshop.log', $level);
+                $handler = new StreamHandler(__DIR__.'/phpintro.log', $level);
             } else {
                 $handler = new RedisHandler(new Predis\Client(['scheme' => 'tcp', 'host' => '192.168.7.7', 'port' => 6379, 'password' => 'geheim']), "logs", $level, true, $cap);
             }
