@@ -12,7 +12,7 @@ Visit us at https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/bachelor/med
 # Basic usage
 
 * ``cd <code>`` which should be accessible for your web server.
-* ``sudo git clone https://github.com/Digital-Media/phpintro.git phpintro``
+* ``git clone https://github.com/Digital-Media/phpintro.git phpintro``
 * ``cd phpintro``
 * ``composer install``
 
