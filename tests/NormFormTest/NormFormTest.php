@@ -48,7 +48,7 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
     public function testGetPage()
     {
         $_SERVER["REQUEST_METHOD"] = "GET";
-        $page=$this->runNormForm();
+        $page = $this->runNormForm();
         self::AssertNotEmpty($page);
         self::AssertRegexp("/form/", $page);
         self::AssertRegexp("/firstname/", $page);
@@ -62,7 +62,7 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
     public function testAllFieldsAreEmpty()
     {
         $_SERVER["REQUEST_METHOD"] = "POST";
-        $_POST=[NormFormDemo::FIRST_NAME => "", NormFormDemo::LAST_NAME => "", NormFormDemo::MESSAGE => ""];
+        $_POST = [NormFormDemo::FIRST_NAME => "", NormFormDemo::LAST_NAME => "", NormFormDemo::MESSAGE => ""];
         $this->runNormForm();
         $params = $this->view->getParameters();
         foreach ($params as $param) {
@@ -72,9 +72,9 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
             } else {
                 if ($param->getName() === "errorMessages") {
                     // There are two required fields, that need a errorMessage associated
-                    self::assertCount(2,$param->getValue());
-                    self::assertArrayHasKey('firstname',$param->getValue());
-                    self::assertArrayHasKey('lastname',$param->getValue());
+                    self::assertCount(2, $param->getValue());
+                    self::assertArrayHasKey('firstname', $param->getValue());
+                    self::assertArrayHasKey('lastname', $param->getValue());
                 }
             }
         }
@@ -86,7 +86,11 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
     public function testFirstNameIsEmpty()
     {
         $_SERVER["REQUEST_METHOD"] = "POST";
-        $_POST=[NormFormDemo::FIRST_NAME => "", NormFormDemo::LAST_NAME => "NotEmpty", NormFormDemo::MESSAGE => "NotEmpty"];
+        $_POST = [
+            NormFormDemo::FIRST_NAME => "",
+            NormFormDemo::LAST_NAME => "NotEmpty",
+            NormFormDemo::MESSAGE => "NotEmpty"
+        ];
         $this->runNormForm();
         $params = $this->view->getParameters();
         foreach ($params as $param) {
@@ -98,8 +102,8 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
                 }
             } else {
                 if ($param instanceof GenericParameter) {
-                    self::assertCount(1,$param->getValue());
-                    self::assertArrayHasKey('firstname',$param->getValue());
+                    self::assertCount(1, $param->getValue());
+                    self::assertArrayHasKey('firstname', $param->getValue());
                 }
             }
         }
@@ -111,7 +115,7 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
     public function testLastNameIsEmpty()
     {
         $_SERVER["REQUEST_METHOD"] = "POST";
-        $_POST=[NormFormDemo::FIRST_NAME => "NotEmpty", NormFormDemo::LAST_NAME => "", NormFormDemo::MESSAGE => ""];
+        $_POST = [NormFormDemo::FIRST_NAME => "NotEmpty", NormFormDemo::LAST_NAME => "", NormFormDemo::MESSAGE => ""];
         $this->runNormForm();
         $params = $this->view->getParameters();
         foreach ($params as $param) {
@@ -123,8 +127,8 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
                 }
             } else {
                 if ($param instanceof GenericParameter) {
-                    self::assertCount(1,$param->getValue());
-                    self::assertArrayHasKey('lastname',$param->getValue());
+                    self::assertCount(1, $param->getValue());
+                    self::assertArrayHasKey('lastname', $param->getValue());
                 }
             }
         }
@@ -136,7 +140,11 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
     public function testAllFieldsAreFilled()
     {
         $_SERVER["REQUEST_METHOD"] = "POST";
-        $_POST=[NormFormDemo::FIRST_NAME => "NotEmpty", NormFormDemo::LAST_NAME => "NotEmpty", NormFormDemo::MESSAGE => "NotEmpty"];
+        $_POST = [
+            NormFormDemo::FIRST_NAME => "NotEmpty",
+            NormFormDemo::LAST_NAME => "NotEmpty",
+            NormFormDemo::MESSAGE => "NotEmpty"
+        ];
         $this->runNormForm();
         $params = $this->view->getParameters();
         foreach ($params as $param) {
@@ -165,7 +173,7 @@ class NormFormTest extends \PHPUnit\Framework\TestCase
          */
         ob_start();
         $this->normform->normform();
-        $ret= ob_get_contents();
+        $ret = ob_get_contents();
         ob_end_clean();
         return $ret;
     }

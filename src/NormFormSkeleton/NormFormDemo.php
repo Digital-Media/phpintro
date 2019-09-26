@@ -10,17 +10,17 @@ class NormFormDemo extends AbstractNormForm
 {
 
     /**
-     * Form field constant that defines how the form field for holding a first name is called (id/name). 
+     * Form field constant that defines how the form field for holding a first name is called (id/name).
      */
     public const FIRST_NAME = "firstname";
 
     /**
-     * Form field constant that defines how the form field for holding a last name is called (id/name). 
+     * Form field constant that defines how the form field for holding a last name is called (id/name).
      */
     public const LAST_NAME = "lastname";
 
     /**
-     * Form field constant that defines how the form field for holding a message is called (id/name). 
+     * Form field constant that defines how the form field for holding a message is called (id/name).
      */
     public const MESSAGE = "message";
 
