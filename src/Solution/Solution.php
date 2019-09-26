@@ -109,7 +109,7 @@ final class Solution extends AbstractNormForm
     protected function isValid(): bool
     {
         $this->current_action = array_keys($_POST);
-        $this->class = substr($this->current_action[0], 1, mb_strlen($this->current_action[0])-1);
+        $this->class = substr($this->current_action[0], 1, mb_strlen($this->current_action[0]) - 1);
         if (!in_array($this->class, $this->available_classes)) {
             $this->errorMessages['no_solution'] = "No Solution available for this class $this->class.";
         }
@@ -129,12 +129,12 @@ final class Solution extends AbstractNormForm
     {
         $action = substr($this->current_action[0], 0, 1);
         switch ($action) {
-        case "c":
-            $this->createSolution($this->class);
-            break;
-        case "r":
-            $this->restoreTemplate($this->class);
-            break;
+            case "c":
+                $this->createSolution($this->class);
+                break;
+            case "r":
+                $this->restoreTemplate($this->class);
+                break;
         }
         $this->currentView->setParameter(new GenericParameter("statusMessage", $this->statusMessage));
         $this->currentView->setParameter(new GenericParameter("errorMessages", $this->errorMessages));
@@ -205,7 +205,7 @@ final class Solution extends AbstractNormForm
      */
     private function mergeSolutionIntoTemplate($solfile, $backupfile)
     {
-        $write=true;
+        $write = true;
         $solhandle = fopen($solfile, 'w+');
         $backuphandle = fopen($backupfile, 'r');
         while (!feof($backuphandle)) {
@@ -220,7 +220,7 @@ final class Solution extends AbstractNormForm
                     $this->copySolutionToTemplate($filename, $solhandle);
                 }
             } elseif (preg_match("-//##%%-", $line)) {
-                $write=false;
+                $write = false;
             } elseif (preg_match("-//#%#%-", $line)) {
                 $write = true;
             }
@@ -240,14 +240,13 @@ final class Solution extends AbstractNormForm
      * @param  $line string Marker, that solution file has to be copied to this line
      * @return string filename and path to solution file for the given marker
      */
-    private function createSolutionFilename($line) 
+    private function createSolutionFilename($line)
     {
-        $filename=str_replace("\r", "", str_replace("\n", "", str_replace("//%%", "/", str_replace(" ", "", $line))));
+        $filename = str_replace("\r", "", str_replace("\n", "", str_replace("//%%", "/", str_replace(" ", "", $line))));
         return $this->createFilename($filename, '/../../../phpintrosolution', '.inc.php');
-
     }
 
-    private function copySolutionToTemplate($filename, $solhandle) 
+    private function copySolutionToTemplate($filename, $solhandle)
     {
         $tmphandle = fopen($filename, 'r');
         while (!feof($tmphandle)) {

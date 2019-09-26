@@ -15,11 +15,11 @@ $backuphandle = fopen($backupfile, 'r') or die($php_errormsg);
 while (!feof($backuphandle)) {
     $line = fgets($backuphandle, 200);
     if (preg_match("-//%%-", $line)) {
-        $filename=$line;
+        $filename = $line;
         // remove os specific line endings
         // remove marker where the solution should be placed
         // remove spaces
-        $filename=str_replace(PHP_EOL, "", str_replace("//%%", "/", str_replace(" ", "", $filename)));
+        $filename = str_replace(PHP_EOL, "", str_replace("//%%", "/", str_replace(" ", "", $filename)));
         // rebuild the path with os specific directory separator and add file extension
         $filename = join(DIRECTORY_SEPARATOR, explode("/", __DIR__ . $filename . ".inc.php"));
         if (!file_exists($filename)) {
@@ -34,9 +34,9 @@ while (!feof($backuphandle)) {
             fputs($solhandle, $solline, 200);
         }
         fclose($tmphandle);
-        $filename="";
+        $filename = "";
     } elseif (preg_match("-//##%%-", $line)) {
-        $write=false;
+        $write = false;
     } elseif (preg_match("-//#%#%-", $line)) {
         $write = true;
     }
