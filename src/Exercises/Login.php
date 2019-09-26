@@ -92,11 +92,11 @@ final class Login extends AbstractNormForm
     protected function business(): void
     {
         // TODO: Save the username in $_SESSION. Replace John Doe with the username used to login
-        $_SESSION['username']= "John Doe";
+        $_SESSION['username'] = "John Doe";
         //%%login/business
         $_SESSION[IS_LOGGED_IN] = Utilities::generateLoginHash();
         // using the null coalesce operator
-        $redirect= $_SESSION['redirect'] ?? $redirect='register.php';
+        $redirect = $_SESSION['redirect'] ?? $redirect = 'register.php';
         // equivalent to: isset($_SESSION['redirect']) ? $redirect= $_SESSION['redirect'] : $redirect='Register.php';
         View::redirectTo($redirect);
     }

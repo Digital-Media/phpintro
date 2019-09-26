@@ -11,12 +11,12 @@ class SettingProperties
     /*
      * $var string public property
      */
-    public $publicStringVar="";
+    public $publicStringVar = "";
 
     /*
      * $var number public property
      */
-    public $publicNumberVar=0;
+    public $publicNumberVar = 0;
 }
 
 $settingProperties = new SettingProperties();
@@ -34,11 +34,11 @@ echo $settingProperties->publicNumberVar;
 
 echo "<h2>setting object property and display it again</h2>";
 echo "<p><strong>\$defineAndConst->publicStringVar='Not empty any longer'</strong></p>";
-$settingProperties->publicStringVar="Not empty any longer";
+$settingProperties->publicStringVar = "Not empty any longer";
 echo $settingProperties->publicStringVar;
 
 echo "<p><strong>\$defineAndConst->publicNumberVar=12</strong></p>";
-$settingProperties->publicNumberVar=12;
+$settingProperties->publicNumberVar = 12;
 echo $settingProperties->publicNumberVar;
 
 echo "<h2>dumping the object with var_dump()</h2>";
@@ -47,5 +47,5 @@ var_dump($settingProperties);
 
 echo "<h2>setting a new object property and display it again</h2>";
 echo "<p><strong>\$defineAndConst->publicNewVar='Now new in Object'</strong></p>";
-$settingProperties->publicNewVar="Now new in Object";
+$settingProperties->publicNewVar = "Now new in Object";
 var_dump($settingProperties);

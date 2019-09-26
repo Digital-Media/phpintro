@@ -13,17 +13,17 @@ class PublicProtectedPrivateProperties
      * $var string private property written in camelCase
      * This is one choice in PSR-1 out of three: $StudlyCaps, $camelCase or $under_score
      */
-    private $privateVar="I am private";
+    private $privateVar = "I am private";
 
     /*
      * $var string protected property written in camelCase
      */
-    protected $protectedVar="I am protected";
+    protected $protectedVar = "I am protected";
 
     /*
      * $var string public property written in camelCase
      */
-    public $publicVar="I am public";
+    public $publicVar = "I am public";
 
     public function __construct($param)
     {
@@ -34,7 +34,7 @@ class PublicProtectedPrivateProperties
         echo  $param;
 
         // local variables must be initialized before usage
-        $local="I am only visible locally in the constructor";
+        $local = "I am only visible locally in the constructor";
         echo "<p><strong>Output of echo \$local;</strong></p>";
         echo $local;
 

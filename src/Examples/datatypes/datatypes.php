@@ -9,9 +9,9 @@
 <p>Demonstrate the impact of implicit data type conversion and different HTML-input types</p>
 <hr>
 <?php
-$v=null;
-$sum=0;
-$stringconcat="";
+$v = null;
+$sum = 0;
+$stringconcat = "";
 echo "Only fields of the form submitted are in \$_POST. The fields of the other forms do not appear!!!";
 var_dump($_POST);
 echo "<hr>";
@@ -32,11 +32,13 @@ if (isset($_POST['submitnumber'])) {
     }
     if (!is_int($_POST['numberinput'])) {
         $v = var_export($_POST['numberinput'], true);
-        echo "numberinput $v is <strong>NOT</strong> of type <strong>integer</strong>. All values in \$_POST are of type string<br>";
+        echo "numberinput $v is <strong>NOT</strong> of type <strong>integer</strong>. 
+              All values in \$_POST are of type string<br>";
     }
     if (is_numeric($_POST['numberinput'])) {
         $v = var_export($_POST['numberinput'], true);
-        echo "numberinput $v is of type numeric though it is a string. Implicit Type Conversion if string starts with a valid number!!<br><hr>";
+        echo "numberinput $v is of type numeric though it is a string. 
+              Implicit Type Conversion if string starts with a valid number!!<br><hr>";
     }
     //
     if (is_string($_POST['stringnumberinput'])) {
@@ -48,24 +50,29 @@ if (isset($_POST['submitnumber'])) {
         echo "stringnumberinput $v is of type integer. All values in \$_POST are of type string<br>";
     } else {
         $v = var_export($_POST['stringnumberinput'], true);
-        echo "stringnumberinput $v is <strong>NOT</strong> of type integer. All values in \$_POST are of type string<br>";
+        echo "stringnumberinput $v is <strong>NOT</strong> of type integer. 
+              All values in \$_POST are of type string<br>";
     }
     if (is_numeric($_POST['stringnumberinput'])) {
         $v = var_export($_POST['stringnumberinput'], true);
-        echo "stringnumberinput $v is of type numeric though it is a string. Implicit Type Conversion if string starts with a valid number!!<br><hr>";
+        echo "stringnumberinput $v is of type numeric though it is a string. 
+              Implicit Type Conversion if string starts with a valid number!!<br><hr>";
     } else {
         $v = var_export($_POST['stringnumberinput'], true);
-        echo "stringnumberinput $v is <strong>NOT</strong> of type numeric though it is a string. Implicit Type Conversion if string starts with a valid number!!<br><hr>";
+        echo "stringnumberinput $v is <strong>NOT</strong> of type numeric though it is a string. 
+              Implicit Type Conversion if string starts with a valid number!!<br><hr>";
     }
     // demonstrating type comparison
     if ($_POST['stringnumberinput'] == 0) {
         echo "comparison \$_POST['stringinputnumber'] == 0 gives true. An empty String is converted to 0!!!<br>";
     }
     if ($_POST['stringnumberinput'] == false) {
-        echo "comparison \$_POST['stringinputnumber'] == false gives true. An empty String is converted to 0, which is equal to false!!!<br>";
+        echo "comparison \$_POST['stringinputnumber'] == false gives true. 
+              An empty String is converted to 0, which is equal to false!!!<br>";
     }
     if (!($_POST['stringnumberinput'] === 0)) {
-        echo "comparison \$_POST['stringinputnumber'] === 0 gives false. If empty string \"\" is given it doesn't compare to 0, that is of type int. Types are not equal!!<br>";
+        echo "comparison \$_POST['stringinputnumber'] === 0 gives false. 
+              If empty string \"\" is given it doesn't compare to 0, that is of type int. Types are not equal!!<br>";
     }
     if ($_POST['stringnumberinput'] === "10") {
         echo "comparison \$_POST['stringinputnumber'] === \"10\" gives true. Type and content are equal!!";
@@ -102,7 +109,8 @@ if (isset($_POST['submitarray'])) {
         }
         $sum += $number;
     }
-    echo "But you can sum (+, +=) up strings, that contain valid numbers. Sum is: ". number_format($sum, 2, ',', '.');
+    echo "But you can sum (+, +=) up strings, that contain valid numbers. Sum is: " .
+          number_format($sum, 2, ',', '.');
 }
 
 ?>
