@@ -69,13 +69,13 @@
 'This is a ' . $var . " with string concatenation."<br>
 "$var within double quotes."<br>
 SOURCE;
-        echo "<h3>heredoc: </h3>" . $source ."<br><br>";
+        echo "<h3>heredoc: </h3>" . $source . "<br><br>";
         $source = <<<'SOURCE'
 '$var within single quotes.'<br>
 'This is a ' . $var . " with string concatenation."<br>
 "$var within double quotes."<br>
 SOURCE;
-        echo "<h3>nowdoc: </h3>" . $source ."<br><br>";
+        echo "<h3>nowdoc: </h3>" . $source . "<br><br>";
         echo '<h3>Strings with single and double quotes</h3>';
         echo '$var within single quotes.<br>';
         echo 'This is a ' . $var . " with string concatenation.<br>";
@@ -86,7 +86,11 @@ SOURCE;
 </main>
 <footer>
     <div>
-        <p>Created and maintained by <a href="mailto:martin.harrer@fh-hagenberg.at">Martin Harrer</a> and <a href="mailto:wolfgang.hochleitner@fh-hagenberg.at">Wolfgang Hochleitner</a>.</p>
+        <p>Created and maintained by
+            <a href="mailto:martin.harrer@fh-hagenberg.at">Martin Harrer</a>
+            and
+            <a href="mailto:wolfgang.hochleitner@fh-hagenberg.at">Wolfgang Hochleitner</a>.
+        </p>
         <p><a href="https://github.com/Digital-Media/phpue">Crafting Text Version 2018</a></p>
     </div>
 </footer>

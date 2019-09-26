@@ -5,19 +5,19 @@
     Concatenates one string as xmlHttp.responseText
     containing every whole line which contains the search string.
     */
-$output= "";
+$output = "";
    // retrieve input sent by getSearchResultPOST() or getSearchResultGET() in search.js
 if (isset($_POST["searchStringPOST"])) {
     $searchString = $_POST["searchStringPOST"];
 } elseif (isset($_GET["searchStringGET"])) {
     $searchString = $_GET["searchStringGET"];
 }
-if(!($searchString == "")) {
+if (!($searchString == "")) {
     // get content of search.txt. Each line ist one entry in the array $array[]='One line of search.txt'
-    if(($array = file("zip.txt")) != null) {
+    if (($array = file("zip.txt")) != null) {
         foreach ($array as $key => $value) {
             // see if searchString is in the line $value
-            if(strpos($value, $searchString) !== false) {
+            if (strpos($value, $searchString) !== false) {
                 $output = $output . htmlspecialchars($value) . "<br/>";
             }
         }

@@ -11,12 +11,12 @@ class StaticProperties
     /*
      * $var string public property
      */
-    public $publicVar="I am public";
+    public $publicVar = "I am public";
 
     /*
      * $var string public static property
      */
-    public static $publicStaticVar="I am public and static";
+    public static $publicStaticVar = "I am public and static";
 
     /**
      * Constructor with some demo code

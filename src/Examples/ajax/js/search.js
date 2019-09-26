@@ -1,6 +1,7 @@
  var xmlHttp = null;
 
-function getSearchResultPOST(searchStringPOST) {
+function getSearchResultPOST(searchStringPOST)
+{
 
     xmlHttp = new XMLHttpRequest();
     if (xmlHttp) {
@@ -20,7 +21,8 @@ function getSearchResultPOST(searchStringPOST) {
     }
 }
 
-function getSearchResultGET(searchStringGET) {
+function getSearchResultGET(searchStringGET)
+{
 
     xmlHttp = new XMLHttpRequest();
     if (xmlHttp) {
@@ -36,7 +38,8 @@ function getSearchResultGET(searchStringGET) {
 }
 
 
-function DisplayResultGET() {
+function DisplayResultGET()
+{
     /*
      * Get the response text and puts it into existing html page
      */
@@ -46,7 +49,8 @@ function DisplayResultGET() {
     }
 }
 
-function DisplayResultPOST() {
+function DisplayResultPOST()
+{
     /*
     * Get the response text and puts it into existing html page
     */

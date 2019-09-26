@@ -17,8 +17,8 @@ namespace phpintro\examples\oophp;
  */
 class Methods
 {
-    public $firstName="John";
-    public $lastName="Doe";
+    public $firstName = "John";
+    public $lastName = "Doe";
     /**
      * __construct must be public
      * TODO try private or protected for __construct
