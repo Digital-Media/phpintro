@@ -105,6 +105,15 @@ final class Login extends AbstractNormForm
      * Authenticates a user by matching the entered username and password with the stored records. If the username is
      * present and the entered password matches the stored password, a valid login is assumed and stored in $_SESSION
      *
+     * In the file phpintro/data/userdata.json the BCRYPT algorithm ist used for hashing the password.
+     * This was done in PHP 5.6 with password_hash(... , PASSWORD_DEFAULT)
+     *
+     * With PHP 7.3 the challenge is to update older hashes to the strongest hash, that is currently available.
+     * Therefore password_get_info(), password_verify() and password_needs_rehash() are used to store
+     * an argon2 hash in phpintro/data/userdata.json, after a successful login against the old password hash.
+     *
+
+     *
      * @return bool Returns true if the combination of username and password is valid, otherwise false.
      */
     private function authenticateUser(): bool
