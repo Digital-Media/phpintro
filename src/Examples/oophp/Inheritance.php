@@ -16,9 +16,11 @@ class Inheritance extends Methods
         echo "<br><br>A protected method of class Method ist called by a public method of subclass Inheritance<br><br>";
         // due to inheritance $this-> can be used
         $this->myProtectedMethod();
+        echo $this->firstName . " " . $this->lastName;
         return $this->firstName . " " . $this->lastName;
     }
 }
 
 $inheritance = new Inheritance();
-$inheritance->mySecondPublicMethod();
+$string = $inheritance->mySecondPublicMethod();
+echo $string;
